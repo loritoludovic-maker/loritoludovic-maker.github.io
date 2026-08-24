@@ -1,1 +1,544 @@
-test
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ludovic Lorito — Technicien Systèmes &amp; Réseaux</title>
+<meta name="description" content="Portfolio de Ludovic Lorito, Technicien Systèmes et Réseaux vers Administrateur Systèmes et Réseaux — Microsoft 365, Active Directory, PowerShell, virtualisation, réseaux et sécurité.">
+<style>
+  :root{
+    --bg: #0b0f14;
+    --bg-alt: #111823;
+    --panel: #141d29;
+    --panel-border: #22303f;
+    --text: #e7edf3;
+    --text-dim: #9fb0c0;
+    --accent: #3ddc97;
+    --accent-2: #4fa3ff;
+    --chip-bg: #1b2734;
+    --chip-border: #2c3d4f;
+    --radius: 10px;
+    --maxw: 1100px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height:1.6;
+  }
+  a{color:var(--accent-2); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  header.hero{
+    position:relative;
+    padding: 90px 24px 70px;
+    text-align:center;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(61,220,151,0.12), transparent 45%),
+      radial-gradient(circle at 80% 0%, rgba(79,163,255,0.14), transparent 45%),
+      var(--bg-alt);
+    border-bottom:1px solid var(--panel-border);
+  }
+  .eyebrow{
+    display:inline-block;
+    font-size:.78rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    border:1px solid var(--chip-border);
+    background:var(--chip-bg);
+    padding:6px 14px;
+    border-radius:999px;
+    margin-bottom:22px;
+  }
+  h1{
+    font-size: clamp(2rem, 5vw, 3.1rem);
+    margin: 0 0 10px;
+    letter-spacing:-0.02em;
+  }
+  .tagline{
+    font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+    color: var(--text-dim);
+    max-width: 640px;
+    margin: 0 auto 30px;
+  }
+  .hero-cta{
+    display:flex;
+    gap:14px;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:11px 22px;
+    border-radius:8px;
+    font-weight:600;
+    font-size:.95rem;
+    border:1px solid transparent;
+    cursor:pointer;
+  }
+  .btn-primary{
+    background: var(--accent);
+    color:#04140d;
+  }
+  .btn-primary:hover{
+    text-decoration:none;
+    filter:brightness(1.08);
+  }
+  .btn-ghost{
+    background:transparent;
+    border-color: var(--chip-border);
+    color: var(--text);
+  }
+  .btn-ghost:hover{
+    text-decoration:none;
+    border-color: var(--accent-2);
+  }
+
+  nav.topnav{
+    position: sticky;
+    top:0;
+    z-index: 50;
+    display:flex;
+    justify-content:center;
+    gap: 4px;
+    flex-wrap:wrap;
+    background: rgba(11,15,20,0.88);
+    backdrop-filter: blur(8px);
+    border-bottom:1px solid var(--panel-border);
+    padding:12px 16px;
+  }
+  nav.topnav a{
+    color: var(--text-dim);
+    font-size:.88rem;
+    font-weight:600;
+    padding:8px 14px;
+    border-radius:6px;
+  }
+  nav.topnav a:hover{
+    color: var(--text);
+    background: var(--panel);
+    text-decoration:none;
+  }
+
+  main{
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  section{
+    padding: 70px 0;
+    border-bottom:1px solid var(--panel-border);
+  }
+  section:last-of-type{ border-bottom:none; }
+
+  .section-head{
+    margin-bottom: 34px;
+  }
+  .section-head .eyebrow{ margin-bottom:12px; }
+  .section-head h2{
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 0 0 8px;
+  }
+  .section-head p{
+    color: var(--text-dim);
+    max-width: 680px;
+    margin:0;
+  }
+
+  /* Parcours */
+  .card{
+    background: var(--panel);
+    border:1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 28px;
+  }
+  .card p{ color: var(--text-dim); margin: 0 0 14px; }
+  .card p:last-child{ margin-bottom:0; }
+
+  /* Vision */
+  .vision-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap:16px;
+  }
+  .vision-card{
+    background: var(--panel);
+    border:1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 22px;
+  }
+  .vision-card .icon{
+    font-size:1.5rem;
+    margin-bottom:10px;
+    display:block;
+  }
+  .vision-card h3{
+    margin:0 0 8px;
+    font-size:1.02rem;
+  }
+  .vision-card p{
+    margin:0;
+    color:var(--text-dim);
+    font-size:.92rem;
+  }
+
+  /* Competences */
+  .skills-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+  }
+  .skill-cat{
+    background: var(--panel);
+    border:1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 22px;
+  }
+  .skill-cat h3{
+    margin: 0 0 14px;
+    font-size: 1rem;
+    color: var(--accent);
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .chip-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .chip{
+    background: var(--chip-bg);
+    border:1px solid var(--chip-border);
+    color: var(--text-dim);
+    font-size:.78rem;
+    padding:5px 11px;
+    border-radius:999px;
+    white-space:nowrap;
+  }
+
+  /* Projets */
+  .projects-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 18px;
+  }
+  .project-card{
+    background: var(--panel);
+    border:1px dashed var(--panel-border);
+    border-radius: var(--radius);
+    padding: 26px;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+    min-height: 160px;
+    color: var(--text-dim);
+  }
+  .project-card .icon{
+    font-size:1.4rem;
+    margin-bottom:10px;
+  }
+  .project-card h3{
+    margin:0 0 6px;
+    color: var(--text);
+    font-size:1rem;
+  }
+  .project-card p{
+    margin:0;
+    font-size:.88rem;
+  }
+
+  /* Contact */
+  .contact-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+  }
+  .contact-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background: var(--panel);
+    border:1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 14px 20px;
+    color: var(--text);
+    font-size:.92rem;
+  }
+  .contact-item .icon{ font-size:1.1rem; }
+
+  footer{
+    text-align:center;
+    padding: 30px 24px 50px;
+    color: var(--text-dim);
+    font-size:.82rem;
+  }
+
+  @media (max-width: 560px){
+    section{ padding: 50px 0; }
+    header.hero{ padding: 70px 20px 50px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <span class="eyebrow">Portfolio professionnel</span>
+  <h1>Ludovic Lorito</h1>
+  <p class="tagline">Technicien Systèmes &amp; Réseaux — en évolution vers un poste d'Administrateur Systèmes &amp; Réseaux</p>
+  <div class="hero-cta">
+    <a class="btn btn-primary" href="#competences">Voir mes compétences</a>
+    <a class="btn btn-ghost" href="#contact">Me contacter</a>
+  </div>
+</header>
+
+<nav class="topnav">
+  <a href="#parcours">Parcours</a>
+  <a href="#vision">Vision</a>
+  <a href="#competences">Compétences</a>
+  <a href="#projets">Projets</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+
+  <section id="parcours">
+    <div class="section-head">
+      <span class="eyebrow">Qui je suis</span>
+      <h2>Parcours</h2>
+    </div>
+    <div class="card">
+      <p>Technicien systèmes et réseaux en CDI au sein de Trustteam France, j'interviens principalement auprès de collectivités, d'établissements scolaires et de structures disposant d'environnements informatiques multisites.</p>
+      <p>Mon activité est orientée vers l'infogérance de proximité, avec une part importante d'interventions directement chez les clients. J'assure le support utilisateur, le diagnostic et la résolution d'incidents, mais également des missions plus avancées d'administration, de sécurisation, de déploiement et d'évolution des infrastructures.</p>
+      <p>Au fil de mes missions, j'ai développé une expérience concrète sur des environnements Microsoft hybrides associant Active Directory local, Microsoft 365, Exchange Online et Microsoft Entra ID. J'interviens également sur des infrastructures virtualisées, des réseaux segmentés en VLAN, des solutions de sauvegarde et différents équipements de sécurité.</p>
+      <p>Je travaille régulièrement sur des projets nécessitant d'analyser un besoin, de comprendre une infrastructure existante, de concevoir une solution, de la tester, de la déployer puis de produire la documentation nécessaire à son exploitation.</p>
+    </div>
+  </section>
+
+  <section id="vision">
+    <div class="section-head">
+      <span class="eyebrow">Où je vais</span>
+      <h2>Vision future</h2>
+      <p>Mon parcours évolue progressivement vers un poste d'Administrateur Systèmes et Réseaux, avec un intérêt particulier pour les axes suivants.</p>
+    </div>
+    <div class="vision-grid">
+      <div class="vision-card">
+        <span class="icon">⚙️</span>
+        <h3>Automatisation PowerShell</h3>
+        <p>Fiabiliser et accélérer la gestion des infrastructures par le scripting.</p>
+      </div>
+      <div class="vision-card">
+        <span class="icon">☁️</span>
+        <h3>Microsoft 365</h3>
+        <p>Approfondir l'administration des environnements cloud Microsoft.</p>
+      </div>
+      <div class="vision-card">
+        <span class="icon">🔐</span>
+        <h3>Sécurité des identités</h3>
+        <p>Renforcer la protection des accès et des comptes utilisateurs.</p>
+      </div>
+      <div class="vision-card">
+        <span class="icon">🖥️</span>
+        <h3>Virtualisation</h3>
+        <p>Concevoir et exploiter des infrastructures virtualisées robustes.</p>
+      </div>
+      <div class="vision-card">
+        <span class="icon">🏢</span>
+        <h3>Gestion d'infrastructures clientes</h3>
+        <p>Piloter des environnements multisites avec exigence et méthode.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="competences">
+    <div class="section-head">
+      <span class="eyebrow">Ce que je maîtrise</span>
+      <h2>Compétences</h2>
+      <p>Un panorama des technologies, outils et méthodes que j'utilise au quotidien ou en projet.</p>
+    </div>
+    <div class="skills-grid">
+
+      <div class="skill-cat">
+        <h3>🪟 Systèmes Microsoft</h3>
+        <div class="chip-list">
+          <span class="chip">Windows 10 / 11</span>
+          <span class="chip">Windows Server 2019</span>
+          <span class="chip">Active Directory Domain Services</span>
+          <span class="chip">Utilisateurs, groupes, OU</span>
+          <span class="chip">DNS / DHCP</span>
+          <span class="chip">SYSVOL / NETLOGON</span>
+          <span class="chip">GPO</span>
+          <span class="chip">Serveurs de fichiers &amp; permissions</span>
+          <span class="chip">Serveurs d'impression</span>
+          <span class="chip">Windows LAPS</span>
+          <span class="chip">RDS</span>
+          <span class="chip">Tâches planifiées</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <h3>☁️ Microsoft 365 &amp; Cloud</h3>
+        <div class="chip-list">
+          <span class="chip">Administration M365</span>
+          <span class="chip">Microsoft Entra ID</span>
+          <span class="chip">Exchange Online</span>
+          <span class="chip">Boîtes partagées &amp; groupes</span>
+          <span class="chip">Délégations &amp; droits d'accès</span>
+          <span class="chip">MFA</span>
+          <span class="chip">Révocation de sessions</span>
+          <span class="chip">Journaux de connexion</span>
+          <span class="chip">Entra Connect</span>
+          <span class="chip">Accès conditionnel</span>
+          <span class="chip">Licences Entra ID P1</span>
+          <span class="chip">Microsoft Graph</span>
+          <span class="chip">Auth. applicative par certificat</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <h3>🤖 Automatisation &amp; Low Code</h3>
+        <div class="chip-list">
+          <span class="chip">PowerShell</span>
+          <span class="chip">Microsoft Graph PowerShell</span>
+          <span class="chip">CSV / Excel</span>
+          <span class="chip">Automatisation de comptes</span>
+          <span class="chip">Journaux &amp; rapports d'exécution</span>
+          <span class="chip">Modes simulation</span>
+          <span class="chip">Power Automate</span>
+          <span class="chip">Power Apps</span>
+          <span class="chip">Listes SharePoint</span>
+          <span class="chip">Teams / Outlook</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <h3>🖥️ Virtualisation &amp; Sauvegarde</h3>
+        <div class="chip-list">
+          <span class="chip">VMware ESXi</span>
+          <span class="chip">VMware vCenter</span>
+          <span class="chip">Proxmox VE</span>
+          <span class="chip">Diagnostic de VM</span>
+          <span class="chip">Allocation de ressources</span>
+          <span class="chip">Réseaux virtuels / VLAN</span>
+          <span class="chip">Thin provisioning</span>
+          <span class="chip">Veeam Backup &amp; Replication</span>
+          <span class="chip">Contrôle des sauvegardes</span>
+          <span class="chip">Stockage HPE MSA</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <h3>🌐 Réseaux &amp; Sécurité</h3>
+        <div class="chip-list">
+          <span class="chip">TCP/IP</span>
+          <span class="chip">VLAN</span>
+          <span class="chip">Routage &amp; passerelles</span>
+          <span class="chip">DHCP / DNS</span>
+          <span class="chip">Ports tagged / untagged</span>
+          <span class="chip">LACP</span>
+          <span class="chip">Wi-Fi professionnel</span>
+          <span class="chip">VPN</span>
+          <span class="chip">Auth. par certificat</span>
+          <span class="chip">Journaux de pare-feu</span>
+          <span class="chip">Alcatel OmniSwitch / AOS</span>
+          <span class="chip">OmniVista</span>
+          <span class="chip">HPE Instant On</span>
+          <span class="chip">Fortinet</span>
+          <span class="chip">WatchGuard</span>
+          <span class="chip">Centreon</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <h3>🛠️ Exploitation &amp; Support</h3>
+        <div class="chip-list">
+          <span class="chip">NinjaOne</span>
+          <span class="chip">Gestion de parc</span>
+          <span class="chip">Support à distance &amp; sur site</span>
+          <span class="chip">Diagnostic matériel/système/réseau</span>
+          <span class="chip">Déploiement logiciels &amp; imprimantes</span>
+          <span class="chip">Analyse de journaux</span>
+          <span class="chip">Documentation technique</span>
+          <span class="chip">Procédures &amp; modes opératoires</span>
+          <span class="chip">Suivi d'incidents</span>
+          <span class="chip">Coordination prestataires</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <h3>🧭 Méthode &amp; qualités professionnelles</h3>
+        <div class="chip-list">
+          <span class="chip">Analyse &amp; résolution de problèmes</span>
+          <span class="chip">Autonomie</span>
+          <span class="chip">Reprise d'infrastructure existante</span>
+          <span class="chip">Simulations &amp; contrôles avant action</span>
+          <span class="chip">Sens du service client</span>
+          <span class="chip">Adaptabilité technique</span>
+          <span class="chip">Vulgarisation technique</span>
+          <span class="chip">Documentation rigoureuse</span>
+          <span class="chip">Gestion des priorités</span>
+          <span class="chip">Travail d'équipe</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projets">
+    <div class="section-head">
+      <span class="eyebrow">Mises en pratique</span>
+      <h2>Projets</h2>
+      <p>Cette section sera enrichie progressivement avec des projets concrets : scripts, migrations, déploiements, avec captures d'écran et explications.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <span class="icon">🧩</span>
+        <h3>Projet à venir</h3>
+        <p>Un premier projet sera bientôt détaillé ici.</p>
+      </div>
+      <div class="project-card">
+        <span class="icon">🧩</span>
+        <h3>Projet à venir</h3>
+        <p>Un second projet sera bientôt détaillé ici.</p>
+      </div>
+      <div class="project-card">
+        <span class="icon">🧩</span>
+        <h3>Projet à venir</h3>
+        <p>D'autres projets suivront au fil du temps.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-head">
+      <span class="eyebrow">Discutons</span>
+      <h2>Contact</h2>
+    </div>
+    <div class="contact-list">
+      <a class="contact-item" href="mailto:lorito.ludovic@gmail.com">
+        <span class="icon">✉️</span> lorito.ludovic@gmail.com
+      </a>
+      <a class="contact-item" href="https://www.linkedin.com/in/ludovic-lorito-a72a772a6" target="_blank" rel="noopener">
+        <span class="icon">💼</span> LinkedIn
+      </a>
+      <a class="contact-item" href="https://github.com/loritoludovic-maker" target="_blank" rel="noopener">
+        <span class="icon">💻</span> GitHub
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 Ludovic Lorito — Portfolio professionnel
+</footer>
+
+</body>
+</html>
