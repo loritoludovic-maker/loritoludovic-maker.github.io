@@ -1,0 +1,6111 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Fiches, QCM interactifs, examens blancs et simulation orale pour préparer le titre TSSR.">
+      
+      
+      
+        <link rel="canonical" href="https://loritoludovic-maker.github.io/revision-tssr/CCP3-Maintenance-Linux/MSP/MSP-Pratique-Services-Linux/">
+      
+      
+        <link rel="prev" href="../../Questions-Ouvertes/Correction/Questions-Ouvertes-Linux-20Q-CORRECTIONS/">
+      
+      
+        <link rel="next" href="../../../quiz/ccp4/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>MSP pratique — services Linux - Révisions TSSR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#msp-pratique-services-linux" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../.." title="Révisions TSSR" class="md-header__button md-logo" aria-label="Révisions TSSR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Révisions TSSR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MSP pratique — services Linux
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal"  aria-label="Passer en mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer en mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="teal"  aria-label="Passer en mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer en mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../START-HERE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Démarrer
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../CCP/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Les 9 CCP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../quiz/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  QCM interactifs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Examens-Blancs/Examen-1/EXAMEN-BLANC-1-EVALUATION/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Examens blancs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Simulation-Orale-Complete/INDEX-SIMULATION-ORALE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Simulation orale
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../quiz/scores/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Mes scores
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Révisions TSSR" class="md-nav__button md-logo" aria-label="Révisions TSSR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    Révisions TSSR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Démarrer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Démarrer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../START-HERE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commencer ici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PRESENTATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Présentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../README-GUIDE-REVISION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide de révision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PLANNING-REVISION-5-JOURS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planning 5 jours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX-GENERAL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index général
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SUIVI-SCORES-PROGRESSION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche de suivi (papier)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../CCP/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Les 9 CCP
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Les 9 CCP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP1 · Support utilisateur
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP1 · Support utilisateur
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/INDEX-CCP1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/Fiche-Revision/FICHE-CCP1-Support-Utilisateur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Support Utilisateur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/QCM/Evaluation/QCM-Support-ITIL-40Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/QCM/Correction/QCM-Support-ITIL-40Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP1-Support-10Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP1-Support-10Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP2 · Windows & Active Directory
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP2 · Windows & Active Directory
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/INDEX-CCP2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/Fiche-Revision/FICHE-CCP2-Windows-AD-PowerShell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Windows AD PowerShell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/QCM/Evaluation/QCM-Windows-ActiveDirectory-30Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/QCM/Correction/QCM-Windows-ActiveDirectory-30Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP2-Windows-AD-15Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP2-Windows-AD-15Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP3 · Maintenance Linux
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP3 · Maintenance Linux
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../INDEX-CCP3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Fiche-Revision/FICHE-01-Linux-Commandes-Essentielles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Linux Commandes Essentielles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../QCM/Evaluation/QCM-Linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../QCM/Correction/QCM-Linux-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Questions-Ouvertes/Evaluation/Questions-Ouvertes-Linux-20Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Questions-Ouvertes/Correction/Questions-Ouvertes-Linux-20Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MSP pratique — services Linux
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MSP pratique — services Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-et-configuration-dns-dhcp-apache-debian-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation et Configuration DNS, DHCP, Apache (Debian 12)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectif-du-msp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 OBJECTIF DU MSP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 PRÉREQUIS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 PRÉREQUIS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-reseau-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration réseau de base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mise-a-jour-systeme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mise à jour système
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-1-installation-dns-bind9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 PARTIE 1 : INSTALLATION DNS (BIND9)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 PARTIE 1 : INSTALLATION DNS (BIND9)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etape-1-installation-de-bind9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 1 : Installation de Bind9
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-2-configuration-du-serveur-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 2 : Configuration du serveur DNS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-3-creer-la-zone-de-recherche-directe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 3 : Créer la zone de recherche directe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-4-creer-les-fichiers-de-zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 4 : Créer les fichiers de zones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-5-verifier-la-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 5 : Vérifier la configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-6-demarrer-et-activer-le-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 6 : Démarrer et activer le service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-7-tester-la-resolution-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 7 : Tester la résolution DNS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-8-configurer-le-serveur-comme-dns-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 8 : Configurer le serveur comme DNS principal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depannage-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Dépannage DNS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-2-installation-dhcp-isc-dhcp-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📡 PARTIE 2 : INSTALLATION DHCP (ISC-DHCP-SERVER)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📡 PARTIE 2 : INSTALLATION DHCP (ISC-DHCP-SERVER)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etape-1-installation-du-serveur-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 1 : Installation du serveur DHCP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-2-configurer-linterface-reseau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 2 : Configurer l'interface réseau
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-3-configuration-du-serveur-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 3 : Configuration du serveur DHCP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-4-verifier-la-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 4 : Vérifier la configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-5-demarrer-et-activer-le-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 5 : Démarrer et activer le service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-6-tester-le-serveur-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 6 : Tester le serveur DHCP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-7-configurer-le-pare-feu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 7 : Configurer le pare-feu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depannage-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Dépannage DHCP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-3-installation-apache2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 PARTIE 3 : INSTALLATION APACHE2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 PARTIE 3 : INSTALLATION APACHE2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etape-1-installation-dapache2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 1 : Installation d'Apache2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-2-configuration-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 2 : Configuration de base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-3-configuration-du-serveur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 3 : Configuration du serveur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-4-creer-une-page-web-de-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 4 : Créer une page web de test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-5-definir-les-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 5 : Définir les permissions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-6-activer-modules-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 6 : Activer modules utiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-7-configurer-le-pare-feu_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 7 : Configurer le pare-feu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-8-tester-le-serveur-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 8 : Tester le serveur web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-9-installer-php-optionnel-mais-recommande" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 9 : Installer PHP (optionnel mais recommandé)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-10-creer-un-virtual-host-supplementaire-optionnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 10 : Créer un Virtual Host supplémentaire (optionnel)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depannage-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Dépannage Apache
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commandes-de-verification-rapide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 COMMANDES DE VÉRIFICATION RAPIDE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 COMMANDES DE VÉRIFICATION RAPIDE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verifier-tous-les-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vérifier tous les services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests-de-connectivite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tests de connectivité
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 CHECKLIST COMPLÈTE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 CHECKLIST COMPLÈTE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns-bind9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ DNS (Bind9)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dhcp-isc-dhcp-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ DHCP (isc-dhcp-server)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apache2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Apache2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timing-pour-lexamen-45-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ TIMING POUR L'EXAMEN (45 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scenarios-dincidents-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 SCÉNARIOS D'INCIDENTS TYPES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 SCÉNARIOS D&#39;INCIDENTS TYPES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-dns-zone-mal-configuree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 1 : DNS - Zone mal configurée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-dhcp-mauvais-subnet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 2 : DHCP - Mauvais subnet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-apache-permissions-incorrectes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 3 : Apache - Permissions incorrectes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commandes-a-connaitre-par-cur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 COMMANDES À CONNAÎTRE PAR CŒUR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 COMMANDES À CONNAÎTRE PAR CŒUR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns-bind9_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS (Bind9)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dhcp-isc-dhcp-server_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DHCP (isc-dhcp-server)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apache2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apache2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Général
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conseils-pour-lexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎓 CONSEILS POUR L'EXAMEN
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP4 · Services réseau
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP4 · Services réseau
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/INDEX-CCP4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/Fiches-Revisions/FICHE-02-Ports-Protocoles-Acronymes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Ports Protocoles Acronymes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/Fiches-Revisions/FICHE-04-Reseau-Subnetting-CIDR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Reseau Subnetting CIDR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/Fiches-Revisions/FICHE-05-Commandes-Cisco-IOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Commandes Cisco IOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/QCM/Evaluation/QCM-Reseau/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/QCM/Correction/QCM-Reseau-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/Questions-Ouvertes/Evaluation/Questions-Ouvertes-Reseau/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/Questions-Ouvertes/Correction/Questions-Ouvertes-Reseau-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/Exercices-Subnetting/Evaluation/Exercices-Subnetting-20-Exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices subnetting — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/Exercices-Subnetting/Correction/Exercices-Subnetting-20-Exercices-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices subnetting — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP5 · Virtualisation VMware
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP5 · Virtualisation VMware
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/INDEX-CCP5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/Fiche-Revisions/FICHE-CCP5-VMware-vSphere/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — VMware vSphere
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/QCM/Evaluation/QCM-Virtualisation-40Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/QCM/Correction/QCM-Virtualisation-40Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP5-VMware-10Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP5-VMware-10Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP6 · Scripts & automatisation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP6 · Scripts & automatisation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/INDEX-CCP6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/Fiche-Revisions/FICHE-06-Scripting-Bash-PowerShell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Scripting Bash PowerShell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/QCM/Evaluation/QCM-CCP6-Scripting-30Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/QCM/Correction/QCM-CCP6-Scripting-30Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP6-Scripting-10Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP6-Scripting-10Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP7 · Sécurisation accès Internet
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP7 · Sécurisation accès Internet
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/INDEX-CCP7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/Fiche-Revisions/FICHE-CCP7-Securite-Reseau-pfSense/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Securite Reseau pfSense
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/QCM/Evaluation/QCM-CCP7-Securite-Reseau-25Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/QCM/Correction/QCM-CCP7-Securite-Reseau-25Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP7-Securite-8Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP7-Securite-8Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP8 · Sauvegardes & restaurations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP8 · Sauvegardes & restaurations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/INDEX-CCP8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/Fiche-Revisions/FICHE-03-Sauvegardes-PRA-PCA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Sauvegardes PRA PCA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/QCM/Evaluation/QCM-CCP8-Sauvegardes-20Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/QCM/Correction/QCM-CCP8-Sauvegardes-20Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/Questions-Ouvertes/Evaluation/Questions-Ouvertes-Sauvegardes-15Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/Questions-Ouvertes/Correction/Questions-Ouvertes-Sauvegardes-15Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP9 · Déploiement de postes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP9 · Déploiement de postes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/INDEX-CCP9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/Fiche-Revisions/FICHE-CCP9-Deploiement-Postes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Deploiement Postes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/QCM/Evaluation/QCM-CCP9-Deploiement-20Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/QCM/Correction/QCM-CCP9-Deploiement-20Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP9-Deploiement-6Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP9-Deploiement-6Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactifs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examens blancs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examens blancs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Examens-Blancs/Examen-1/EXAMEN-BLANC-1-EVALUATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen blanc 1 — sujet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Examens-Blancs/Examen-1/EXAMEN-BLANC-1-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen blanc 1 — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Examens-Blancs/Examen-2/EXAMEN-BLANC-2-EVALUATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen blanc 2 — sujet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Examens-Blancs/Examen-2/EXAMEN-BLANC-2-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen blanc 2 — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation orale
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Simulation orale
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simulation-Orale-Complete/INDEX-SIMULATION-ORALE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sommaire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simulation-Orale-Complete/SIMULATION-ORALE-PARTIE1-MSP-PRATIQUE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partie 1 — MSP pratique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simulation-Orale-Complete/SIMULATION-ORALE-PARTIE2-ENTRETIEN-TECHNIQUE-COMPLET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partie 2 — Entretien technique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simulation-Orale-Complete/SIMULATION-ORALE-PARTIE3-ENTRETIEN-FINAL-COMPLET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partie 3 — Entretien final
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/scores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mes scores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-et-configuration-dns-dhcp-apache-debian-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation et Configuration DNS, DHCP, Apache (Debian 12)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectif-du-msp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 OBJECTIF DU MSP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 PRÉREQUIS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 PRÉREQUIS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-reseau-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration réseau de base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mise-a-jour-systeme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mise à jour système
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-1-installation-dns-bind9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 PARTIE 1 : INSTALLATION DNS (BIND9)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 PARTIE 1 : INSTALLATION DNS (BIND9)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etape-1-installation-de-bind9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 1 : Installation de Bind9
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-2-configuration-du-serveur-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 2 : Configuration du serveur DNS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-3-creer-la-zone-de-recherche-directe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 3 : Créer la zone de recherche directe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-4-creer-les-fichiers-de-zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 4 : Créer les fichiers de zones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-5-verifier-la-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 5 : Vérifier la configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-6-demarrer-et-activer-le-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 6 : Démarrer et activer le service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-7-tester-la-resolution-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 7 : Tester la résolution DNS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-8-configurer-le-serveur-comme-dns-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 8 : Configurer le serveur comme DNS principal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depannage-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Dépannage DNS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-2-installation-dhcp-isc-dhcp-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📡 PARTIE 2 : INSTALLATION DHCP (ISC-DHCP-SERVER)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📡 PARTIE 2 : INSTALLATION DHCP (ISC-DHCP-SERVER)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etape-1-installation-du-serveur-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 1 : Installation du serveur DHCP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-2-configurer-linterface-reseau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 2 : Configurer l'interface réseau
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-3-configuration-du-serveur-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 3 : Configuration du serveur DHCP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-4-verifier-la-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 4 : Vérifier la configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-5-demarrer-et-activer-le-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 5 : Démarrer et activer le service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-6-tester-le-serveur-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 6 : Tester le serveur DHCP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-7-configurer-le-pare-feu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 7 : Configurer le pare-feu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depannage-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Dépannage DHCP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-3-installation-apache2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 PARTIE 3 : INSTALLATION APACHE2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 PARTIE 3 : INSTALLATION APACHE2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etape-1-installation-dapache2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 1 : Installation d'Apache2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-2-configuration-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 2 : Configuration de base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-3-configuration-du-serveur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 3 : Configuration du serveur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-4-creer-une-page-web-de-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 4 : Créer une page web de test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-5-definir-les-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 5 : Définir les permissions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-6-activer-modules-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 6 : Activer modules utiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-7-configurer-le-pare-feu_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 7 : Configurer le pare-feu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-8-tester-le-serveur-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 8 : Tester le serveur web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-9-installer-php-optionnel-mais-recommande" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 9 : Installer PHP (optionnel mais recommandé)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-10-creer-un-virtual-host-supplementaire-optionnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 10 : Créer un Virtual Host supplémentaire (optionnel)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depannage-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Dépannage Apache
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commandes-de-verification-rapide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 COMMANDES DE VÉRIFICATION RAPIDE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 COMMANDES DE VÉRIFICATION RAPIDE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verifier-tous-les-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vérifier tous les services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests-de-connectivite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tests de connectivité
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 CHECKLIST COMPLÈTE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 CHECKLIST COMPLÈTE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns-bind9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ DNS (Bind9)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dhcp-isc-dhcp-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ DHCP (isc-dhcp-server)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apache2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Apache2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timing-pour-lexamen-45-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ TIMING POUR L'EXAMEN (45 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scenarios-dincidents-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 SCÉNARIOS D'INCIDENTS TYPES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 SCÉNARIOS D&#39;INCIDENTS TYPES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-dns-zone-mal-configuree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 1 : DNS - Zone mal configurée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-dhcp-mauvais-subnet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 2 : DHCP - Mauvais subnet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-apache-permissions-incorrectes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 3 : Apache - Permissions incorrectes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commandes-a-connaitre-par-cur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 COMMANDES À CONNAÎTRE PAR CŒUR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 COMMANDES À CONNAÎTRE PAR CŒUR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns-bind9_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS (Bind9)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dhcp-isc-dhcp-server_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DHCP (isc-dhcp-server)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apache2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apache2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Général
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conseils-pour-lexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎓 CONSEILS POUR L'EXAMEN
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../../CCP/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Les 9 CCP
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../../quiz/ccp3/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    CCP3 · Maintenance Linux
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="msp-pratique-services-linux">🐧 MSP PRATIQUE - SERVICES LINUX<a class="headerlink" href="#msp-pratique-services-linux" title="Permanent link">&para;</a></h1>
+<h2 id="installation-et-configuration-dns-dhcp-apache-debian-12">Installation et Configuration DNS, DHCP, Apache (Debian 12)<a class="headerlink" href="#installation-et-configuration-dns-dhcp-apache-debian-12" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Pour l'examen</strong> : Tu auras 45 minutes pour résoudre 3 incidents pratiques. Maîtrise ces installations de base !</p>
+</blockquote>
+<hr />
+<h2 id="objectif-du-msp">🎯 OBJECTIF DU MSP<a class="headerlink" href="#objectif-du-msp" title="Permanent link">&para;</a></h2>
+<p><strong>Contexte entreprise</strong> : PME 50 utilisateurs, infrastructure à mettre en place</p>
+<p><strong>Services à déployer</strong> :
+1. <strong>DNS</strong> (Bind9) : Résolution de noms interne
+2. <strong>DHCP</strong> (isc-dhcp-server) : Attribution IP automatique
+3. <strong>Apache2</strong> : Serveur web intranet</p>
+<p><strong>Système</strong> : Debian 12 (Bookworm)</p>
+<hr />
+<h2 id="prerequis">📋 PRÉREQUIS<a class="headerlink" href="#prerequis" title="Permanent link">&para;</a></h2>
+<h3 id="configuration-reseau-de-base">Configuration réseau de base<a class="headerlink" href="#configuration-reseau-de-base" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Afficher configuration réseau</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>ip<span class="w"> </span>addr<span class="w"> </span>show
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>ip<span class="w"> </span>route<span class="w"> </span>show
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># Configurer IP statique (fichier /etc/network/interfaces)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/network/interfaces
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># Contenu :</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>auto<span class="w"> </span>ens33
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>iface<span class="w"> </span>ens33<span class="w"> </span>inet<span class="w"> </span>static
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span>address<span class="w"> </span><span class="m">192</span>.168.1.10
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span>netmask<span class="w"> </span><span class="m">255</span>.255.255.0
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span>gateway<span class="w"> </span><span class="m">192</span>.168.1.1
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span>dns-nameservers<span class="w"> </span><span class="m">8</span>.8.8.8
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c1"># Redémarrer réseau</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>networking
+</code></pre></div>
+<h3 id="mise-a-jour-systeme">Mise à jour système<a class="headerlink" href="#mise-a-jour-systeme" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Mettre à jour les dépôts</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Mettre à jour le système</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Vérifier version Debian</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>cat<span class="w"> </span>/etc/debian_version
+</code></pre></div>
+<hr />
+<h2 id="partie-1-installation-dns-bind9">🌐 PARTIE 1 : INSTALLATION DNS (BIND9)<a class="headerlink" href="#partie-1-installation-dns-bind9" title="Permanent link">&para;</a></h2>
+<h3 id="etape-1-installation-de-bind9">Étape 1 : Installation de Bind9<a class="headerlink" href="#etape-1-installation-de-bind9" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Installer Bind9 et outils</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>bind9<span class="w"> </span>bind9utils<span class="w"> </span>bind9-doc<span class="w"> </span>dnsutils<span class="w"> </span>-y
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Vérifier installation</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>dpkg<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>bind9
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># Vérifier version</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>named<span class="w"> </span>-v
+</code></pre></div>
+<h3 id="etape-2-configuration-du-serveur-dns">Étape 2 : Configuration du serveur DNS<a class="headerlink" href="#etape-2-configuration-du-serveur-dns" title="Permanent link">&para;</a></h3>
+<p><strong>Fichier principal de configuration</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/bind/named.conf.options
+</code></pre></div></p>
+<p><strong>Contenu</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>options {
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    directory "/var/cache/bind";
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    // Forwarders (DNS externes si résolution externe nécessaire)
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    forwarders {
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        8.8.8.8;
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        8.8.4.4;
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    };
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    // Autoriser requêtes depuis le réseau local
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    allow-query { localhost; 192.168.1.0/24; };
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    // Désactiver transfert de zone (sécurité)
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    allow-transfer { none; };
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    // Écouter sur IPv4 uniquement
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    listen-on { any; };
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    listen-on-v6 { none; };
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>    // Autoriser récursion pour le réseau local
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>    recursion yes;
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>    allow-recursion { localhost; 192.168.1.0/24; };
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>    dnssec-validation auto;
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>};
+</code></pre></div></p>
+<h3 id="etape-3-creer-la-zone-de-recherche-directe">Étape 3 : Créer la zone de recherche directe<a class="headerlink" href="#etape-3-creer-la-zone-de-recherche-directe" title="Permanent link">&para;</a></h3>
+<p><strong>Déclarer la zone</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/bind/named.conf.local
+</code></pre></div></p>
+<p><strong>Contenu</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>// Zone de recherche directe (Forward)
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>zone "entreprise.local" {
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    type master;
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    file "/etc/bind/zones/db.entreprise.local";
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    allow-update { none; };
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>};
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>// Zone de recherche inversée (Reverse)
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>zone "1.168.192.in-addr.arpa" {
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    type master;
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    file "/etc/bind/zones/db.192.168.1";
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    allow-update { none; };
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>};
+</code></pre></div></p>
+<h3 id="etape-4-creer-les-fichiers-de-zones">Étape 4 : Créer les fichiers de zones<a class="headerlink" href="#etape-4-creer-les-fichiers-de-zones" title="Permanent link">&para;</a></h3>
+<p><strong>Créer le répertoire</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>/etc/bind/zones
+</code></pre></div></p>
+<p><strong>Zone de recherche directe</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/bind/zones/db.entreprise.local
+</code></pre></div></p>
+<p><strong>Contenu</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$TTL    86400
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>@       IN      SOA     ns1.entreprise.local. admin.entreprise.local. (
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>                              2024111201         ; Serial (YYYYMMDDNN)
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>                              3600               ; Refresh (1h)
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>                              1800               ; Retry (30min)
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>                              604800             ; Expire (1 semaine)
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>                              86400 )            ; Negative Cache TTL (1 jour)
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>;
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>; Serveurs de noms
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>@       IN      NS      ns1.entreprise.local.
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>; Enregistrements A (IPv4)
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>ns1             IN      A       192.168.1.10
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>dns             IN      A       192.168.1.10
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>srv-web         IN      A       192.168.1.20
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>srv-fichiers    IN      A       192.168.1.30
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>pc01            IN      A       192.168.1.100
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>pc02            IN      A       192.168.1.101
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>; Alias (CNAME)
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>www             IN      CNAME   srv-web
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>intranet        IN      CNAME   srv-web
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>ftp             IN      CNAME   srv-fichiers
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>; Enregistrement MX (Mail)
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>@               IN      MX  10  mail.entreprise.local.
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>mail            IN      A       192.168.1.25
+</code></pre></div></p>
+<p><strong>Zone de recherche inversée</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/bind/zones/db.192.168.1
+</code></pre></div></p>
+<p><strong>Contenu</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>$TTL    86400
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>@       IN      SOA     ns1.entreprise.local. admin.entreprise.local. (
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>                              2024111201         ; Serial
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>                              3600               ; Refresh
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>                              1800               ; Retry
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>                              604800             ; Expire
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>                              86400 )            ; Negative Cache TTL
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>;
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>; Serveurs de noms
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>@       IN      NS      ns1.entreprise.local.
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>; Enregistrements PTR (IP → Nom)
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>10      IN      PTR     ns1.entreprise.local.
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>20      IN      PTR     srv-web.entreprise.local.
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>30      IN      PTR     srv-fichiers.entreprise.local.
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>100     IN      PTR     pc01.entreprise.local.
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>101     IN      PTR     pc02.entreprise.local.
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>25      IN      PTR     mail.entreprise.local.
+</code></pre></div></p>
+<h3 id="etape-5-verifier-la-configuration">Étape 5 : Vérifier la configuration<a class="headerlink" href="#etape-5-verifier-la-configuration" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Vérifier syntaxe configuration principale</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>sudo<span class="w"> </span>named-checkconf
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># Vérifier syntaxe zone directe</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>sudo<span class="w"> </span>named-checkzone<span class="w"> </span>entreprise.local<span class="w"> </span>/etc/bind/zones/db.entreprise.local
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="c1"># Vérifier syntaxe zone inversée</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>sudo<span class="w"> </span>named-checkzone<span class="w"> </span><span class="m">1</span>.168.192.in-addr.arpa<span class="w"> </span>/etc/bind/zones/db.192.168.1
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="c1"># Si tout OK : "OK" affiché</span>
+</code></pre></div>
+<h3 id="etape-6-demarrer-et-activer-le-service">Étape 6 : Démarrer et activer le service<a class="headerlink" href="#etape-6-demarrer-et-activer-le-service" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Redémarrer Bind9</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>bind9
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="c1"># Vérifier statut</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>bind9
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="c1"># Activer au démarrage</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>bind9
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="c1"># Vérifier que le service écoute sur le port 53</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>sudo<span class="w"> </span>ss<span class="w"> </span>-tunlp<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>:53
+</code></pre></div>
+<h3 id="etape-7-tester-la-resolution-dns">Étape 7 : Tester la résolution DNS<a class="headerlink" href="#etape-7-tester-la-resolution-dns" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Tester résolution directe (nom → IP)</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>dig<span class="w"> </span>@192.168.1.10<span class="w"> </span>ns1.entreprise.local
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>dig<span class="w"> </span>@192.168.1.10<span class="w"> </span>srv-web.entreprise.local
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>nslookup<span class="w"> </span>www.entreprise.local<span class="w"> </span><span class="m">192</span>.168.1.10
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="c1"># Tester résolution inversée (IP → nom)</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>dig<span class="w"> </span>@192.168.1.10<span class="w"> </span>-x<span class="w"> </span><span class="m">192</span>.168.1.20
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="c1"># Tester depuis un autre PC (configurer DNS = 192.168.1.10)</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>ping<span class="w"> </span>srv-web.entreprise.local
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>ping<span class="w"> </span>www.entreprise.local
+</code></pre></div>
+<h3 id="etape-8-configurer-le-serveur-comme-dns-principal">Étape 8 : Configurer le serveur comme DNS principal<a class="headerlink" href="#etape-8-configurer-le-serveur-comme-dns-principal" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># Modifier /etc/resolv.conf</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/resolv.conf
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="c1"># Contenu :</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>nameserver<span class="w"> </span><span class="m">192</span>.168.1.10
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>search<span class="w"> </span>entreprise.local
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="c1"># Rendre permanent (sinon écrasé au reboot)</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>sudo<span class="w"> </span>chattr<span class="w"> </span>+i<span class="w"> </span>/etc/resolv.conf
+</code></pre></div>
+<h3 id="depannage-dns">🛠️ Dépannage DNS<a class="headerlink" href="#depannage-dns" title="Permanent link">&para;</a></h3>
+<p><strong>Problème : Service ne démarre pas</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># Vérifier logs</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>sudo<span class="w"> </span>journalctl<span class="w"> </span>-xeu<span class="w"> </span>bind9
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>sudo<span class="w"> </span>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/syslog<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>named
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="c1"># Erreurs fréquentes :</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="c1"># - Syntaxe zone → named-checkzone</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="c1"># - Port 53 occupé → sudo ss -tunlp | grep :53</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="c1"># - Permissions → sudo chown -R bind:bind /etc/bind/zones</span>
+</code></pre></div></p>
+<p><strong>Problème : Résolution ne fonctionne pas</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># Vérifier pare-feu</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">53</span>/tcp
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">53</span>/udp
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="c1"># Tester localement</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>dig<span class="w"> </span>@localhost<span class="w"> </span>entreprise.local
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="c1"># Vérifier ACL (allow-query dans named.conf.options)</span>
+</code></pre></div></p>
+<hr />
+<h2 id="partie-2-installation-dhcp-isc-dhcp-server">📡 PARTIE 2 : INSTALLATION DHCP (ISC-DHCP-SERVER)<a class="headerlink" href="#partie-2-installation-dhcp-isc-dhcp-server" title="Permanent link">&para;</a></h2>
+<h3 id="etape-1-installation-du-serveur-dhcp">Étape 1 : Installation du serveur DHCP<a class="headerlink" href="#etape-1-installation-du-serveur-dhcp" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># Installer isc-dhcp-server</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>isc-dhcp-server<span class="w"> </span>-y
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="c1"># Vérifier installation</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>dpkg<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>isc-dhcp-server
+</code></pre></div>
+<h3 id="etape-2-configurer-linterface-reseau">Étape 2 : Configurer l'interface réseau<a class="headerlink" href="#etape-2-configurer-linterface-reseau" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># Spécifier l'interface d'écoute</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/default/isc-dhcp-server
+</code></pre></div>
+<p><strong>Contenu</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># Interface IPv4</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="nv">INTERFACESv4</span><span class="o">=</span><span class="s2">"ens33"</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="c1"># Désactiver IPv6 (si non utilisé)</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="nv">INTERFACESv6</span><span class="o">=</span><span class="s2">""</span>
+</code></pre></div></p>
+<h3 id="etape-3-configuration-du-serveur-dhcp">Étape 3 : Configuration du serveur DHCP<a class="headerlink" href="#etape-3-configuration-du-serveur-dhcp" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1"># Éditer le fichier de configuration principal</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/dhcp/dhcpd.conf
+</code></pre></div>
+<p><strong>Contenu</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a># Configuration globale
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>default-lease-time 86400;              # Bail par défaut : 1 jour
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>max-lease-time 604800;                 # Bail maximum : 7 jours
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>authoritative;                         # Serveur autoritaire
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a># Options globales
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>option domain-name "entreprise.local";
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>option domain-name-servers 192.168.1.10;
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a># Logging
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>log-facility local7;
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>
+<a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a># Sous-réseau 192.168.1.0/24
+<a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a>subnet 192.168.1.0 netmask 255.255.255.0 {
+<a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a>    # Plage d'adresses dynamiques
+<a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a>    range 192.168.1.100 192.168.1.200;
+<a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a>
+<a id="__codelineno-22-18" name="__codelineno-22-18" href="#__codelineno-22-18"></a>    # Passerelle par défaut
+<a id="__codelineno-22-19" name="__codelineno-22-19" href="#__codelineno-22-19"></a>    option routers 192.168.1.1;
+<a id="__codelineno-22-20" name="__codelineno-22-20" href="#__codelineno-22-20"></a>
+<a id="__codelineno-22-21" name="__codelineno-22-21" href="#__codelineno-22-21"></a>    # Serveurs DNS
+<a id="__codelineno-22-22" name="__codelineno-22-22" href="#__codelineno-22-22"></a>    option domain-name-servers 192.168.1.10, 8.8.8.8;
+<a id="__codelineno-22-23" name="__codelineno-22-23" href="#__codelineno-22-23"></a>
+<a id="__codelineno-22-24" name="__codelineno-22-24" href="#__codelineno-22-24"></a>    # Serveur NTP (optionnel)
+<a id="__codelineno-22-25" name="__codelineno-22-25" href="#__codelineno-22-25"></a>    option ntp-servers 192.168.1.10;
+<a id="__codelineno-22-26" name="__codelineno-22-26" href="#__codelineno-22-26"></a>
+<a id="__codelineno-22-27" name="__codelineno-22-27" href="#__codelineno-22-27"></a>    # Nom de domaine
+<a id="__codelineno-22-28" name="__codelineno-22-28" href="#__codelineno-22-28"></a>    option domain-name "entreprise.local";
+<a id="__codelineno-22-29" name="__codelineno-22-29" href="#__codelineno-22-29"></a>}
+<a id="__codelineno-22-30" name="__codelineno-22-30" href="#__codelineno-22-30"></a>
+<a id="__codelineno-22-31" name="__codelineno-22-31" href="#__codelineno-22-31"></a># Exclusions (adresses non distribuées)
+<a id="__codelineno-22-32" name="__codelineno-22-32" href="#__codelineno-22-32"></a># Déjà gérées par la plage (100-200)
+<a id="__codelineno-22-33" name="__codelineno-22-33" href="#__codelineno-22-33"></a># Serveurs : 192.168.1.1-99 et 201-254 (IP statiques)
+<a id="__codelineno-22-34" name="__codelineno-22-34" href="#__codelineno-22-34"></a>
+<a id="__codelineno-22-35" name="__codelineno-22-35" href="#__codelineno-22-35"></a># Réservations (IP fixes par adresse MAC)
+<a id="__codelineno-22-36" name="__codelineno-22-36" href="#__codelineno-22-36"></a>host imprimante-compta {
+<a id="__codelineno-22-37" name="__codelineno-22-37" href="#__codelineno-22-37"></a>    hardware ethernet 00:1A:2B:3C:4D:5E;
+<a id="__codelineno-22-38" name="__codelineno-22-38" href="#__codelineno-22-38"></a>    fixed-address 192.168.1.50;
+<a id="__codelineno-22-39" name="__codelineno-22-39" href="#__codelineno-22-39"></a>}
+<a id="__codelineno-22-40" name="__codelineno-22-40" href="#__codelineno-22-40"></a>
+<a id="__codelineno-22-41" name="__codelineno-22-41" href="#__codelineno-22-41"></a>host pc-direction {
+<a id="__codelineno-22-42" name="__codelineno-22-42" href="#__codelineno-22-42"></a>    hardware ethernet 00:11:22:33:44:55;
+<a id="__codelineno-22-43" name="__codelineno-22-43" href="#__codelineno-22-43"></a>    fixed-address 192.168.1.51;
+<a id="__codelineno-22-44" name="__codelineno-22-44" href="#__codelineno-22-44"></a>}
+<a id="__codelineno-22-45" name="__codelineno-22-45" href="#__codelineno-22-45"></a>
+<a id="__codelineno-22-46" name="__codelineno-22-46" href="#__codelineno-22-46"></a>host serveur-backup {
+<a id="__codelineno-22-47" name="__codelineno-22-47" href="#__codelineno-22-47"></a>    hardware ethernet 08:00:27:AB:CD:EF;
+<a id="__codelineno-22-48" name="__codelineno-22-48" href="#__codelineno-22-48"></a>    fixed-address 192.168.1.60;
+<a id="__codelineno-22-49" name="__codelineno-22-49" href="#__codelineno-22-49"></a>}
+</code></pre></div></p>
+<h3 id="etape-4-verifier-la-configuration">Étape 4 : Vérifier la configuration<a class="headerlink" href="#etape-4-verifier-la-configuration" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1"># Vérifier syntaxe du fichier</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>sudo<span class="w"> </span>dhcpd<span class="w"> </span>-t<span class="w"> </span>-cf<span class="w"> </span>/etc/dhcp/dhcpd.conf
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="c1"># Si OK : "Configuration file valid"</span>
+</code></pre></div>
+<h3 id="etape-5-demarrer-et-activer-le-service">Étape 5 : Démarrer et activer le service<a class="headerlink" href="#etape-5-demarrer-et-activer-le-service" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c1"># Redémarrer le service DHCP</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>isc-dhcp-server
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="c1"># Vérifier statut</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>isc-dhcp-server
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="c1"># Activer au démarrage</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>isc-dhcp-server
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="c1"># Vérifier que le service écoute sur le port 67</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>sudo<span class="w"> </span>ss<span class="w"> </span>-unp<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>:67
+</code></pre></div>
+<h3 id="etape-6-tester-le-serveur-dhcp">Étape 6 : Tester le serveur DHCP<a class="headerlink" href="#etape-6-tester-le-serveur-dhcp" title="Permanent link">&para;</a></h3>
+<p><strong>Depuis un client</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="c1"># Libérer le bail actuel</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>sudo<span class="w"> </span>dhclient<span class="w"> </span>-r
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="c1"># Demander nouvelle IP</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>sudo<span class="w"> </span>dhclient<span class="w"> </span>-v
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="c1"># Vérifier IP obtenue</span>
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>ip<span class="w"> </span>addr<span class="w"> </span>show
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>
+<a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a><span class="c1"># Vérifier configuration reçue</span>
+<a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>cat<span class="w"> </span>/var/lib/dhcp/dhclient.leases
+</code></pre></div></p>
+<p><strong>Sur le serveur</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="c1"># Voir les baux actifs</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>cat<span class="w"> </span>/var/lib/dhcp/dhcpd.leases
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="c1"># Logs en temps réel</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>sudo<span class="w"> </span>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/syslog<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>dhcpd
+</code></pre></div></p>
+<h3 id="etape-7-configurer-le-pare-feu">Étape 7 : Configurer le pare-feu<a class="headerlink" href="#etape-7-configurer-le-pare-feu" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="c1"># Autoriser DHCP</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">67</span>/udp
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">68</span>/udp
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="c1"># Vérifier règles</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>status
+</code></pre></div>
+<h3 id="depannage-dhcp">🛠️ Dépannage DHCP<a class="headerlink" href="#depannage-dhcp" title="Permanent link">&para;</a></h3>
+<p><strong>Problème : Service ne démarre pas</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="c1"># Vérifier logs</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>sudo<span class="w"> </span>journalctl<span class="w"> </span>-xeu<span class="w"> </span>isc-dhcp-server
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>sudo<span class="w"> </span>tail<span class="w"> </span>-50<span class="w"> </span>/var/log/syslog<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>dhcpd
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="c1"># Erreurs fréquentes :</span>
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a><span class="c1"># - Interface incorrecte → /etc/default/isc-dhcp-server</span>
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a><span class="c1"># - Syntaxe config → dhcpd -t</span>
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a><span class="c1"># - Subnet ne correspond pas à l'interface</span>
+</code></pre></div></p>
+<p><strong>Problème : Clients n'obtiennent pas d'IP</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="c1"># Vérifier que le serveur écoute</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>sudo<span class="w"> </span>ss<span class="w"> </span>-unp<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>:67
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="c1"># Vérifier logs lors de la demande</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>sudo<span class="w"> </span>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/syslog<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>dhcpd
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="c1"># Tester avec dhcping (installer si nécessaire)</span>
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>dhcping
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>sudo<span class="w"> </span>dhcping<span class="w"> </span>-s<span class="w"> </span><span class="m">192</span>.168.1.10
+</code></pre></div></p>
+<p><strong>Problème : Réservation ne fonctionne pas</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="c1"># Vérifier adresse MAC du client</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>ip<span class="w"> </span>link<span class="w"> </span>show
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="c1"># Format MAC : aa:bb:cc:dd:ee:ff (minuscules, avec ":")</span>
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a><span class="c1"># Redémarrer service après modification réservation</span>
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>isc-dhcp-server
+</code></pre></div></p>
+<hr />
+<h2 id="partie-3-installation-apache2">🌐 PARTIE 3 : INSTALLATION APACHE2<a class="headerlink" href="#partie-3-installation-apache2" title="Permanent link">&para;</a></h2>
+<h3 id="etape-1-installation-dapache2">Étape 1 : Installation d'Apache2<a class="headerlink" href="#etape-1-installation-dapache2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="c1"># Installer Apache2</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apache2<span class="w"> </span>-y
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="c1"># Vérifier installation</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>apache2<span class="w"> </span>-v
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a><span class="c1"># Vérifier statut</span>
+<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>apache2
+</code></pre></div>
+<h3 id="etape-2-configuration-de-base">Étape 2 : Configuration de base<a class="headerlink" href="#etape-2-configuration-de-base" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="c1"># Fichier de configuration principal</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/apache2/apache2.conf
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="c1"># Options importantes (déjà configurées par défaut) :</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="c1"># - ServerRoot "/etc/apache2"</span>
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a><span class="c1"># - DocumentRoot "/var/www/html"</span>
+<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a><span class="c1"># - Port 80</span>
+</code></pre></div>
+<h3 id="etape-3-configuration-du-serveur">Étape 3 : Configuration du serveur<a class="headerlink" href="#etape-3-configuration-du-serveur" title="Permanent link">&para;</a></h3>
+<p><strong>Configurer le ServerName</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/apache2/sites-available/000-default.conf
+</code></pre></div></p>
+<p><strong>Contenu</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="nt">&lt;VirtualHost</span><span class="w"> </span><span class="s">*:80</span><span class="nt">&gt;</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">    </span><span class="nb">ServerAdmin</span><span class="w"> </span>webmaster@entreprise.local
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="w">    </span><span class="nb">ServerName</span><span class="w"> </span>srv-web.entreprise.local
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="w">    </span><span class="nb">ServerAlias</span><span class="w"> </span>www.entreprise.local<span class="w"> </span>intranet.entreprise.local
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>
+<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a><span class="w">    </span><span class="nb">DocumentRoot</span><span class="w"> </span><span class="sx">/var/www/html</span>
+<a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a>
+<a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a><span class="w">    </span><span class="nt">&lt;Directory</span><span class="w"> </span><span class="s">/var/www/html</span><span class="nt">&gt;</span>
+<a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a><span class="w">        </span><span class="nb">Options</span><span class="w"> </span>Indexes<span class="w"> </span>FollowSymLinks
+<a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a><span class="w">        </span><span class="nb">AllowOverride</span><span class="w"> </span><span class="k">All</span>
+<a id="__codelineno-34-11" name="__codelineno-34-11" href="#__codelineno-34-11"></a><span class="w">        </span><span class="nb">Require</span><span class="w"> </span><span class="k">all</span><span class="w"> </span>granted
+<a id="__codelineno-34-12" name="__codelineno-34-12" href="#__codelineno-34-12"></a><span class="w">    </span><span class="nt">&lt;/Directory&gt;</span>
+<a id="__codelineno-34-13" name="__codelineno-34-13" href="#__codelineno-34-13"></a>
+<a id="__codelineno-34-14" name="__codelineno-34-14" href="#__codelineno-34-14"></a><span class="w">    </span><span class="nb">ErrorLog</span><span class="w"> </span>${APACHE_LOG_DIR}/error.log
+<a id="__codelineno-34-15" name="__codelineno-34-15" href="#__codelineno-34-15"></a><span class="w">    </span><span class="nb">CustomLog</span><span class="w"> </span>${APACHE_LOG_DIR}/access.log<span class="w"> </span>combined
+<a id="__codelineno-34-16" name="__codelineno-34-16" href="#__codelineno-34-16"></a><span class="nt">&lt;/VirtualHost&gt;</span>
+</code></pre></div></p>
+<h3 id="etape-4-creer-une-page-web-de-test">Étape 4 : Créer une page web de test<a class="headerlink" href="#etape-4-creer-une-page-web-de-test" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="c1"># Supprimer la page par défaut</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>sudo<span class="w"> </span>rm<span class="w"> </span>/var/www/html/index.html
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a><span class="c1"># Créer une page personnalisée</span>
+<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/var/www/html/index.html
+</code></pre></div>
+<p><strong>Contenu</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"fr"</span><span class="p">&gt;</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"UTF-8"</span><span class="p">&gt;</span>
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"viewport"</span> <span class="na">content</span><span class="o">=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="p">&gt;</span>
+<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Intranet Entreprise<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a><span class="w">        </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a><span class="w">            </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Arial</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a><span class="w">            </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">135</span><span class="kt">deg</span><span class="p">,</span><span class="w"> </span><span class="mh">#667eea</span><span class="w"> </span><span class="mi">0</span><span class="kt">%</span><span class="p">,</span><span class="w"> </span><span class="mh">#764ba2</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">);</span>
+<a id="__codelineno-36-11" name="__codelineno-36-11" href="#__codelineno-36-11"></a><span class="w">            </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<a id="__codelineno-36-12" name="__codelineno-36-12" href="#__codelineno-36-12"></a><span class="w">            </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<a id="__codelineno-36-13" name="__codelineno-36-13" href="#__codelineno-36-13"></a><span class="w">            </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<a id="__codelineno-36-14" name="__codelineno-36-14" href="#__codelineno-36-14"></a><span class="w">            </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<a id="__codelineno-36-15" name="__codelineno-36-15" href="#__codelineno-36-15"></a><span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">vh</span><span class="p">;</span>
+<a id="__codelineno-36-16" name="__codelineno-36-16" href="#__codelineno-36-16"></a><span class="w">            </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-36-17" name="__codelineno-36-17" href="#__codelineno-36-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-36-18" name="__codelineno-36-18" href="#__codelineno-36-18"></a><span class="w">        </span><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-36-19" name="__codelineno-36-19" href="#__codelineno-36-19"></a><span class="w">            </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<a id="__codelineno-36-20" name="__codelineno-36-20" href="#__codelineno-36-20"></a><span class="w">            </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.3</span><span class="p">);</span>
+<a id="__codelineno-36-21" name="__codelineno-36-21" href="#__codelineno-36-21"></a><span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<a id="__codelineno-36-22" name="__codelineno-36-22" href="#__codelineno-36-22"></a><span class="w">            </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+<a id="__codelineno-36-23" name="__codelineno-36-23" href="#__codelineno-36-23"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-36-24" name="__codelineno-36-24" href="#__codelineno-36-24"></a><span class="w">        </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">em</span><span class="p">;</span><span class="w"> </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-36-25" name="__codelineno-36-25" href="#__codelineno-36-25"></a><span class="w">        </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">1.2</span><span class="kt">em</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-36-26" name="__codelineno-36-26" href="#__codelineno-36-26"></a><span class="w">        </span><span class="p">.</span><span class="nc">info</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-36-27" name="__codelineno-36-27" href="#__codelineno-36-27"></a><span class="w">            </span><span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+<a id="__codelineno-36-28" name="__codelineno-36-28" href="#__codelineno-36-28"></a><span class="w">            </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">0.9</span><span class="kt">em</span><span class="p">;</span>
+<a id="__codelineno-36-29" name="__codelineno-36-29" href="#__codelineno-36-29"></a><span class="w">            </span><span class="k">opacity</span><span class="p">:</span><span class="w"> </span><span class="mf">0.8</span><span class="p">;</span>
+<a id="__codelineno-36-30" name="__codelineno-36-30" href="#__codelineno-36-30"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-36-31" name="__codelineno-36-31" href="#__codelineno-36-31"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<a id="__codelineno-36-32" name="__codelineno-36-32" href="#__codelineno-36-32"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-36-33" name="__codelineno-36-33" href="#__codelineno-36-33"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-36-34" name="__codelineno-36-34" href="#__codelineno-36-34"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"container"</span><span class="p">&gt;</span>
+<a id="__codelineno-36-35" name="__codelineno-36-35" href="#__codelineno-36-35"></a>        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>🌐 Bienvenue sur l'Intranet<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-36-36" name="__codelineno-36-36" href="#__codelineno-36-36"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Serveur web Apache2 opérationnel<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-36-37" name="__codelineno-36-37" href="#__codelineno-36-37"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"info"</span><span class="p">&gt;</span>
+<a id="__codelineno-36-38" name="__codelineno-36-38" href="#__codelineno-36-38"></a>            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Serveur :<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> srv-web.entreprise.local<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-36-39" name="__codelineno-36-39" href="#__codelineno-36-39"></a>            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Date :<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> <span class="cp">&lt;?php echo date('d/m/Y H:i:s'); ?&gt;</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-36-40" name="__codelineno-36-40" href="#__codelineno-36-40"></a>        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-36-41" name="__codelineno-36-41" href="#__codelineno-36-41"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-36-42" name="__codelineno-36-42" href="#__codelineno-36-42"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-36-43" name="__codelineno-36-43" href="#__codelineno-36-43"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<h3 id="etape-5-definir-les-permissions">Étape 5 : Définir les permissions<a class="headerlink" href="#etape-5-definir-les-permissions" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="c1"># Propriétaire des fichiers web</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/html/
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a><span class="c1"># Permissions</span>
+<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>/var/www/html/
+</code></pre></div>
+<h3 id="etape-6-activer-modules-utiles">Étape 6 : Activer modules utiles<a class="headerlink" href="#etape-6-activer-modules-utiles" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="c1"># Module de réécriture d'URL</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>sudo<span class="w"> </span>a2enmod<span class="w"> </span>rewrite
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="c1"># Module SSL (pour HTTPS)</span>
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>sudo<span class="w"> </span>a2enmod<span class="w"> </span>ssl
+<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>
+<a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a><span class="c1"># Module headers</span>
+<a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a>sudo<span class="w"> </span>a2enmod<span class="w"> </span>headers
+<a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a>
+<a id="__codelineno-38-10" name="__codelineno-38-10" href="#__codelineno-38-10"></a><span class="c1"># Redémarrer Apache</span>
+<a id="__codelineno-38-11" name="__codelineno-38-11" href="#__codelineno-38-11"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</code></pre></div>
+<h3 id="etape-7-configurer-le-pare-feu_1">Étape 7 : Configurer le pare-feu<a class="headerlink" href="#etape-7-configurer-le-pare-feu_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="c1"># Autoriser HTTP (port 80)</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">80</span>/tcp
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="c1"># Autoriser HTTPS (port 443)</span>
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">443</span>/tcp
+<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a>
+<a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a><span class="c1"># Ou utiliser le profil Apache</span>
+<a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="s1">'Apache Full'</span>
+<a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a>
+<a id="__codelineno-39-10" name="__codelineno-39-10" href="#__codelineno-39-10"></a><span class="c1"># Vérifier</span>
+<a id="__codelineno-39-11" name="__codelineno-39-11" href="#__codelineno-39-11"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>status
+</code></pre></div>
+<h3 id="etape-8-tester-le-serveur-web">Étape 8 : Tester le serveur web<a class="headerlink" href="#etape-8-tester-le-serveur-web" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="c1"># Localement</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>curl<span class="w"> </span>http://localhost
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>curl<span class="w"> </span>http://192.168.1.10
+<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>
+<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a><span class="c1"># Depuis un navigateur (autre PC)</span>
+<a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>http://192.168.1.10
+<a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a>http://srv-web.entreprise.local
+<a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a>http://www.entreprise.local
+</code></pre></div>
+<h3 id="etape-9-installer-php-optionnel-mais-recommande">Étape 9 : Installer PHP (optionnel mais recommandé)<a class="headerlink" href="#etape-9-installer-php-optionnel-mais-recommande" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="c1"># Installer PHP et module Apache</span>
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>php<span class="w"> </span>libapache2-mod-php<span class="w"> </span>php-mysql<span class="w"> </span>-y
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>
+<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a><span class="c1"># Vérifier version PHP</span>
+<a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>php<span class="w"> </span>-v
+<a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a>
+<a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a><span class="c1"># Créer page de test PHP</span>
+<a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/var/www/html/info.php
+</code></pre></div>
+<p><strong>Contenu</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="nb">phpinfo</span><span class="p">();</span>
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a><span class="cp">?&gt;</span>
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="c1"># Tester : http://srv-web.entreprise.local/info.php</span>
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="c1"># IMPORTANT : Supprimer après test (sécurité)</span>
+<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>sudo<span class="w"> </span>rm<span class="w"> </span>/var/www/html/info.php
+<a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a>
+<a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a><span class="c1"># Redémarrer Apache</span>
+<a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</code></pre></div>
+<h3 id="etape-10-creer-un-virtual-host-supplementaire-optionnel">Étape 10 : Créer un Virtual Host supplémentaire (optionnel)<a class="headerlink" href="#etape-10-creer-un-virtual-host-supplementaire-optionnel" title="Permanent link">&para;</a></h3>
+<p><strong>Pour héberger plusieurs sites</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="c1"># Créer configuration</span>
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/apache2/sites-available/intranet2.conf
+</code></pre></div></p>
+<p><strong>Contenu</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="nt">&lt;VirtualHost</span><span class="w"> </span><span class="s">*:80</span><span class="nt">&gt;</span>
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="w">    </span><span class="nb">ServerAdmin</span><span class="w"> </span>admin@entreprise.local
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="w">    </span><span class="nb">ServerName</span><span class="w"> </span>intranet2.entreprise.local
+<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a><span class="w">    </span><span class="nb">DocumentRoot</span><span class="w"> </span><span class="sx">/var/www/intranet2</span>
+<a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a>
+<a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a><span class="w">    </span><span class="nt">&lt;Directory</span><span class="w"> </span><span class="s">/var/www/intranet2</span><span class="nt">&gt;</span>
+<a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a><span class="w">        </span><span class="nb">Options</span><span class="w"> </span>Indexes<span class="w"> </span>FollowSymLinks
+<a id="__codelineno-45-8" name="__codelineno-45-8" href="#__codelineno-45-8"></a><span class="w">        </span><span class="nb">AllowOverride</span><span class="w"> </span><span class="k">All</span>
+<a id="__codelineno-45-9" name="__codelineno-45-9" href="#__codelineno-45-9"></a><span class="w">        </span><span class="nb">Require</span><span class="w"> </span><span class="k">all</span><span class="w"> </span>granted
+<a id="__codelineno-45-10" name="__codelineno-45-10" href="#__codelineno-45-10"></a><span class="w">    </span><span class="nt">&lt;/Directory&gt;</span>
+<a id="__codelineno-45-11" name="__codelineno-45-11" href="#__codelineno-45-11"></a>
+<a id="__codelineno-45-12" name="__codelineno-45-12" href="#__codelineno-45-12"></a><span class="w">    </span><span class="nb">ErrorLog</span><span class="w"> </span>${APACHE_LOG_DIR}/intranet2-error.log
+<a id="__codelineno-45-13" name="__codelineno-45-13" href="#__codelineno-45-13"></a><span class="w">    </span><span class="nb">CustomLog</span><span class="w"> </span>${APACHE_LOG_DIR}/intranet2-access.log<span class="w"> </span>combined
+<a id="__codelineno-45-14" name="__codelineno-45-14" href="#__codelineno-45-14"></a><span class="nt">&lt;/VirtualHost&gt;</span>
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="c1"># Créer répertoire</span>
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>/var/www/intranet2
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>
+<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a><span class="c1"># Page d'accueil</span>
+<a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"&lt;h1&gt;Site Intranet 2&lt;/h1&gt;"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/var/www/intranet2/index.html
+<a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a>
+<a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a><span class="c1"># Permissions</span>
+<a id="__codelineno-46-8" name="__codelineno-46-8" href="#__codelineno-46-8"></a>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/intranet2
+<a id="__codelineno-46-9" name="__codelineno-46-9" href="#__codelineno-46-9"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>/var/www/intranet2
+<a id="__codelineno-46-10" name="__codelineno-46-10" href="#__codelineno-46-10"></a>
+<a id="__codelineno-46-11" name="__codelineno-46-11" href="#__codelineno-46-11"></a><span class="c1"># Activer le site</span>
+<a id="__codelineno-46-12" name="__codelineno-46-12" href="#__codelineno-46-12"></a>sudo<span class="w"> </span>a2ensite<span class="w"> </span>intranet2.conf
+<a id="__codelineno-46-13" name="__codelineno-46-13" href="#__codelineno-46-13"></a>
+<a id="__codelineno-46-14" name="__codelineno-46-14" href="#__codelineno-46-14"></a><span class="c1"># Recharger Apache</span>
+<a id="__codelineno-46-15" name="__codelineno-46-15" href="#__codelineno-46-15"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>apache2
+<a id="__codelineno-46-16" name="__codelineno-46-16" href="#__codelineno-46-16"></a>
+<a id="__codelineno-46-17" name="__codelineno-46-17" href="#__codelineno-46-17"></a><span class="c1"># Ajouter enregistrement DNS</span>
+<a id="__codelineno-46-18" name="__codelineno-46-18" href="#__codelineno-46-18"></a><span class="c1"># Dans /etc/bind/zones/db.entreprise.local :</span>
+<a id="__codelineno-46-19" name="__codelineno-46-19" href="#__codelineno-46-19"></a><span class="c1"># intranet2  IN  A  192.168.1.20</span>
+</code></pre></div>
+<h3 id="depannage-apache">🛠️ Dépannage Apache<a class="headerlink" href="#depannage-apache" title="Permanent link">&para;</a></h3>
+<p><strong>Problème : Apache ne démarre pas</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="c1"># Vérifier configuration</span>
+<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>sudo<span class="w"> </span>apache2ctl<span class="w"> </span>configtest
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>
+<a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a><span class="c1"># Logs détaillés</span>
+<a id="__codelineno-47-5" name="__codelineno-47-5" href="#__codelineno-47-5"></a>sudo<span class="w"> </span>journalctl<span class="w"> </span>-xeu<span class="w"> </span>apache2
+<a id="__codelineno-47-6" name="__codelineno-47-6" href="#__codelineno-47-6"></a>sudo<span class="w"> </span>tail<span class="w"> </span>-50<span class="w"> </span>/var/log/apache2/error.log
+<a id="__codelineno-47-7" name="__codelineno-47-7" href="#__codelineno-47-7"></a>
+<a id="__codelineno-47-8" name="__codelineno-47-8" href="#__codelineno-47-8"></a><span class="c1"># Erreurs fréquentes :</span>
+<a id="__codelineno-47-9" name="__codelineno-47-9" href="#__codelineno-47-9"></a><span class="c1"># - Port 80 occupé → sudo ss -tunlp | grep :80</span>
+<a id="__codelineno-47-10" name="__codelineno-47-10" href="#__codelineno-47-10"></a><span class="c1"># - Syntaxe VirtualHost → apache2ctl configtest</span>
+<a id="__codelineno-47-11" name="__codelineno-47-11" href="#__codelineno-47-11"></a><span class="c1"># - Permissions DocumentRoot</span>
+</code></pre></div></p>
+<p><strong>Problème : Page non trouvée (404)</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="c1"># Vérifier DocumentRoot</span>
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>ls<span class="w"> </span>-la<span class="w"> </span>/var/www/html/
+<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a>
+<a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a><span class="c1"># Vérifier permissions</span>
+<a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/html/
+<a id="__codelineno-48-6" name="__codelineno-48-6" href="#__codelineno-48-6"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>/var/www/html/
+<a id="__codelineno-48-7" name="__codelineno-48-7" href="#__codelineno-48-7"></a>
+<a id="__codelineno-48-8" name="__codelineno-48-8" href="#__codelineno-48-8"></a><span class="c1"># Vérifier configuration VirtualHost</span>
+<a id="__codelineno-48-9" name="__codelineno-48-9" href="#__codelineno-48-9"></a>cat<span class="w"> </span>/etc/apache2/sites-enabled/000-default.conf
+</code></pre></div></p>
+<p><strong>Problème : Accès interdit (403 Forbidden)</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="c1"># Vérifier directive &lt;Directory&gt; dans VirtualHost</span>
+<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="c1"># Doit contenir : Require all granted</span>
+<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a>
+<a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a><span class="c1"># Vérifier SELinux/AppArmor (rare sur Debian)</span>
+<a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a>sudo<span class="w"> </span>aa-status
+<a id="__codelineno-49-6" name="__codelineno-49-6" href="#__codelineno-49-6"></a>
+<a id="__codelineno-49-7" name="__codelineno-49-7" href="#__codelineno-49-7"></a><span class="c1"># Vérifier permissions fichiers</span>
+<a id="__codelineno-49-8" name="__codelineno-49-8" href="#__codelineno-49-8"></a>ls<span class="w"> </span>-la<span class="w"> </span>/var/www/html/
+</code></pre></div></p>
+<hr />
+<h2 id="commandes-de-verification-rapide">🔍 COMMANDES DE VÉRIFICATION RAPIDE<a class="headerlink" href="#commandes-de-verification-rapide" title="Permanent link">&para;</a></h2>
+<h3 id="verifier-tous-les-services">Vérifier tous les services<a class="headerlink" href="#verifier-tous-les-services" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="c1"># Statut des 3 services</span>
+<a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>bind9<span class="w"> </span>isc-dhcp-server<span class="w"> </span>apache2
+<a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a>
+<a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a><span class="c1"># Ports en écoute</span>
+<a id="__codelineno-50-5" name="__codelineno-50-5" href="#__codelineno-50-5"></a>sudo<span class="w"> </span>ss<span class="w"> </span>-tunlp<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s1">'(:53|:67|:80|:443)'</span>
+<a id="__codelineno-50-6" name="__codelineno-50-6" href="#__codelineno-50-6"></a>
+<a id="__codelineno-50-7" name="__codelineno-50-7" href="#__codelineno-50-7"></a><span class="c1"># Vérifier logs</span>
+<a id="__codelineno-50-8" name="__codelineno-50-8" href="#__codelineno-50-8"></a>sudo<span class="w"> </span>tail<span class="w"> </span>-20<span class="w"> </span>/var/log/syslog
+</code></pre></div>
+<h3 id="tests-de-connectivite">Tests de connectivité<a class="headerlink" href="#tests-de-connectivite" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="c1"># DNS</span>
+<a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a>dig<span class="w"> </span>@localhost<span class="w"> </span>entreprise.local
+<a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a>nslookup<span class="w"> </span>srv-web.entreprise.local
+<a id="__codelineno-51-4" name="__codelineno-51-4" href="#__codelineno-51-4"></a>
+<a id="__codelineno-51-5" name="__codelineno-51-5" href="#__codelineno-51-5"></a><span class="c1"># DHCP (depuis client)</span>
+<a id="__codelineno-51-6" name="__codelineno-51-6" href="#__codelineno-51-6"></a>sudo<span class="w"> </span>dhclient<span class="w"> </span>-v
+<a id="__codelineno-51-7" name="__codelineno-51-7" href="#__codelineno-51-7"></a>
+<a id="__codelineno-51-8" name="__codelineno-51-8" href="#__codelineno-51-8"></a><span class="c1"># Apache</span>
+<a id="__codelineno-51-9" name="__codelineno-51-9" href="#__codelineno-51-9"></a>curl<span class="w"> </span>http://localhost
+<a id="__codelineno-51-10" name="__codelineno-51-10" href="#__codelineno-51-10"></a>curl<span class="w"> </span>http://srv-web.entreprise.local
+</code></pre></div>
+<hr />
+<h2 id="checklist-complete">📊 CHECKLIST COMPLÈTE<a class="headerlink" href="#checklist-complete" title="Permanent link">&para;</a></h2>
+<h3 id="dns-bind9">✅ DNS (Bind9)<a class="headerlink" href="#dns-bind9" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Bind9 installé et démarré</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Zone directe configurée (<code>/etc/bind/zones/db.entreprise.local</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Zone inversée configurée (<code>/etc/bind/zones/db.192.168.1</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Syntaxe vérifiée (<code>named-checkzone</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Service écoute sur port 53</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Résolution directe fonctionne (<code>dig</code>, <code>nslookup</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Résolution inversée fonctionne (<code>dig -x</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Pare-feu autorise port 53 (TCP/UDP)</li>
+</ul>
+<h3 id="dhcp-isc-dhcp-server">✅ DHCP (isc-dhcp-server)<a class="headerlink" href="#dhcp-isc-dhcp-server" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> isc-dhcp-server installé et démarré</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Interface configurée (<code>/etc/default/isc-dhcp-server</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Subnet configuré avec plage IP</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Options DNS et passerelle définies</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Réservations créées (si nécessaire)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Syntaxe vérifiée (<code>dhcpd -t</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Service écoute sur port 67</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Clients obtiennent IP automatiquement</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Pare-feu autorise ports 67-68 (UDP)</li>
+</ul>
+<h3 id="apache2">✅ Apache2<a class="headerlink" href="#apache2" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Apache2 installé et démarré</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> VirtualHost configuré avec ServerName</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Page d'accueil créée (<code>/var/www/html/index.html</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Permissions correctes (www-data:www-data, 755)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Modules activés (rewrite, ssl)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Configuration testée (<code>apache2ctl configtest</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Service écoute sur port 80</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Page accessible depuis navigateur</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Pare-feu autorise port 80 (HTTP)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> PHP installé et fonctionnel (optionnel)</li>
+</ul>
+<hr />
+<h2 id="timing-pour-lexamen-45-minutes">⏱️ TIMING POUR L'EXAMEN (45 minutes)<a class="headerlink" href="#timing-pour-lexamen-45-minutes" title="Permanent link">&para;</a></h2>
+<p><strong>Incident 1 : DNS ne résout pas</strong> (15 min)
+- Vérifier service : <code>systemctl status bind9</code>
+- Vérifier syntaxe zones : <code>named-checkzone</code>
+- Vérifier logs : <code>/var/log/syslog</code>
+- Tester résolution : <code>dig</code>, <code>nslookup</code></p>
+<p><strong>Incident 2 : DHCP ne distribue pas d'IP</strong> (15 min)
+- Vérifier service : <code>systemctl status isc-dhcp-server</code>
+- Vérifier interface : <code>/etc/default/isc-dhcp-server</code>
+- Vérifier config : <code>dhcpd -t</code>
+- Vérifier logs : <code>/var/log/syslog</code></p>
+<p><strong>Incident 3 : Apache inaccessible</strong> (15 min)
+- Vérifier service : <code>systemctl status apache2</code>
+- Vérifier config : <code>apache2ctl configtest</code>
+- Vérifier port : <code>ss -tunlp | grep :80</code>
+- Vérifier permissions : <code>ls -la /var/www/html/</code></p>
+<hr />
+<h2 id="scenarios-dincidents-types">🎯 SCÉNARIOS D'INCIDENTS TYPES<a class="headerlink" href="#scenarios-dincidents-types" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-1-dns-zone-mal-configuree">Scénario 1 : DNS - Zone mal configurée<a class="headerlink" href="#scenario-1-dns-zone-mal-configuree" title="Permanent link">&para;</a></h3>
+<p><strong>Symptôme</strong> : <code>dig entreprise.local</code> ne retourne rien</p>
+<p><strong>Causes possibles</strong> :
+- Serial non incrémenté
+- Manque point final (.) après FQDN
+- Syntaxe SOA incorrecte
+- Permissions fichier zone</p>
+<p><strong>Solution</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>sudo<span class="w"> </span>named-checkzone<span class="w"> </span>entreprise.local<span class="w"> </span>/etc/bind/zones/db.entreprise.local
+<a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a>sudo<span class="w"> </span>chown<span class="w"> </span>bind:bind<span class="w"> </span>/etc/bind/zones/*
+<a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>bind9
+</code></pre></div></p>
+<h3 id="scenario-2-dhcp-mauvais-subnet">Scénario 2 : DHCP - Mauvais subnet<a class="headerlink" href="#scenario-2-dhcp-mauvais-subnet" title="Permanent link">&para;</a></h3>
+<p><strong>Symptôme</strong> : Service démarre mais clients n'obtiennent pas d'IP</p>
+<p><strong>Causes possibles</strong> :
+- Subnet dans dhcpd.conf ne correspond pas au réseau réel
+- Interface incorrecte dans <code>/etc/default/isc-dhcp-server</code>
+- Plage IP hors subnet</p>
+<p><strong>Solution</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="c1"># Vérifier réseau réel</span>
+<a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a>ip<span class="w"> </span>addr<span class="w"> </span>show
+<a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a>
+<a id="__codelineno-53-4" name="__codelineno-53-4" href="#__codelineno-53-4"></a><span class="c1"># Corriger subnet dans dhcpd.conf</span>
+<a id="__codelineno-53-5" name="__codelineno-53-5" href="#__codelineno-53-5"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/dhcp/dhcpd.conf
+<a id="__codelineno-53-6" name="__codelineno-53-6" href="#__codelineno-53-6"></a>
+<a id="__codelineno-53-7" name="__codelineno-53-7" href="#__codelineno-53-7"></a><span class="c1"># Vérifier interface</span>
+<a id="__codelineno-53-8" name="__codelineno-53-8" href="#__codelineno-53-8"></a>ip<span class="w"> </span>link<span class="w"> </span>show
+<a id="__codelineno-53-9" name="__codelineno-53-9" href="#__codelineno-53-9"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/default/isc-dhcp-server
+<a id="__codelineno-53-10" name="__codelineno-53-10" href="#__codelineno-53-10"></a>
+<a id="__codelineno-53-11" name="__codelineno-53-11" href="#__codelineno-53-11"></a><span class="c1"># Redémarrer</span>
+<a id="__codelineno-53-12" name="__codelineno-53-12" href="#__codelineno-53-12"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>isc-dhcp-server
+</code></pre></div></p>
+<h3 id="scenario-3-apache-permissions-incorrectes">Scénario 3 : Apache - Permissions incorrectes<a class="headerlink" href="#scenario-3-apache-permissions-incorrectes" title="Permanent link">&para;</a></h3>
+<p><strong>Symptôme</strong> : 403 Forbidden</p>
+<p><strong>Causes possibles</strong> :
+- Propriétaire incorrect
+- Permissions trop restrictives
+- Directive "Require" manquante</p>
+<p><strong>Solution</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/html/
+<a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>/var/www/html/
+<a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/apache2/sites-available/000-default.conf
+<a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a><span class="c1"># Vérifier : Require all granted</span>
+<a id="__codelineno-54-5" name="__codelineno-54-5" href="#__codelineno-54-5"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</code></pre></div></p>
+<hr />
+<h2 id="commandes-a-connaitre-par-cur">📚 COMMANDES À CONNAÎTRE PAR CŒUR<a class="headerlink" href="#commandes-a-connaitre-par-cur" title="Permanent link">&para;</a></h2>
+<h3 id="dns-bind9_1">DNS (Bind9)<a class="headerlink" href="#dns-bind9_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>bind9
+<a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>bind9
+<a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a>named-checkconf
+<a id="__codelineno-55-4" name="__codelineno-55-4" href="#__codelineno-55-4"></a>named-checkzone<span class="w"> </span>&lt;zone&gt;<span class="w"> </span>&lt;fichier&gt;
+<a id="__codelineno-55-5" name="__codelineno-55-5" href="#__codelineno-55-5"></a>dig<span class="w"> </span>@&lt;serveur&gt;<span class="w"> </span>&lt;nom&gt;
+<a id="__codelineno-55-6" name="__codelineno-55-6" href="#__codelineno-55-6"></a>nslookup<span class="w"> </span>&lt;nom&gt;<span class="w"> </span>&lt;serveur&gt;
+<a id="__codelineno-55-7" name="__codelineno-55-7" href="#__codelineno-55-7"></a>dig<span class="w"> </span>-x<span class="w"> </span>&lt;IP&gt;
+<a id="__codelineno-55-8" name="__codelineno-55-8" href="#__codelineno-55-8"></a>sudo<span class="w"> </span>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/syslog<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>named
+</code></pre></div>
+<h3 id="dhcp-isc-dhcp-server_1">DHCP (isc-dhcp-server)<a class="headerlink" href="#dhcp-isc-dhcp-server_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>isc-dhcp-server
+<a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>isc-dhcp-server
+<a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a>dhcpd<span class="w"> </span>-t<span class="w"> </span>-cf<span class="w"> </span>/etc/dhcp/dhcpd.conf
+<a id="__codelineno-56-4" name="__codelineno-56-4" href="#__codelineno-56-4"></a>cat<span class="w"> </span>/var/lib/dhcp/dhcpd.leases
+<a id="__codelineno-56-5" name="__codelineno-56-5" href="#__codelineno-56-5"></a>sudo<span class="w"> </span>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/syslog<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>dhcpd
+<a id="__codelineno-56-6" name="__codelineno-56-6" href="#__codelineno-56-6"></a>sudo<span class="w"> </span>dhclient<span class="w"> </span>-r
+<a id="__codelineno-56-7" name="__codelineno-56-7" href="#__codelineno-56-7"></a>sudo<span class="w"> </span>dhclient<span class="w"> </span>-v
+</code></pre></div>
+<h3 id="apache2_1">Apache2<a class="headerlink" href="#apache2_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+<a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>apache2
+<a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a>apache2ctl<span class="w"> </span>configtest
+<a id="__codelineno-57-4" name="__codelineno-57-4" href="#__codelineno-57-4"></a>sudo<span class="w"> </span>a2ensite<span class="w"> </span>&lt;site&gt;
+<a id="__codelineno-57-5" name="__codelineno-57-5" href="#__codelineno-57-5"></a>sudo<span class="w"> </span>a2dissite<span class="w"> </span>&lt;site&gt;
+<a id="__codelineno-57-6" name="__codelineno-57-6" href="#__codelineno-57-6"></a>sudo<span class="w"> </span>a2enmod<span class="w"> </span>&lt;module&gt;
+<a id="__codelineno-57-7" name="__codelineno-57-7" href="#__codelineno-57-7"></a>curl<span class="w"> </span>http://localhost
+<a id="__codelineno-57-8" name="__codelineno-57-8" href="#__codelineno-57-8"></a>sudo<span class="w"> </span>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/apache2/error.log
+<a id="__codelineno-57-9" name="__codelineno-57-9" href="#__codelineno-57-9"></a>sudo<span class="w"> </span>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/apache2/access.log
+</code></pre></div>
+<h3 id="general">Général<a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>&lt;service&gt;
+<a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>&lt;service&gt;
+<a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a>sudo<span class="w"> </span>journalctl<span class="w"> </span>-xeu<span class="w"> </span>&lt;service&gt;
+<a id="__codelineno-58-4" name="__codelineno-58-4" href="#__codelineno-58-4"></a>sudo<span class="w"> </span>ss<span class="w"> </span>-tunlp<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>:&lt;port&gt;
+<a id="__codelineno-58-5" name="__codelineno-58-5" href="#__codelineno-58-5"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>status
+<a id="__codelineno-58-6" name="__codelineno-58-6" href="#__codelineno-58-6"></a>ip<span class="w"> </span>addr<span class="w"> </span>show
+<a id="__codelineno-58-7" name="__codelineno-58-7" href="#__codelineno-58-7"></a>ip<span class="w"> </span>route<span class="w"> </span>show
+</code></pre></div>
+<hr />
+<h2 id="conseils-pour-lexamen">🎓 CONSEILS POUR L'EXAMEN<a class="headerlink" href="#conseils-pour-lexamen" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Lecture attentive</strong> : Bien lire la MSP, noter les infos clés (réseau, noms, IPs)</p>
+</li>
+<li>
+<p><strong>Méthodologie</strong> : Toujours suivre cette séquence :</p>
+</li>
+<li>Vérifier service : <code>systemctl status</code></li>
+<li>Vérifier logs : <code>journalctl</code> ou <code>/var/log/syslog</code></li>
+<li>Vérifier config : <code>named-checkconf</code>, <code>dhcpd -t</code>, <code>apache2ctl configtest</code></li>
+<li>
+<p>Vérifier réseau : <code>ss -tunlp</code>, <code>ip addr</code></p>
+</li>
+<li>
+<p><strong>Ne pas paniquer</strong> : Si bloqué, passer à l'incident suivant et revenir</p>
+</li>
+<li>
+<p><strong>Tester après chaque correction</strong> : Toujours valider que la correction fonctionne</p>
+</li>
+<li>
+<p><strong>Documenter</strong> : Noter les commandes utilisées et résultats (utile pour l'oral)</p>
+</li>
+</ol>
+<hr />
+<p><strong>🚀 Bon courage pour l'examen pratique ! Tu as toutes les clés en main !</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../../Questions-Ouvertes/Correction/Questions-Ouvertes-Linux-20Q-CORRECTIONS/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Questions ouvertes — correction">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Questions ouvertes — correction
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../../quiz/ccp4/" class="md-footer__link md-footer__link--next" aria-label="Suivant: QCM interactif">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                QCM interactif
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Contenu sous licence GPL-3.0 — bon courage pour l'examen !
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../assets/quiz.js"></script>
+      
+    
+  </body>
+</html>

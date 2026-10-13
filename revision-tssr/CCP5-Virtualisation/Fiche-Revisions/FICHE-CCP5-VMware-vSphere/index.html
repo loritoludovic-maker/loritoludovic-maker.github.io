@@ -1,0 +1,5679 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Fiches, QCM interactifs, examens blancs et simulation orale pour préparer le titre TSSR.">
+      
+      
+      
+        <link rel="canonical" href="https://loritoludovic-maker.github.io/revision-tssr/CCP5-Virtualisation/Fiche-Revisions/FICHE-CCP5-VMware-vSphere/">
+      
+      
+        <link rel="prev" href="../../INDEX-CCP5/">
+      
+      
+        <link rel="next" href="../../QCM/Evaluation/QCM-Virtualisation-40Q/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Fiche — VMware vSphere - Révisions TSSR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fiche-revision-ccp5-vmware-vsphere-virtualisation" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../.." title="Révisions TSSR" class="md-header__button md-logo" aria-label="Révisions TSSR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Révisions TSSR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fiche — VMware vSphere
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal"  aria-label="Passer en mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer en mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="teal"  aria-label="Passer en mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer en mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../START-HERE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Démarrer
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../CCP/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Les 9 CCP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../quiz/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  QCM interactifs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Examens-Blancs/Examen-1/EXAMEN-BLANC-1-EVALUATION/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Examens blancs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Simulation-Orale-Complete/INDEX-SIMULATION-ORALE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Simulation orale
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../quiz/scores/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Mes scores
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Révisions TSSR" class="md-nav__button md-logo" aria-label="Révisions TSSR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    Révisions TSSR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Démarrer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Démarrer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../START-HERE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commencer ici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PRESENTATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Présentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../README-GUIDE-REVISION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide de révision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PLANNING-REVISION-5-JOURS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planning 5 jours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX-GENERAL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index général
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SUIVI-SCORES-PROGRESSION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche de suivi (papier)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../CCP/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Les 9 CCP
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Les 9 CCP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP1 · Support utilisateur
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP1 · Support utilisateur
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/INDEX-CCP1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/Fiche-Revision/FICHE-CCP1-Support-Utilisateur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Support Utilisateur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/QCM/Evaluation/QCM-Support-ITIL-40Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/QCM/Correction/QCM-Support-ITIL-40Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP1-Support-10Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP1-Support-10Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP2 · Windows & Active Directory
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP2 · Windows & Active Directory
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/INDEX-CCP2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/Fiche-Revision/FICHE-CCP2-Windows-AD-PowerShell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Windows AD PowerShell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/QCM/Evaluation/QCM-Windows-ActiveDirectory-30Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/QCM/Correction/QCM-Windows-ActiveDirectory-30Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP2-Windows-AD-15Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP2-Windows-AD-15Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP3 · Maintenance Linux
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP3 · Maintenance Linux
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/INDEX-CCP3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/Fiche-Revision/FICHE-01-Linux-Commandes-Essentielles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Linux Commandes Essentielles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/QCM/Evaluation/QCM-Linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/QCM/Correction/QCM-Linux-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/Questions-Ouvertes/Evaluation/Questions-Ouvertes-Linux-20Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/Questions-Ouvertes/Correction/Questions-Ouvertes-Linux-20Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/MSP/MSP-Pratique-Services-Linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MSP pratique — services Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP4 · Services réseau
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP4 · Services réseau
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/INDEX-CCP4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/Fiches-Revisions/FICHE-02-Ports-Protocoles-Acronymes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Ports Protocoles Acronymes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/Fiches-Revisions/FICHE-04-Reseau-Subnetting-CIDR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Reseau Subnetting CIDR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/Fiches-Revisions/FICHE-05-Commandes-Cisco-IOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Commandes Cisco IOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/QCM/Evaluation/QCM-Reseau/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/QCM/Correction/QCM-Reseau-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/Questions-Ouvertes/Evaluation/Questions-Ouvertes-Reseau/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/Questions-Ouvertes/Correction/Questions-Ouvertes-Reseau-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/Exercices-Subnetting/Evaluation/Exercices-Subnetting-20-Exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices subnetting — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/Exercices-Subnetting/Correction/Exercices-Subnetting-20-Exercices-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices subnetting — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP5 · Virtualisation VMware
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP5 · Virtualisation VMware
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../INDEX-CCP5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — VMware vSphere
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — VMware vSphere
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-architecture-vsphere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. ARCHITECTURE vSPHERE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. ARCHITECTURE vSPHERE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#composants-essentiels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Composants essentiels
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-snapshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. SNAPSHOTS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. SNAPSHOTS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Définition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Utilisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commandes-esxi-vim-cmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commandes ESXi (vim-cmd)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ATTENTION
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-vmotion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. vMOTION
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. vMOTION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Définition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prerequis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prérequis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-reseau-vmotion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration réseau vMotion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-vmotion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types vMotion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-vsphere-ha-high-availability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. vSPHERE HA (High Availability)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. vSPHERE HA (High Availability)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonctionnement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonctionnement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prerequis_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prérequis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#difference-ha-vs-ft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Différence HA vs FT
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-types-de-disques-virtuels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. TYPES DE DISQUES VIRTUELS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. TYPES DE DISQUES VIRTUELS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thick-provision-epais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thick Provision (épais)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thin-provision-dynamique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thin Provision (dynamique)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commande-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commande conversion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-datastores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. DATASTORES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. DATASTORES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vmfs-vmware-file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VMFS (VMware File System)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nfs-network-file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NFS (Network File System)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparaison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparaison
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commandes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commandes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-drs-distributed-resource-scheduler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. DRS (Distributed Resource Scheduler)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. DRS (Distributed Resource Scheduler)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonctionnement_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonctionnement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regles-drs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Règles DRS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-reseau-vsphere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. RÉSEAU vSPHERE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. RÉSEAU vSPHERE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vswitch-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vSwitch Standard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vswitch-distributed-dvswitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vSwitch Distributed (dvSwitch)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Port Groups
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vmkernel-ports-vmkx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VMkernel Ports (vmkX)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-templates-clones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. TEMPLATES &amp; CLONES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. TEMPLATES &amp; CLONES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Template
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-clones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types clones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-commandes-esxcli-essentielles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. COMMANDES ESXCLI ESSENTIELLES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. COMMANDES ESXCLI ESSENTIELLES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reseau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Réseau
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stockage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stockage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VMs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maintenance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-bonnes-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. BONNES PRATIQUES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. BONNES PRATIQUES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#snapshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snapshots
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ressources-vms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ressources VMs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stockage_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stockage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reseau_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Réseau
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-depannage-rapide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. DÉPANNAGE RAPIDE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. DÉPANNAGE RAPIDE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vm-ne-demarre-pas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VM ne démarre pas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vmotion-echoue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vMotion échoue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datastore-plein" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Datastore plein
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commandes-a-retenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        COMMANDES À RETENIR
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../QCM/Evaluation/QCM-Virtualisation-40Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../QCM/Correction/QCM-Virtualisation-40Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP5-VMware-10Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP5-VMware-10Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP6 · Scripts & automatisation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP6 · Scripts & automatisation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/INDEX-CCP6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/Fiche-Revisions/FICHE-06-Scripting-Bash-PowerShell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Scripting Bash PowerShell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/QCM/Evaluation/QCM-CCP6-Scripting-30Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/QCM/Correction/QCM-CCP6-Scripting-30Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP6-Scripting-10Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP6-Scripting-10Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP7 · Sécurisation accès Internet
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP7 · Sécurisation accès Internet
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/INDEX-CCP7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/Fiche-Revisions/FICHE-CCP7-Securite-Reseau-pfSense/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Securite Reseau pfSense
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/QCM/Evaluation/QCM-CCP7-Securite-Reseau-25Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/QCM/Correction/QCM-CCP7-Securite-Reseau-25Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP7-Securite-8Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP7-Securite-8Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP8 · Sauvegardes & restaurations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP8 · Sauvegardes & restaurations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/INDEX-CCP8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/Fiche-Revisions/FICHE-03-Sauvegardes-PRA-PCA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Sauvegardes PRA PCA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/QCM/Evaluation/QCM-CCP8-Sauvegardes-20Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/QCM/Correction/QCM-CCP8-Sauvegardes-20Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/Questions-Ouvertes/Evaluation/Questions-Ouvertes-Sauvegardes-15Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/Questions-Ouvertes/Correction/Questions-Ouvertes-Sauvegardes-15Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP9 · Déploiement de postes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP9 · Déploiement de postes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/INDEX-CCP9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/Fiche-Revisions/FICHE-CCP9-Deploiement-Postes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Deploiement Postes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/QCM/Evaluation/QCM-CCP9-Deploiement-20Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/QCM/Correction/QCM-CCP9-Deploiement-20Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP9-Deploiement-6Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP9-Deploiement-6Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactifs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examens blancs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examens blancs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Examens-Blancs/Examen-1/EXAMEN-BLANC-1-EVALUATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen blanc 1 — sujet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Examens-Blancs/Examen-1/EXAMEN-BLANC-1-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen blanc 1 — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Examens-Blancs/Examen-2/EXAMEN-BLANC-2-EVALUATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen blanc 2 — sujet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Examens-Blancs/Examen-2/EXAMEN-BLANC-2-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen blanc 2 — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation orale
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Simulation orale
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simulation-Orale-Complete/INDEX-SIMULATION-ORALE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sommaire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simulation-Orale-Complete/SIMULATION-ORALE-PARTIE1-MSP-PRATIQUE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partie 1 — MSP pratique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simulation-Orale-Complete/SIMULATION-ORALE-PARTIE2-ENTRETIEN-TECHNIQUE-COMPLET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partie 2 — Entretien technique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simulation-Orale-Complete/SIMULATION-ORALE-PARTIE3-ENTRETIEN-FINAL-COMPLET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partie 3 — Entretien final
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/scores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mes scores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-architecture-vsphere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. ARCHITECTURE vSPHERE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. ARCHITECTURE vSPHERE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#composants-essentiels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Composants essentiels
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-snapshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. SNAPSHOTS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. SNAPSHOTS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Définition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Utilisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commandes-esxi-vim-cmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commandes ESXi (vim-cmd)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ATTENTION
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-vmotion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. vMOTION
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. vMOTION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Définition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prerequis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prérequis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-reseau-vmotion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration réseau vMotion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-vmotion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types vMotion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-vsphere-ha-high-availability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. vSPHERE HA (High Availability)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. vSPHERE HA (High Availability)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonctionnement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonctionnement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prerequis_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prérequis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#difference-ha-vs-ft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Différence HA vs FT
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-types-de-disques-virtuels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. TYPES DE DISQUES VIRTUELS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. TYPES DE DISQUES VIRTUELS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thick-provision-epais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thick Provision (épais)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thin-provision-dynamique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thin Provision (dynamique)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commande-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commande conversion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-datastores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. DATASTORES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. DATASTORES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vmfs-vmware-file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VMFS (VMware File System)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nfs-network-file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NFS (Network File System)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparaison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparaison
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commandes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commandes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-drs-distributed-resource-scheduler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. DRS (Distributed Resource Scheduler)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. DRS (Distributed Resource Scheduler)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonctionnement_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonctionnement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regles-drs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Règles DRS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-reseau-vsphere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. RÉSEAU vSPHERE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. RÉSEAU vSPHERE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vswitch-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vSwitch Standard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vswitch-distributed-dvswitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vSwitch Distributed (dvSwitch)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Port Groups
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vmkernel-ports-vmkx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VMkernel Ports (vmkX)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-templates-clones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. TEMPLATES &amp; CLONES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. TEMPLATES &amp; CLONES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Template
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-clones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types clones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-commandes-esxcli-essentielles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. COMMANDES ESXCLI ESSENTIELLES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. COMMANDES ESXCLI ESSENTIELLES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reseau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Réseau
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stockage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stockage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VMs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maintenance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-bonnes-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. BONNES PRATIQUES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. BONNES PRATIQUES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#snapshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snapshots
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ressources-vms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ressources VMs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stockage_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stockage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reseau_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Réseau
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-depannage-rapide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. DÉPANNAGE RAPIDE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. DÉPANNAGE RAPIDE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vm-ne-demarre-pas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VM ne démarre pas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vmotion-echoue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vMotion échoue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datastore-plein" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Datastore plein
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commandes-a-retenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        COMMANDES À RETENIR
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../../CCP/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Les 9 CCP
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../../quiz/ccp5/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    CCP5 · Virtualisation VMware
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="fiche-revision-ccp5-vmware-vsphere-virtualisation">FICHE REVISION CCP5 - VMWARE vSPHERE / VIRTUALISATION<a class="headerlink" href="#fiche-revision-ccp5-vmware-vsphere-virtualisation" title="Permanent link">&para;</a></h1>
+<p><strong>Certification TSSR</strong> - CCP5 : Maintenir infrastructure virtualisée</p>
+<hr />
+<h2 id="1-architecture-vsphere">1. ARCHITECTURE vSPHERE<a class="headerlink" href="#1-architecture-vsphere" title="Permanent link">&para;</a></h2>
+<h3 id="composants-essentiels">Composants essentiels<a class="headerlink" href="#composants-essentiels" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>vCenter Server (gestionnaire centralisé)
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    └── Datacenter
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>          ├── Cluster (HA/DRS activés)
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>          │     ├── ESXi Host 1 (hyperviseur)
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>          │     │     ├── VM1, VM2, VM3
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>          │     │     └── vSwitch (réseau virtuel)
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>          │     └── ESXi Host 2
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>          │           └── VM4, VM5, VM6
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>          └── Datastores (stockage partagé)
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                ├── VMFS (VMware)
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>                └── NFS (Linux)
+</code></pre></div>
+<p><strong>ESXi</strong> : Hyperviseur bare-metal (type 1), installé directement sur serveur<br />
+<strong>vCenter</strong> : Gestion centralisée, requis pour HA/DRS/vMotion<br />
+<strong>Datastore</strong> : Stockage VMs (disques VMDK, ISO, templates)</p>
+<hr />
+<h2 id="2-snapshots">2. SNAPSHOTS<a class="headerlink" href="#2-snapshots" title="Permanent link">&para;</a></h2>
+<h3 id="definition">Définition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h3>
+<p><strong>Snapshot</strong> = Photo instantanée état VM (disque + mémoire + config)</p>
+<h3 id="utilisation">Utilisation<a class="headerlink" href="#utilisation" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>AVANT mise à jour risquée → Créer snapshot
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>SI problème → Restaurer snapshot
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>SI OK → Supprimer snapshot (consolider disques)
+</code></pre></div>
+<h3 id="commandes-esxi-vim-cmd">Commandes ESXi (vim-cmd)<a class="headerlink" href="#commandes-esxi-vim-cmd" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Lister VMs</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>vim-cmd<span class="w"> </span>vmsvc/getallvms
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Créer snapshot</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>vim-cmd<span class="w"> </span>vmsvc/snapshot.create<span class="w"> </span>&lt;vmid&gt;<span class="w"> </span><span class="s2">"Avant_MaJ_Windows"</span><span class="w"> </span><span class="s2">"Snapshot avant KB5012345"</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># Lister snapshots</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>vim-cmd<span class="w"> </span>vmsvc/snapshot.get<span class="w"> </span>&lt;vmid&gt;
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1"># Restaurer snapshot</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>vim-cmd<span class="w"> </span>vmsvc/snapshot.revert<span class="w"> </span>&lt;vmid&gt;<span class="w"> </span>&lt;snapshot_id&gt;<span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1"># Supprimer snapshot</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>vim-cmd<span class="w"> </span>vmsvc/snapshot.remove<span class="w"> </span>&lt;vmid&gt;<span class="w"> </span>&lt;snapshot_id&gt;
+</code></pre></div>
+<h3 id="attention">ATTENTION<a class="headerlink" href="#attention" title="Permanent link">&para;</a></h3>
+<ul>
+<li>❌ <strong>Pas de sauvegarde</strong> : Snapshot ≠ backup (même datastore)</li>
+<li>⚠️ <strong>Performance</strong> : Snapshot &gt; 72h ralentit VM (fichiers delta croissants)</li>
+<li>⚠️ <strong>Espace disque</strong> : Snapshot consomme espace (delta disks)</li>
+<li>✅ <strong>Bonne pratique</strong> : Supprimer après validation (consolide automatiquement)</li>
+</ul>
+<hr />
+<h2 id="3-vmotion">3. vMOTION<a class="headerlink" href="#3-vmotion" title="Permanent link">&para;</a></h2>
+<h3 id="definition_1">Définition<a class="headerlink" href="#definition_1" title="Permanent link">&para;</a></h3>
+<p><strong>vMotion</strong> = Migration à chaud VM entre hôtes ESXi <strong>SANS interruption</strong></p>
+<h3 id="prerequis">Prérequis<a class="headerlink" href="#prerequis" title="Permanent link">&para;</a></h3>
+<ol>
+<li>✅ vCenter Server configuré</li>
+<li>✅ Réseau vMotion dédié (VMkernel avec vMotion enabled)</li>
+<li>✅ Stockage partagé (même datastore accessible par les 2 ESXi)</li>
+<li>✅ Processeurs compatibles (même fabricant Intel/AMD, EVC mode si nécessaire)</li>
+<li>✅ Licences vSphere Standard minimum</li>
+</ol>
+<h3 id="configuration-reseau-vmotion">Configuration réseau vMotion<a class="headerlink" href="#configuration-reseau-vmotion" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># ESXi Shell : Créer VMkernel pour vMotion</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>esxcli<span class="w"> </span>network<span class="w"> </span>ip<span class="w"> </span>interface<span class="w"> </span>add<span class="w"> </span>-i<span class="w"> </span>vmk1<span class="w"> </span>-p<span class="w"> </span><span class="s2">"vMotion"</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>esxcli<span class="w"> </span>network<span class="w"> </span>ip<span class="w"> </span>interface<span class="w"> </span>ipv4<span class="w"> </span><span class="nb">set</span><span class="w"> </span>-i<span class="w"> </span>vmk1<span class="w"> </span>-I<span class="w"> </span><span class="m">10</span>.0.10.10<span class="w"> </span>-N<span class="w"> </span><span class="m">255</span>.255.255.0<span class="w"> </span>-t<span class="w"> </span>static
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>vim-cmd<span class="w"> </span>hostsvc/vmotion/vnic_set<span class="w"> </span>vmk1
+</code></pre></div>
+<h3 id="types-vmotion">Types vMotion<a class="headerlink" href="#types-vmotion" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>vMotion standard</strong> : Migration VM (stockage reste)</li>
+<li><strong>Storage vMotion</strong> : Migration disques VM (VM reste sur même hôte)</li>
+<li><strong>Cross vSwitch vMotion</strong> : Change vSwitch pendant migration</li>
+<li><strong>Long Distance vMotion</strong> : Entre sites (latence &lt;150ms, vSphere 6+)</li>
+</ul>
+<hr />
+<h2 id="4-vsphere-ha-high-availability">4. vSPHERE HA (High Availability)<a class="headerlink" href="#4-vsphere-ha-high-availability" title="Permanent link">&para;</a></h2>
+<h3 id="fonctionnement">Fonctionnement<a class="headerlink" href="#fonctionnement" title="Permanent link">&para;</a></h3>
+<p>Si <strong>ESXi hôte crash</strong> → VMs redémarrent automatiquement sur autres hôtes cluster</p>
+<h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>vCenter → Cluster → Configure → vSphere HA
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  ☑ Turn On vSphere HA
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  Admission Control : 
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    - Host failures tolerated: 1 (réserve ressources pour 1 panne)
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>  VM Monitoring:
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    - VM Monitoring: Enabled (redémarre VM si guest OS freeze)
+</code></pre></div>
+<h3 id="prerequis_1">Prérequis<a class="headerlink" href="#prerequis_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Minimum 2 hôtes ESXi dans cluster</li>
+<li>Stockage partagé (datastores accessibles par tous hôtes)</li>
+<li>Réseau management fiable (heartbeat entre hôtes)</li>
+</ul>
+<h3 id="difference-ha-vs-ft">Différence HA vs FT<a class="headerlink" href="#difference-ha-vs-ft" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th>HA</th>
+<th>FT (Fault Tolerance)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tolérance</strong></td>
+<td>Redémarrage VM (downtime 1-2min)</td>
+<td><strong>0 downtime</strong> (VM miroir active)</td>
+</tr>
+<tr>
+<td><strong>Ressources</strong></td>
+<td>Économique</td>
+<td>Double ressources (2 VMs actives)</td>
+</tr>
+<tr>
+<td><strong>Cas usage</strong></td>
+<td>Applications standard</td>
+<td>Applications critiques (base prod)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-types-de-disques-virtuels">5. TYPES DE DISQUES VIRTUELS<a class="headerlink" href="#5-types-de-disques-virtuels" title="Permanent link">&para;</a></h2>
+<h3 id="thick-provision-epais">Thick Provision (épais)<a class="headerlink" href="#thick-provision-epais" title="Permanent link">&para;</a></h3>
+<p><strong>Lazy Zeroed Thick</strong> :
+- Espace réservé immédiatement
+- Zéros écrits à la demande (plus rapide création)
+- Performance : ⭐⭐⭐</p>
+<p><strong>Eager Zeroed Thick</strong> :
+- Espace réservé + rempli de zéros immédiatement
+- Création longue mais <strong>requis pour FT</strong>
+- Performance : ⭐⭐⭐⭐⭐ (meilleure)</p>
+<h3 id="thin-provision-dynamique">Thin Provision (dynamique)<a class="headerlink" href="#thin-provision-dynamique" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Espace alloué à la demande (VM 100GB peut occuper 30GB)</li>
+<li><strong>Risque</strong> : Sur-allocation → datastore plein</li>
+<li>Performance : ⭐⭐ (fragmentation)</li>
+<li><strong>Cas usage</strong> : Environnements tests, VDI</li>
+</ul>
+<h3 id="commande-conversion">Commande conversion<a class="headerlink" href="#commande-conversion" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>vmkfstools<span class="w"> </span>-i<span class="w"> </span>source.vmdk<span class="w"> </span>-d<span class="w"> </span>thin<span class="w"> </span>destination.vmdk
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>vmkfstools<span class="w"> </span>-i<span class="w"> </span>source.vmdk<span class="w"> </span>-d<span class="w"> </span>eagerzeroedthick<span class="w"> </span>destination.vmdk
+</code></pre></div>
+<hr />
+<h2 id="6-datastores">6. DATASTORES<a class="headerlink" href="#6-datastores" title="Permanent link">&para;</a></h2>
+<h3 id="vmfs-vmware-file-system">VMFS (VMware File System)<a class="headerlink" href="#vmfs-vmware-file-system" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Système fichiers VMware propriétaire</li>
+<li><strong>Support</strong> : Bloc (SAN iSCSI, Fibre Channel)</li>
+<li><strong>Avantages</strong> : Locking fichiers, snapshots matériels</li>
+<li><strong>Version actuelle</strong> : VMFS6 (blocs 512e/4Kn)</li>
+</ul>
+<h3 id="nfs-network-file-system">NFS (Network File System)<a class="headerlink" href="#nfs-network-file-system" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Système fichiers réseau standard</li>
+<li><strong>Support</strong> : NAS (Synology, QNAP, serveurs Linux)</li>
+<li><strong>Avantages</strong> : Simplicité administration, économique</li>
+<li><strong>Versions</strong> : NFSv3 (default), NFSv4.1 (authentification Kerberos)</li>
+</ul>
+<h3 id="comparaison">Comparaison<a class="headerlink" href="#comparaison" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th>VMFS</th>
+<th>NFS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>Bloc</td>
+<td>Fichier</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td><strong>Coût</strong></td>
+<td>Élevé (SAN)</td>
+<td>Économique (NAS)</td>
+</tr>
+<tr>
+<td><strong>Snapshots</strong></td>
+<td>Matériels</td>
+<td>Logiciels</td>
+</tr>
+</tbody>
+</table>
+<h3 id="commandes">Commandes<a class="headerlink" href="#commandes" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Lister datastores</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>esxcli<span class="w"> </span>storage<span class="w"> </span>filesystem<span class="w"> </span>list
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Monter datastore NFS</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>esxcli<span class="w"> </span>storage<span class="w"> </span>nfs<span class="w"> </span>add<span class="w"> </span>-H<span class="w"> </span><span class="m">192</span>.168.1.100<span class="w"> </span>-s<span class="w"> </span>/volume1/VMstore<span class="w"> </span>-v<span class="w"> </span>NFS_Datastore01
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1"># Augmenter datastore VMFS</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>vmkfstools<span class="w"> </span>-X<span class="w"> </span>500G<span class="w"> </span>/vmfs/volumes/datastore1
+</code></pre></div>
+<hr />
+<h2 id="7-drs-distributed-resource-scheduler">7. DRS (Distributed Resource Scheduler)<a class="headerlink" href="#7-drs-distributed-resource-scheduler" title="Permanent link">&para;</a></h2>
+<h3 id="fonctionnement_1">Fonctionnement<a class="headerlink" href="#fonctionnement_1" title="Permanent link">&para;</a></h3>
+<p><strong>Load balancing automatique</strong> : Déplace VMs entre hôtes pour équilibrer CPU/RAM</p>
+<h3 id="modes">Modes<a class="headerlink" href="#modes" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Manual</strong> : DRS recommande, admin exécute</li>
+<li><strong>Partially Automated</strong> : DRS place VMs au démarrage, recommande migrations</li>
+<li><strong>Fully Automated</strong> : DRS migre automatiquement (vMotion)</li>
+</ul>
+<h3 id="regles-drs">Règles DRS<a class="headerlink" href="#regles-drs" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Affinity Rules (affinité) :
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  - Keep VMs together : VM1 + VM2 sur même hôte (performance réseau)
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Anti-Affinity Rules (anti-affinité) :
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>  - Separate VMs : VM_DC1 et VM_DC2 sur hôtes différents (HA)
+</code></pre></div>
+<hr />
+<h2 id="8-reseau-vsphere">8. RÉSEAU vSPHERE<a class="headerlink" href="#8-reseau-vsphere" title="Permanent link">&para;</a></h2>
+<h3 id="vswitch-standard">vSwitch Standard<a class="headerlink" href="#vswitch-standard" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Configuré localement par hôte ESXi</li>
+<li>Gratuit (inclus ESXi)</li>
+<li>Administration manuelle multi-hôtes</li>
+</ul>
+<h3 id="vswitch-distributed-dvswitch">vSwitch Distributed (dvSwitch)<a class="headerlink" href="#vswitch-distributed-dvswitch" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Configuration centralisée via vCenter</li>
+<li>Licence Enterprise Plus requise</li>
+<li><strong>Avantages</strong> : Policies réseau uniformes, Network I/O Control</li>
+</ul>
+<h3 id="port-groups">Port Groups<a class="headerlink" href="#port-groups" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Port Group "Production" → VLAN 10
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Port Group "DMZ"        → VLAN 20
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>Port Group "Admin"      → VLAN 99
+</code></pre></div>
+<h3 id="vmkernel-ports-vmkx">VMkernel Ports (vmkX)<a class="headerlink" href="#vmkernel-ports-vmkx" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>vmk0</strong> : Management (accès ESXi)</li>
+<li><strong>vmk1</strong> : vMotion</li>
+<li><strong>vmk2</strong> : vSAN</li>
+<li><strong>vmk3</strong> : Fault Tolerance</li>
+</ul>
+<hr />
+<h2 id="9-templates-clones">9. TEMPLATES &amp; CLONES<a class="headerlink" href="#9-templates-clones" title="Permanent link">&para;</a></h2>
+<h3 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h3>
+<p>VM modèle figée (non démarrable), base déploiements rapides</p>
+<p><strong>Workflow</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>1. Installer OS sur VM + personnaliser
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2. Sysprep Windows / cloud-init Linux
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>3. Convertir VM en template
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>4. Déployer VMs depuis template (nom, IP, etc.)
+</code></pre></div></p>
+<h3 id="types-clones">Types clones<a class="headerlink" href="#types-clones" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Full Clone</strong> : Copie complète indépendante</li>
+<li><strong>Linked Clone</strong> : Disque parent partagé (delta disks)</li>
+<li>Avantage : Gain espace (10 VMs = 1 parent + 10 petits deltas)</li>
+<li>Inconvénient : Dépendance (parent corrompu = tous clones KO)</li>
+</ul>
+<hr />
+<h2 id="10-commandes-esxcli-essentielles">10. COMMANDES ESXCLI ESSENTIELLES<a class="headerlink" href="#10-commandes-esxcli-essentielles" title="Permanent link">&para;</a></h2>
+<h3 id="reseau">Réseau<a class="headerlink" href="#reseau" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>esxcli<span class="w"> </span>network<span class="w"> </span>nic<span class="w"> </span>list<span class="w">                    </span><span class="c1"># Cartes réseau physiques</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>esxcli<span class="w"> </span>network<span class="w"> </span>vswitch<span class="w"> </span>standard<span class="w"> </span>list<span class="w">       </span><span class="c1"># vSwitches</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>esxcli<span class="w"> </span>network<span class="w"> </span>ip<span class="w"> </span>interface<span class="w"> </span>ipv4<span class="w"> </span>get<span class="w">       </span><span class="c1"># Config IP VMkernel</span>
+</code></pre></div>
+<h3 id="stockage">Stockage<a class="headerlink" href="#stockage" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>esxcli<span class="w"> </span>storage<span class="w"> </span>core<span class="w"> </span>adapter<span class="w"> </span>list<span class="w">           </span><span class="c1"># Adaptateurs (vmhbaX)</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>esxcli<span class="w"> </span>storage<span class="w"> </span>vmfs<span class="w"> </span>extent<span class="w"> </span>list<span class="w">            </span><span class="c1"># Datastores VMFS</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>esxcli<span class="w"> </span>storage<span class="w"> </span>nfs<span class="w"> </span>list<span class="w">                    </span><span class="c1"># Datastores NFS</span>
+</code></pre></div>
+<h3 id="vms">VMs<a class="headerlink" href="#vms" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>vim-cmd<span class="w"> </span>vmsvc/getallvms<span class="w">                    </span><span class="c1"># Liste VMs</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>vim-cmd<span class="w"> </span>vmsvc/power.on<span class="w"> </span>&lt;vmid&gt;<span class="w">              </span><span class="c1"># Démarrer VM</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>vim-cmd<span class="w"> </span>vmsvc/power.off<span class="w"> </span>&lt;vmid&gt;<span class="w">             </span><span class="c1"># Éteindre VM</span>
+</code></pre></div>
+<h3 id="maintenance">Maintenance<a class="headerlink" href="#maintenance" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>esxcli<span class="w"> </span>system<span class="w"> </span>maintenanceMode<span class="w"> </span><span class="nb">set</span><span class="w"> </span>--enable<span class="w"> </span><span class="nb">true</span><span class="w">   </span><span class="c1"># Mode maintenance</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>esxcli<span class="w"> </span>system<span class="w"> </span>shutdown<span class="w"> </span>reboot<span class="w"> </span>-r<span class="w"> </span><span class="s2">"Patch mensuel"</span><span class="w">  </span><span class="c1"># Redémarrage</span>
+</code></pre></div>
+<hr />
+<h2 id="11-bonnes-pratiques">11. BONNES PRATIQUES<a class="headerlink" href="#11-bonnes-pratiques" title="Permanent link">&para;</a></h2>
+<h3 id="snapshots">Snapshots<a class="headerlink" href="#snapshots" title="Permanent link">&para;</a></h3>
+<ul>
+<li>❌ Jamais snapshot sur VM base de données en production (corruption)</li>
+<li>✅ Supprimer dans 24-72h maximum</li>
+<li>✅ Planifier fenêtre maintenance pour consolidation (I/O intensif)</li>
+</ul>
+<h3 id="ressources-vms">Ressources VMs<a class="headerlink" href="#ressources-vms" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Réserver RAM critique (SQL Server, Exchange)</li>
+<li>✅ Limiter CPU shares pour VMs tests (éviter monopolisation)</li>
+<li>❌ Ne pas allouer 100% ressources physiques (overhead ESXi)</li>
+</ul>
+<h3 id="stockage_1">Stockage<a class="headerlink" href="#stockage_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Thin provision pour VDI/tests, Thick pour production</li>
+<li>✅ Séparer datastores : OS / Données / Logs</li>
+<li>✅ Laisser 20% espace libre datastore (performances)</li>
+</ul>
+<h3 id="reseau_1">Réseau<a class="headerlink" href="#reseau_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Réseau vMotion dédié (10 Gbps recommandé)</li>
+<li>✅ Teaming NICs (failover automatique)</li>
+<li>✅ Jumbo Frames (MTU 9000) pour vMotion/NFS</li>
+</ul>
+<hr />
+<h2 id="12-depannage-rapide">12. DÉPANNAGE RAPIDE<a class="headerlink" href="#12-depannage-rapide" title="Permanent link">&para;</a></h2>
+<h3 id="vm-ne-demarre-pas">VM ne démarre pas<a class="headerlink" href="#vm-ne-demarre-pas" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Vérifier logs</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>tail<span class="w"> </span>-f<span class="w"> </span>/vmfs/volumes/datastore1/VM01/vmware.log
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="c1"># Causes fréquentes :</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>-<span class="w"> </span>Datastore<span class="w"> </span>déconnecté
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>-<span class="w"> </span>Fichier<span class="w"> </span>.vmx<span class="w"> </span>verrouillé<span class="w"> </span><span class="o">(</span>autre<span class="w"> </span>hôte<span class="o">)</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>-<span class="w"> </span>Snapshot<span class="w"> </span>corrompu
+</code></pre></div>
+<h3 id="vmotion-echoue">vMotion échoue<a class="headerlink" href="#vmotion-echoue" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Erreur commune : "The VMotion migration failed..."
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>Checks :
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>1. Réseau vMotion actif : esxcli network ip interface list
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>2. VMkernel vMotion enabled
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>3. Stockage partagé accessible par les 2 hôtes
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>4. Compatibilité CPU (EVC mode si nécessaire)
+</code></pre></div>
+<h3 id="datastore-plein">Datastore plein<a class="headerlink" href="#datastore-plein" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># Top 10 VMs les plus volumineuses</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>du<span class="w"> </span>-h<span class="w"> </span>/vmfs/volumes/datastore1/*<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-rh<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-10
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="c1"># Consolider snapshots</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>vim-cmd<span class="w"> </span>vmsvc/snapshot.removeall<span class="w"> </span>&lt;vmid&gt;
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="c1"># Supprimer vieux logs</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>find<span class="w"> </span>/vmfs/volumes/datastore1<span class="w"> </span>-name<span class="w"> </span><span class="s2">"*.log"</span><span class="w"> </span>-mtime<span class="w"> </span>+30<span class="w"> </span>-delete
+</code></pre></div>
+<hr />
+<h2 id="commandes-a-retenir">COMMANDES À RETENIR<a class="headerlink" href="#commandes-a-retenir" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># Snapshots</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>vim-cmd<span class="w"> </span>vmsvc/snapshot.create<span class="w"> </span>&lt;vmid&gt;<span class="w"> </span><span class="s2">"nom"</span><span class="w"> </span><span class="s2">"description"</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>vim-cmd<span class="w"> </span>vmsvc/snapshot.revert<span class="w"> </span>&lt;vmid&gt;<span class="w"> </span>&lt;snapshot_id&gt;<span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>vim-cmd<span class="w"> </span>vmsvc/snapshot.removeall<span class="w"> </span>&lt;vmid&gt;
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="c1"># Datastores</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>esxcli<span class="w"> </span>storage<span class="w"> </span>nfs<span class="w"> </span>add<span class="w"> </span>-H<span class="w"> </span>&lt;IP_NAS&gt;<span class="w"> </span>-s<span class="w"> </span>&lt;chemin&gt;<span class="w"> </span>-v<span class="w"> </span>&lt;nom&gt;
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>esxcli<span class="w"> </span>storage<span class="w"> </span>filesystem<span class="w"> </span>list
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="c1"># Réseau vMotion</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>esxcli<span class="w"> </span>network<span class="w"> </span>ip<span class="w"> </span>interface<span class="w"> </span>add<span class="w"> </span>-i<span class="w"> </span>vmk1<span class="w"> </span>-p<span class="w"> </span><span class="s2">"vMotion"</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>vim-cmd<span class="w"> </span>hostsvc/vmotion/vnic_set<span class="w"> </span>vmk1
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="c1"># Maintenance</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>esxcli<span class="w"> </span>system<span class="w"> </span>maintenanceMode<span class="w"> </span><span class="nb">set</span><span class="w"> </span>--enable<span class="w"> </span><span class="nb">true</span>
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>vim-cmd<span class="w"> </span>vmsvc/getallvms
+</code></pre></div>
+<hr />
+<p><strong>Date révision</strong> : 12 novembre 2025<br />
+<strong>Examen TSSR</strong> : 17 novembre 2025</p>
+<p><strong>Cette fiche couvre 75% des questions CCP5 Virtualisation !</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../../INDEX-CCP5/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Vue d&#39;ensemble">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Vue d'ensemble
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../QCM/Evaluation/QCM-Virtualisation-40Q/" class="md-footer__link md-footer__link--next" aria-label="Suivant: QCM — énoncé">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                QCM — énoncé
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Contenu sous licence GPL-3.0 — bon courage pour l'examen !
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../assets/quiz.js"></script>
+      
+    
+  </body>
+</html>

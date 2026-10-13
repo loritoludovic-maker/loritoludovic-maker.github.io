@@ -1,0 +1,5482 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Fiches, QCM interactifs, examens blancs et simulation orale pour préparer le titre TSSR.">
+      
+      
+      
+        <link rel="canonical" href="https://loritoludovic-maker.github.io/revision-tssr/CCP2-Windows-Active-Directory/Fiche-Revision/FICHE-CCP2-Windows-AD-PowerShell/">
+      
+      
+        <link rel="prev" href="../../INDEX-CCP2/">
+      
+      
+        <link rel="next" href="../../QCM/Evaluation/QCM-Windows-ActiveDirectory-30Q/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Fiche — Windows AD PowerShell - Révisions TSSR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fiche-revision-ccp2-windows-server-active-directory-powershell" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../.." title="Révisions TSSR" class="md-header__button md-logo" aria-label="Révisions TSSR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Révisions TSSR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fiche — Windows AD PowerShell
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal"  aria-label="Passer en mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer en mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="teal"  aria-label="Passer en mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer en mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../START-HERE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Démarrer
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../CCP/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Les 9 CCP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../quiz/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  QCM interactifs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Examens-Blancs/Examen-1/EXAMEN-BLANC-1-EVALUATION/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Examens blancs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Simulation-Orale-Complete/INDEX-SIMULATION-ORALE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Simulation orale
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../quiz/scores/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Mes scores
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Révisions TSSR" class="md-nav__button md-logo" aria-label="Révisions TSSR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    Révisions TSSR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Démarrer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Démarrer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../START-HERE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commencer ici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PRESENTATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Présentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../README-GUIDE-REVISION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide de révision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PLANNING-REVISION-5-JOURS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planning 5 jours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX-GENERAL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index général
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SUIVI-SCORES-PROGRESSION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche de suivi (papier)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../CCP/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Les 9 CCP
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Les 9 CCP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP1 · Support utilisateur
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP1 · Support utilisateur
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/INDEX-CCP1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/Fiche-Revision/FICHE-CCP1-Support-Utilisateur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Support Utilisateur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/QCM/Evaluation/QCM-Support-ITIL-40Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/QCM/Correction/QCM-Support-ITIL-40Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP1-Support-10Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP1-Support-10Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP2 · Windows & Active Directory
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP2 · Windows & Active Directory
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../INDEX-CCP2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Windows AD PowerShell
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Windows AD PowerShell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-active-directory-ad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. ACTIVE DIRECTORY (AD)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. ACTIVE DIRECTORY (AD)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure-hierarchique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure hiérarchique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controleur-de-domaine-dc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contrôleur de domaine (DC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-gestion-utilisateurs-et-groupes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. GESTION UTILISATEURS ET GROUPES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. GESTION UTILISATEURS ET GROUPES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creer-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Créer utilisateur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creer-groupe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Créer groupe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recherches-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recherches utiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-strategies-de-groupe-gpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. STRATÉGIES DE GROUPE (GPO)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. STRATÉGIES DE GROUPE (GPO)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chemins-gpo-essentiels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chemins GPO essentiels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpo-courantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPO courantes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commandes-gpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commandes GPO
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-dns-windows-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. DNS WINDOWS SERVER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. DNS WINDOWS SERVER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-denregistrements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types d'enregistrements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commandes-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commandes DNS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-permissions-ntfs-vs-partage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. PERMISSIONS NTFS vs PARTAGE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. PERMISSIONS NTFS vs PARTAGE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ntfs-local-reseau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NTFS (local + réseau)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partage-smb-reseau-uniquement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partage SMB (réseau uniquement)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regle-cumulative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Règle cumulative
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-powershell-avance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. POWERSHELL AVANCÉ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. POWERSHELL AVANCÉ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables-et-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables et types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boucles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boucles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conditions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonctions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonctions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modules-ad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modules AD
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-services-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. SERVICES WINDOWS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. SERVICES WINDOWS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gestion-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestion services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#services-critiques-ad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Services critiques AD
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-windows-update-wsus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. WINDOWS UPDATE / WSUS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. WINDOWS UPDATE / WSUS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wsus-windows-server-update-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WSUS (Windows Server Update Services)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commandes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commandes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-sauvegarde-windows-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. SAUVEGARDE WINDOWS SERVER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. SAUVEGARDE WINDOWS SERVER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-server-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows Server Backup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-scripts-powershell-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. SCRIPTS POWERSHELL UTILES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. SCRIPTS POWERSHELL UTILES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#script-1-creation-utilisateurs-en-masse-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Script 1 : Création utilisateurs en masse (CSV)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-2-rapport-espace-disque-serveurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Script 2 : Rapport espace disque serveurs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-3-desactiver-comptes-inactifs-90-jours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Script 3 : Désactiver comptes inactifs &gt;90 jours
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commandes-essentielles-a-retenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        COMMANDES ESSENTIELLES À RETENIR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="COMMANDES ESSENTIELLES À RETENIR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#active-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Active Directory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../QCM/Evaluation/QCM-Windows-ActiveDirectory-30Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../QCM/Correction/QCM-Windows-ActiveDirectory-30Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP2-Windows-AD-15Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP2-Windows-AD-15Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP3 · Maintenance Linux
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP3 · Maintenance Linux
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/INDEX-CCP3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/Fiche-Revision/FICHE-01-Linux-Commandes-Essentielles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Linux Commandes Essentielles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/QCM/Evaluation/QCM-Linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/QCM/Correction/QCM-Linux-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/Questions-Ouvertes/Evaluation/Questions-Ouvertes-Linux-20Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/Questions-Ouvertes/Correction/Questions-Ouvertes-Linux-20Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/MSP/MSP-Pratique-Services-Linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MSP pratique — services Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP4 · Services réseau
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP4 · Services réseau
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/INDEX-CCP4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/Fiches-Revisions/FICHE-02-Ports-Protocoles-Acronymes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Ports Protocoles Acronymes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/Fiches-Revisions/FICHE-04-Reseau-Subnetting-CIDR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Reseau Subnetting CIDR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/Fiches-Revisions/FICHE-05-Commandes-Cisco-IOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Commandes Cisco IOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/QCM/Evaluation/QCM-Reseau/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/QCM/Correction/QCM-Reseau-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/Questions-Ouvertes/Evaluation/Questions-Ouvertes-Reseau/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/Questions-Ouvertes/Correction/Questions-Ouvertes-Reseau-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/Exercices-Subnetting/Evaluation/Exercices-Subnetting-20-Exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices subnetting — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP4-Services-Reseau/Exercices-Subnetting/Correction/Exercices-Subnetting-20-Exercices-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices subnetting — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP5 · Virtualisation VMware
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP5 · Virtualisation VMware
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/INDEX-CCP5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/Fiche-Revisions/FICHE-CCP5-VMware-vSphere/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — VMware vSphere
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/QCM/Evaluation/QCM-Virtualisation-40Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/QCM/Correction/QCM-Virtualisation-40Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP5-VMware-10Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP5-VMware-10Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP6 · Scripts & automatisation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP6 · Scripts & automatisation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/INDEX-CCP6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/Fiche-Revisions/FICHE-06-Scripting-Bash-PowerShell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Scripting Bash PowerShell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/QCM/Evaluation/QCM-CCP6-Scripting-30Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/QCM/Correction/QCM-CCP6-Scripting-30Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP6-Scripting-10Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP6-Scripting-10Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP7 · Sécurisation accès Internet
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP7 · Sécurisation accès Internet
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/INDEX-CCP7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/Fiche-Revisions/FICHE-CCP7-Securite-Reseau-pfSense/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Securite Reseau pfSense
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/QCM/Evaluation/QCM-CCP7-Securite-Reseau-25Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/QCM/Correction/QCM-CCP7-Securite-Reseau-25Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP7-Securite-8Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP7-Securite-8Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP8 · Sauvegardes & restaurations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP8 · Sauvegardes & restaurations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/INDEX-CCP8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/Fiche-Revisions/FICHE-03-Sauvegardes-PRA-PCA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Sauvegardes PRA PCA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/QCM/Evaluation/QCM-CCP8-Sauvegardes-20Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/QCM/Correction/QCM-CCP8-Sauvegardes-20Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/Questions-Ouvertes/Evaluation/Questions-Ouvertes-Sauvegardes-15Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/Questions-Ouvertes/Correction/Questions-Ouvertes-Sauvegardes-15Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP9 · Déploiement de postes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP9 · Déploiement de postes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/INDEX-CCP9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/Fiche-Revisions/FICHE-CCP9-Deploiement-Postes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Deploiement Postes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/QCM/Evaluation/QCM-CCP9-Deploiement-20Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/QCM/Correction/QCM-CCP9-Deploiement-20Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP9-Deploiement-6Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP9-Deploiement-6Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactifs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examens blancs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examens blancs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Examens-Blancs/Examen-1/EXAMEN-BLANC-1-EVALUATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen blanc 1 — sujet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Examens-Blancs/Examen-1/EXAMEN-BLANC-1-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen blanc 1 — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Examens-Blancs/Examen-2/EXAMEN-BLANC-2-EVALUATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen blanc 2 — sujet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Examens-Blancs/Examen-2/EXAMEN-BLANC-2-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen blanc 2 — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation orale
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Simulation orale
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simulation-Orale-Complete/INDEX-SIMULATION-ORALE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sommaire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simulation-Orale-Complete/SIMULATION-ORALE-PARTIE1-MSP-PRATIQUE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partie 1 — MSP pratique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simulation-Orale-Complete/SIMULATION-ORALE-PARTIE2-ENTRETIEN-TECHNIQUE-COMPLET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partie 2 — Entretien technique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simulation-Orale-Complete/SIMULATION-ORALE-PARTIE3-ENTRETIEN-FINAL-COMPLET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partie 3 — Entretien final
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/scores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mes scores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-active-directory-ad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. ACTIVE DIRECTORY (AD)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. ACTIVE DIRECTORY (AD)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure-hierarchique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure hiérarchique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controleur-de-domaine-dc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contrôleur de domaine (DC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-gestion-utilisateurs-et-groupes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. GESTION UTILISATEURS ET GROUPES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. GESTION UTILISATEURS ET GROUPES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creer-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Créer utilisateur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creer-groupe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Créer groupe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recherches-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recherches utiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-strategies-de-groupe-gpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. STRATÉGIES DE GROUPE (GPO)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. STRATÉGIES DE GROUPE (GPO)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chemins-gpo-essentiels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chemins GPO essentiels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpo-courantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPO courantes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commandes-gpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commandes GPO
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-dns-windows-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. DNS WINDOWS SERVER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. DNS WINDOWS SERVER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-denregistrements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types d'enregistrements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commandes-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commandes DNS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-permissions-ntfs-vs-partage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. PERMISSIONS NTFS vs PARTAGE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. PERMISSIONS NTFS vs PARTAGE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ntfs-local-reseau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NTFS (local + réseau)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partage-smb-reseau-uniquement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partage SMB (réseau uniquement)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regle-cumulative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Règle cumulative
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-powershell-avance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. POWERSHELL AVANCÉ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. POWERSHELL AVANCÉ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables-et-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables et types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boucles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boucles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conditions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonctions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonctions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modules-ad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modules AD
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-services-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. SERVICES WINDOWS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. SERVICES WINDOWS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gestion-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestion services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#services-critiques-ad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Services critiques AD
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-windows-update-wsus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. WINDOWS UPDATE / WSUS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. WINDOWS UPDATE / WSUS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wsus-windows-server-update-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WSUS (Windows Server Update Services)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commandes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commandes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-sauvegarde-windows-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. SAUVEGARDE WINDOWS SERVER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. SAUVEGARDE WINDOWS SERVER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-server-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows Server Backup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-scripts-powershell-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. SCRIPTS POWERSHELL UTILES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. SCRIPTS POWERSHELL UTILES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#script-1-creation-utilisateurs-en-masse-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Script 1 : Création utilisateurs en masse (CSV)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-2-rapport-espace-disque-serveurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Script 2 : Rapport espace disque serveurs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-3-desactiver-comptes-inactifs-90-jours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Script 3 : Désactiver comptes inactifs &gt;90 jours
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commandes-essentielles-a-retenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        COMMANDES ESSENTIELLES À RETENIR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="COMMANDES ESSENTIELLES À RETENIR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#active-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Active Directory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../../CCP/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Les 9 CCP
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../../quiz/ccp2/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    CCP2 · Windows & Active Directory
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="fiche-revision-ccp2-windows-server-active-directory-powershell">FICHE REVISION CCP2 - WINDOWS SERVER / ACTIVE DIRECTORY / POWERSHELL<a class="headerlink" href="#fiche-revision-ccp2-windows-server-active-directory-powershell" title="Permanent link">&para;</a></h1>
+<p><strong>Certification TSSR</strong> - CCP2 : Exploiter des serveurs Windows et un domaine ActiveDirectory</p>
+<hr />
+<h2 id="1-active-directory-ad">1. ACTIVE DIRECTORY (AD)<a class="headerlink" href="#1-active-directory-ad" title="Permanent link">&para;</a></h2>
+<h3 id="structure-hierarchique">Structure hiérarchique<a class="headerlink" href="#structure-hierarchique" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>FORÊT (Forest)
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  └── DOMAINE (Domain)
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        └── UNITÉS ORGANISATIONNELLES (OU)
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>              └── OBJETS (Users, Computers, Groups)
+</code></pre></div>
+<p><strong>Forêt</strong> : Limite sécurité, schéma AD commun, relations d'approbation<br />
+<strong>Domaine</strong> : Limite administrative, réplication, politiques<br />
+<strong>OU</strong> : Conteneurs personnalisables, application GPO<br />
+<strong>Objets</strong> : Utilisateurs, ordinateurs, groupes</p>
+<h3 id="controleur-de-domaine-dc">Contrôleur de domaine (DC)<a class="headerlink" href="#controleur-de-domaine-dc" title="Permanent link">&para;</a></h3>
+<p><strong>Rôles FSMO</strong> (5 rôles) :
+- <strong>Forêt</strong> (2) : Maître de schéma, Maître d'attribution de noms de domaine
+- <strong>Domaine</strong> (3) : Émulateur PDC, Maître RID, Maître d'infrastructure</p>
+<p><strong>Commandes</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c"># Installer AD DS</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">Install-WindowsFeature</span> <span class="n">AD-Domain-Services</span> <span class="n">-IncludeManagementTools</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c"># Promouvoir serveur en DC</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nb">Install-ADDSForest</span> <span class="n">-DomainName</span> <span class="s2">"entreprise.local"</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c"># Vérifier rôles FSMO</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="nb">Get-ADDomain</span> <span class="p">|</span> <span class="nb">Select-Object</span> <span class="n">PDCEmulator</span><span class="p">,</span> <span class="n">RIDMaster</span><span class="p">,</span> <span class="n">InfrastructureMaster</span>
+</code></pre></div></p>
+<hr />
+<h2 id="2-gestion-utilisateurs-et-groupes">2. GESTION UTILISATEURS ET GROUPES<a class="headerlink" href="#2-gestion-utilisateurs-et-groupes" title="Permanent link">&para;</a></h2>
+<h3 id="creer-utilisateur">Créer utilisateur<a class="headerlink" href="#creer-utilisateur" title="Permanent link">&para;</a></h3>
+<p><strong>PowerShell</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">New-ADUser</span> <span class="n">-Name</span> <span class="s2">"Jean Dupont"</span> <span class="p">`</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  <span class="n">-GivenName</span> <span class="s2">"Jean"</span> <span class="p">`</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  <span class="n">-Surname</span> <span class="s2">"Dupont"</span> <span class="p">`</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  <span class="n">-SamAccountName</span> <span class="s2">"jdupont"</span> <span class="p">`</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  <span class="n">-UserPrincipalName</span> <span class="s2">"jdupont@entreprise.local"</span> <span class="p">`</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  <span class="n">-Path</span> <span class="s2">"OU=Utilisateurs,DC=entreprise,DC=local"</span> <span class="p">`</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  <span class="n">-AccountPassword</span> <span class="p">(</span><span class="nb">ConvertTo-SecureString</span> <span class="s2">"P@ssw0rd123!"</span> <span class="n">-AsPlainText</span> <span class="n">-Force</span><span class="p">)</span> <span class="p">`</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  <span class="n">-Enabled</span> <span class="nv">$true</span>
+</code></pre></div></p>
+<h3 id="creer-groupe">Créer groupe<a class="headerlink" href="#creer-groupe" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">New-ADGroup</span> <span class="n">-Name</span> <span class="s2">"GRP_RH"</span> <span class="p">`</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  <span class="n">-GroupScope</span> <span class="n">Global</span> <span class="p">`</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  <span class="n">-GroupCategory</span> <span class="n">Security</span> <span class="p">`</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  <span class="n">-Path</span> <span class="s2">"OU=Groupes,DC=entreprise,DC=local"</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c"># Ajouter membre</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="nb">Add-ADGroupMember</span> <span class="n">-Identity</span> <span class="s2">"GRP_RH"</span> <span class="n">-Members</span> <span class="s2">"jdupont"</span>
+</code></pre></div>
+<h3 id="recherches-utiles">Recherches utiles<a class="headerlink" href="#recherches-utiles" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c"># Utilisateurs désactivés</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">Get-ADUser</span> <span class="n">-Filter</span> <span class="p">{</span><span class="n">Enabled</span> <span class="o">-eq</span> <span class="nv">$false</span><span class="p">}</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c"># Utilisateurs OU spécifique</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nb">Get-ADUser</span> <span class="n">-SearchBase</span> <span class="s2">"OU=RH,DC=entreprise,DC=local"</span> <span class="n">-Filter</span> <span class="p">*</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c"># Dernière connexion &gt;90 jours</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="nv">$date</span> <span class="p">=</span> <span class="p">(</span><span class="nb">Get-Date</span><span class="p">).</span><span class="n">AddDays</span><span class="p">(-</span><span class="n">90</span><span class="p">)</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="nb">Get-ADUser</span> <span class="n">-Filter</span> <span class="p">{</span><span class="n">LastLogonDate</span> <span class="o">-lt</span> <span class="nv">$date</span><span class="p">}</span> <span class="n">-Properties</span> <span class="n">LastLogonDate</span>
+</code></pre></div>
+<hr />
+<h2 id="3-strategies-de-groupe-gpo">3. STRATÉGIES DE GROUPE (GPO)<a class="headerlink" href="#3-strategies-de-groupe-gpo" title="Permanent link">&para;</a></h2>
+<h3 id="chemins-gpo-essentiels">Chemins GPO essentiels<a class="headerlink" href="#chemins-gpo-essentiels" title="Permanent link">&para;</a></h3>
+<p><strong>Configuration ordinateur</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Computer Configuration
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  └── Policies
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>        ├── Software Settings
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>        ├── Windows Settings
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        │     ├── Security Settings (mots de passe, audit, pare-feu)
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        │     └── Scripts (démarrage/arrêt)
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        └── Administrative Templates
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>              ├── System (USB, BitLocker, Windows Update)
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>              └── Network (Wi-Fi, VPN)
+</code></pre></div></p>
+<p><strong>Configuration utilisateur</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>User Configuration
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>  └── Policies
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>        ├── Software Settings
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>        ├── Windows Settings
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>        │     ├── Folder Redirection
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        │     └── Scripts (ouverture/fermeture session)
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        └── Administrative Templates
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>              ├── Desktop (fond d'écran, widgets)
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>              └── Start Menu (épingler applications)
+</code></pre></div></p>
+<h3 id="gpo-courantes">GPO courantes<a class="headerlink" href="#gpo-courantes" title="Permanent link">&para;</a></h3>
+<p><strong>Bloquer clés USB</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Computer Config → Admin Templates → System → Removable Storage Access
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>→ All Removable Storage: Deny all access = Enabled
+</code></pre></div></p>
+<p><strong>Mappage lecteurs réseau</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>User Config → Preferences → Windows Settings → Drive Maps
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>→ New → Mapped Drive
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>   Action: Create
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>   Location: \\SRV-FILE01\Partages
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>   Drive Letter: P:
+</code></pre></div></p>
+<p><strong>Stratégie mots de passe</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Computer Config → Policies → Windows Settings → Security Settings → Account Policies → Password Policy
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>→ Minimum password length: 12 characters
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>→ Password must meet complexity requirements: Enabled
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>→ Maximum password age: 90 days
+</code></pre></div></p>
+<h3 id="commandes-gpo">Commandes GPO<a class="headerlink" href="#commandes-gpo" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c"># Créer GPO</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nb">New-GPO</span> <span class="n">-Name</span> <span class="s2">"GPO-Securite-RH"</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c"># Lier GPO à OU</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="nb">New-GPLink</span> <span class="n">-Name</span> <span class="s2">"GPO-Securite-RH"</span> <span class="n">-Target</span> <span class="s2">"OU=RH,DC=entreprise,DC=local"</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="c"># Forcer application</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="n">gpupdate</span> <span class="p">/</span><span class="n">force</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="c"># Rapport GPO utilisateur</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="n">gpresult</span> <span class="p">/</span><span class="nb">r</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="n">gpresult</span> <span class="p">/</span><span class="nb">h </span><span class="n">rapport</span><span class="p">.</span><span class="n">html</span>
+</code></pre></div>
+<hr />
+<h2 id="4-dns-windows-server">4. DNS WINDOWS SERVER<a class="headerlink" href="#4-dns-windows-server" title="Permanent link">&para;</a></h2>
+<h3 id="types-denregistrements">Types d'enregistrements<a class="headerlink" href="#types-denregistrements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>TYPE</th>
+<th>DESCRIPTION</th>
+<th>EXEMPLE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>IPv4 vers nom</td>
+<td>intranet.entreprise.local → 192.168.10.30</td>
+</tr>
+<tr>
+<td><strong>AAAA</strong></td>
+<td>IPv6 vers nom</td>
+<td>serveur → 2001:db8::1</td>
+</tr>
+<tr>
+<td><strong>CNAME</strong></td>
+<td>Alias</td>
+<td>www → intranet</td>
+</tr>
+<tr>
+<td><strong>MX</strong></td>
+<td>Serveur mail</td>
+<td>mail.entreprise.local priorité 10</td>
+</tr>
+<tr>
+<td><strong>PTR</strong></td>
+<td>Reverse (IP→nom)</td>
+<td>192.168.10.30 → SRV-DC01</td>
+</tr>
+<tr>
+<td><strong>SRV</strong></td>
+<td>Service AD</td>
+<td>_ldap._tcp.entreprise.local</td>
+</tr>
+</tbody>
+</table>
+<h3 id="commandes-dns">Commandes DNS<a class="headerlink" href="#commandes-dns" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c"># Créer zone principale</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nb">Add-DnsServerPrimaryZone</span> <span class="n">-Name</span> <span class="s2">"entreprise.local"</span> <span class="n">-ZoneFile</span> <span class="s2">"entreprise.local.dns"</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c"># Ajouter enregistrement A</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="nb">Add-DnsServerResourceRecordA</span> <span class="n">-Name</span> <span class="s2">"intranet"</span> <span class="p">`</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>  <span class="n">-ZoneName</span> <span class="s2">"entreprise.local"</span> <span class="p">`</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>  <span class="n">-IPv4Address</span> <span class="s2">"192.168.10.30"</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="c"># Ajouter CNAME</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="nb">Add-DnsServerResourceRecordCName</span> <span class="n">-Name</span> <span class="s2">"www"</span> <span class="p">`</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>  <span class="n">-ZoneName</span> <span class="s2">"entreprise.local"</span> <span class="p">`</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>  <span class="n">-HostNameAlias</span> <span class="s2">"intranet.entreprise.local"</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="c"># Tests</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="n">nslookup</span> <span class="n">intranet</span><span class="p">.</span><span class="n">entreprise</span><span class="p">.</span><span class="n">local</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="nb">Resolve-DnsName</span> <span class="n">intranet</span><span class="p">.</span><span class="n">entreprise</span><span class="p">.</span><span class="n">local</span>
+</code></pre></div>
+<hr />
+<h2 id="5-permissions-ntfs-vs-partage">5. PERMISSIONS NTFS vs PARTAGE<a class="headerlink" href="#5-permissions-ntfs-vs-partage" title="Permanent link">&para;</a></h2>
+<h3 id="ntfs-local-reseau">NTFS (local + réseau)<a class="headerlink" href="#ntfs-local-reseau" title="Permanent link">&para;</a></h3>
+<p><strong>Permissions</strong> :
+- <strong>Lecture</strong> : Voir fichiers/dossiers
+- <strong>Écriture</strong> : Créer fichiers
+- <strong>Modification</strong> : Lire + Écrire + Supprimer
+- <strong>Contrôle total</strong> : Toutes permissions + modifier ACL</p>
+<p><strong>Commandes</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c"># Voir permissions</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nb">Get-Acl</span> <span class="s2">"C:\Partages\RH"</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c"># Ajouter permission</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="nv">$acl</span> <span class="p">=</span> <span class="nb">Get-Acl</span> <span class="s2">"C:\Partages\RH"</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="nv">$rule</span> <span class="p">=</span> <span class="nb">New-Object</span> <span class="n">System</span><span class="p">.</span><span class="n">Security</span><span class="p">.</span><span class="n">AccessControl</span><span class="p">.</span><span class="n">FileSystemAccessRule</span><span class="p">(</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    <span class="s2">"ENTREPRISE\GRP_RH"</span><span class="p">,</span> <span class="s2">"Modify"</span><span class="p">,</span> <span class="s2">"ContainerInherit,ObjectInherit"</span><span class="p">,</span> <span class="s2">"None"</span><span class="p">,</span> <span class="s2">"Allow"</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="p">)</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="nv">$acl</span><span class="p">.</span><span class="n">SetAccessRule</span><span class="p">(</span><span class="nv">$rule</span><span class="p">)</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="nb">Set-Acl</span> <span class="s2">"C:\Partages\RH"</span> <span class="nv">$acl</span>
+</code></pre></div></p>
+<h3 id="partage-smb-reseau-uniquement">Partage SMB (réseau uniquement)<a class="headerlink" href="#partage-smb-reseau-uniquement" title="Permanent link">&para;</a></h3>
+<p><strong>Permissions</strong> :
+- <strong>Lecture</strong> : Lire fichiers
+- <strong>Modification</strong> : Lire + Écrire
+- <strong>Contrôle total</strong> : Toutes permissions</p>
+<p><strong>Commandes</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c"># Créer partage</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="nb">New-SmbShare</span> <span class="n">-Name</span> <span class="s2">"RH_Partage"</span> <span class="n">-Path</span> <span class="s2">"C:\Partages\RH"</span> <span class="n">-FullAccess</span> <span class="s2">"Tout le monde"</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="c"># Modifier permissions partage</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="nb">Grant-SmbShareAccess</span> <span class="n">-Name</span> <span class="s2">"RH_Partage"</span> <span class="n">-AccountName</span> <span class="s2">"ENTREPRISE\GRP_RH"</span> <span class="n">-AccessRight</span> <span class="n">Full</span>
+</code></pre></div></p>
+<h3 id="regle-cumulative">Règle cumulative<a class="headerlink" href="#regle-cumulative" title="Permanent link">&para;</a></h3>
+<p><strong>NTFS Lecture + SMB Contrôle total = Lecture finale</strong> (plus restrictive gagne)</p>
+<p><strong>Bonne pratique</strong> :
+- Partage SMB : "Tout le monde" = Contrôle total
+- Gérer finesse via NTFS uniquement</p>
+<hr />
+<h2 id="6-powershell-avance">6. POWERSHELL AVANCÉ<a class="headerlink" href="#6-powershell-avance" title="Permanent link">&para;</a></h2>
+<h3 id="variables-et-types">Variables et types<a class="headerlink" href="#variables-et-types" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nv">$nom</span> <span class="p">=</span> <span class="s2">"Dupont"</span>                    <span class="c"># String</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nv">$age</span> <span class="p">=</span> <span class="n">35</span>                          <span class="c"># Int</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="nv">$actif</span> <span class="p">=</span> <span class="nv">$true</span>                     <span class="c"># Boolean</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="nv">$liste</span> <span class="p">=</span> <span class="p">@(</span><span class="s2">"PC01"</span><span class="p">,</span> <span class="s2">"PC02"</span><span class="p">)</span>         <span class="c"># Array</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="nv">$hash</span> <span class="p">=</span> <span class="p">@{</span><span class="n">Nom</span><span class="p">=</span><span class="s2">"Dupont"</span><span class="p">;</span> <span class="n">Age</span><span class="p">=</span><span class="n">35</span><span class="p">}</span>    <span class="c"># Hashtable</span>
+</code></pre></div>
+<h3 id="boucles">Boucles<a class="headerlink" href="#boucles" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c"># ForEach</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nv">$pcs</span> <span class="p">=</span> <span class="nb">Get-ADComputer</span> <span class="n">-Filter</span> <span class="p">*</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="k">foreach</span> <span class="p">(</span><span class="nv">$pc</span> <span class="k">in</span> <span class="nv">$pcs</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    <span class="nb">Write-Host</span> <span class="nv">$pc</span><span class="p">.</span><span class="n">Name</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="p">}</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="c"># ForEach-Object (pipeline)</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="nb">Get-ADUser</span> <span class="n">-Filter</span> <span class="p">*</span> <span class="p">|</span> <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span> <span class="nv">$_</span><span class="p">.</span><span class="n">SamAccountName</span> <span class="p">}</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="c"># While</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="nv">$i</span> <span class="p">=</span> <span class="n">0</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="k">while</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">-lt</span> <span class="n">10</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>    <span class="nb">Write-Host</span> <span class="nv">$i</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>    <span class="nv">$i</span><span class="p">++</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="conditions">Conditions<a class="headerlink" href="#conditions" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">if</span> <span class="p">(</span><span class="nv">$age</span> <span class="o">-ge</span> <span class="n">18</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    <span class="nb">Write-Host</span> <span class="s2">"Majeur"</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$age</span> <span class="o">-ge</span> <span class="n">16</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    <span class="nb">Write-Host</span> <span class="s2">"Mineur avec permis"</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    <span class="nb">Write-Host</span> <span class="s2">"Mineur"</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="fonctions">Fonctions<a class="headerlink" href="#fonctions" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">function</span> <span class="nb">Get-DiskSpace</span> <span class="p">{</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    <span class="k">param</span><span class="p">(</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>        <span class="no">[string]</span><span class="nv">$ComputerName</span> <span class="p">=</span> <span class="s2">"localhost"</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    <span class="p">)</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    <span class="nb">Get-WmiObject</span> <span class="n">Win32_LogicalDisk</span> <span class="n">-ComputerName</span> <span class="nv">$ComputerName</span> <span class="p">|</span> 
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>        <span class="nb">Where-Object</span> <span class="p">{</span><span class="nv">$_</span><span class="p">.</span><span class="n">DriveType</span> <span class="o">-eq</span> <span class="n">3</span><span class="p">}</span> <span class="p">|</span> 
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>        <span class="nb">Select-Object</span> <span class="n">DeviceID</span><span class="p">,</span> 
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>            <span class="p">@{</span><span class="n">Name</span><span class="p">=</span><span class="s2">"SizeGB"</span><span class="p">;</span><span class="n">Expression</span><span class="p">={</span><span class="no">[math]</span><span class="p">::</span><span class="n">Round</span><span class="p">(</span><span class="nv">$_</span><span class="p">.</span><span class="n">Size</span><span class="p">/</span><span class="n">1GB</span><span class="p">,</span><span class="n">2</span><span class="p">)}},</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>            <span class="p">@{</span><span class="n">Name</span><span class="p">=</span><span class="s2">"FreeGB"</span><span class="p">;</span><span class="n">Expression</span><span class="p">={</span><span class="no">[math]</span><span class="p">::</span><span class="n">Round</span><span class="p">(</span><span class="nv">$_</span><span class="p">.</span><span class="n">FreeSpace</span><span class="p">/</span><span class="n">1GB</span><span class="p">,</span><span class="n">2</span><span class="p">)}}</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="p">}</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="c"># Utilisation</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="nb">Get-DiskSpace</span> <span class="n">-ComputerName</span> <span class="s2">"SRV-FILE01"</span>
+</code></pre></div>
+<h3 id="modules-ad">Modules AD<a class="headerlink" href="#modules-ad" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c"># Importer module</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="nb">Import-Module</span> <span class="n">ActiveDirectory</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="c"># Commandes essentielles</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="nb">Get-ADUser</span> <span class="n">-Identity</span> <span class="s2">"jdupont"</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="nb">Get-ADComputer</span> <span class="n">-Filter</span> <span class="p">{</span><span class="n">OperatingSystem</span> <span class="o">-like</span> <span class="s2">"*Server*"</span><span class="p">}</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="nb">Get-ADGroup</span> <span class="n">-Identity</span> <span class="s2">"GRP_RH"</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="nb">Get-ADGroupMember</span> <span class="n">-Identity</span> <span class="s2">"Domain Admins"</span>
+</code></pre></div>
+<hr />
+<h2 id="7-services-windows">7. SERVICES WINDOWS<a class="headerlink" href="#7-services-windows" title="Permanent link">&para;</a></h2>
+<h3 id="gestion-services">Gestion services<a class="headerlink" href="#gestion-services" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c"># Lister services</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="nb">Get-Service</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="p">{</span><span class="nv">$_</span><span class="p">.</span><span class="n">Status</span> <span class="o">-eq</span> <span class="s2">"Running"</span><span class="p">}</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="c"># Démarrer/Arrêter</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="nb">Start-Service</span> <span class="n">-Name</span> <span class="s2">"Spooler"</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="nb">Stop-Service</span> <span class="n">-Name</span> <span class="s2">"Spooler"</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="nb">Restart-Service</span> <span class="n">-Name</span> <span class="s2">"Spooler"</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="c"># Configurer démarrage automatique</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="nb">Set-Service</span> <span class="n">-Name</span> <span class="s2">"Spooler"</span> <span class="n">-StartupType</span> <span class="n">Automatic</span>
+</code></pre></div>
+<h3 id="services-critiques-ad">Services critiques AD<a class="headerlink" href="#services-critiques-ad" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>DNS Client</strong> : Résolution noms</li>
+<li><strong>Netlogon</strong> : Authentification domaine</li>
+<li><strong>Active Directory Domain Services</strong> : Contrôleur domaine</li>
+<li><strong>DFS Replication</strong> : Réplication fichiers</li>
+<li><strong>Windows Time</strong> : Synchronisation horloge (crucial AD)</li>
+</ul>
+<hr />
+<h2 id="8-windows-update-wsus">8. WINDOWS UPDATE / WSUS<a class="headerlink" href="#8-windows-update-wsus" title="Permanent link">&para;</a></h2>
+<h3 id="wsus-windows-server-update-services">WSUS (Windows Server Update Services)<a class="headerlink" href="#wsus-windows-server-update-services" title="Permanent link">&para;</a></h3>
+<p><strong>Rôle</strong> : Serveur central distribution mises à jour Windows</p>
+<p><strong>Avantages</strong> :
+- Contrôle déploiement mises à jour
+- Économie bande passante (1 téléchargement)
+- Tests avant production</p>
+<p><strong>GPO WSUS</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Computer Config → Admin Templates → Windows Components → Windows Update
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>→ Configure Automatic Updates: Enabled
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>→ Specify intranet Microsoft update service location:
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>   http://srv-wsus.entreprise.local:8530
+</code></pre></div></p>
+<h3 id="commandes">Commandes<a class="headerlink" href="#commandes" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c"># Forcer recherche mises à jour</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="nb">Start-WUScan</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="c"># Installer mises à jour</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="nb">Install-WindowsUpdate</span> <span class="n">-AcceptAll</span> <span class="n">-AutoReboot</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="c"># Historique</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="nb">Get-WindowsUpdateLog</span>
+</code></pre></div>
+<hr />
+<h2 id="9-sauvegarde-windows-server">9. SAUVEGARDE WINDOWS SERVER<a class="headerlink" href="#9-sauvegarde-windows-server" title="Permanent link">&para;</a></h2>
+<h3 id="windows-server-backup">Windows Server Backup<a class="headerlink" href="#windows-server-backup" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c"># Installer fonctionnalité</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="nb">Install-WindowsFeature</span> <span class="n">Windows-Server-Backup</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="c"># Sauv egarde complète vers disque externe</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="n">wbadmin</span> <span class="nb">start </span><span class="n">backup</span> <span class="n">-backupTarget</span><span class="p">:</span><span class="n">E</span><span class="p">:</span> <span class="n">-include</span><span class="p">:</span><span class="n">C</span><span class="p">:</span> <span class="n">-allCritical</span> <span class="n">-quiet</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="c"># Sauvegarde état système (AD, registre, boot)</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="n">wbadmin</span> <span class="nb">start </span><span class="n">systemstatebackup</span> <span class="n">-backupTarget</span><span class="p">:</span><span class="n">E</span><span class="p">:</span> <span class="n">-quiet</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="c"># Restauration fichiers</span>
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="n">wbadmin</span> <span class="nb">start </span><span class="n">recovery</span> <span class="n">-version</span><span class="p">:</span><span class="n">12</span><span class="p">/</span><span class="n">11</span><span class="p">/</span><span class="n">2025</span><span class="p">-</span><span class="n">10</span><span class="p">:</span><span class="n">00</span> <span class="n">-itemType</span><span class="p">:</span><span class="n">File</span> <span class="n">-items</span><span class="p">:</span><span class="n">C</span><span class="p">:\</span><span class="n">Data</span>
+</code></pre></div>
+<hr />
+<h2 id="10-scripts-powershell-utiles">10. SCRIPTS POWERSHELL UTILES<a class="headerlink" href="#10-scripts-powershell-utiles" title="Permanent link">&para;</a></h2>
+<h3 id="script-1-creation-utilisateurs-en-masse-csv">Script 1 : Création utilisateurs en masse (CSV)<a class="headerlink" href="#script-1-creation-utilisateurs-en-masse-csv" title="Permanent link">&para;</a></h3>
+<p><strong>users.csv</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Prenom,Nom,Login,OU
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>Jean,Dupont,jdupont,"OU=RH,DC=entreprise,DC=local"
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>Marie,Martin,mmartin,"OU=Comptabilite,DC=entreprise,DC=local"
+</code></pre></div></p>
+<p><strong>Script</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nb">Import-Csv</span> <span class="s2">"users.csv"</span> <span class="p">|</span> <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>    <span class="nv">$password</span> <span class="p">=</span> <span class="nb">ConvertTo-SecureString</span> <span class="s2">"P@ssw0rd123!"</span> <span class="n">-AsPlainText</span> <span class="n">-Force</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>    <span class="nb">New-ADUser</span> <span class="n">-Name</span> <span class="s2">"</span><span class="p">$(</span><span class="nv">$_</span><span class="p">.</span><span class="n">Prenom</span><span class="p">)</span><span class="s2"> </span><span class="p">$(</span><span class="nv">$_</span><span class="p">.</span><span class="n">Nom</span><span class="p">)</span><span class="s2">"</span> <span class="p">`</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>        <span class="n">-GivenName</span> <span class="nv">$_</span><span class="p">.</span><span class="n">Prenom</span> <span class="p">`</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>        <span class="n">-Surname</span> <span class="nv">$_</span><span class="p">.</span><span class="n">Nom</span> <span class="p">`</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>        <span class="n">-SamAccountName</span> <span class="nv">$_</span><span class="p">.</span><span class="n">Login</span> <span class="p">`</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>        <span class="n">-UserPrincipalName</span> <span class="s2">"</span><span class="p">$(</span><span class="nv">$_</span><span class="p">.</span><span class="n">Login</span><span class="p">)</span><span class="s2">@entreprise.local"</span> <span class="p">`</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>        <span class="n">-Path</span> <span class="nv">$_</span><span class="p">.</span><span class="n">OU</span> <span class="p">`</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>        <span class="n">-AccountPassword</span> <span class="nv">$password</span> <span class="p">`</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>        <span class="n">-Enabled</span> <span class="nv">$true</span>
+<a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a>
+<a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a>    <span class="nb">Write-Host</span> <span class="s2">"Utilisateur </span><span class="p">$(</span><span class="nv">$_</span><span class="p">.</span><span class="n">Login</span><span class="p">)</span><span class="s2"> cree"</span> <span class="n">-ForegroundColor</span> <span class="n">Green</span>
+<a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a><span class="p">}</span>
+</code></pre></div></p>
+<h3 id="script-2-rapport-espace-disque-serveurs">Script 2 : Rapport espace disque serveurs<a class="headerlink" href="#script-2-rapport-espace-disque-serveurs" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nv">$serveurs</span> <span class="p">=</span> <span class="p">@(</span><span class="s2">"SRV-DC01"</span><span class="p">,</span> <span class="s2">"SRV-FILE01"</span><span class="p">,</span> <span class="s2">"SRV-WEB01"</span><span class="p">)</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="nv">$rapport</span> <span class="p">=</span> <span class="p">@()</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="k">foreach</span> <span class="p">(</span><span class="nv">$srv</span> <span class="k">in</span> <span class="nv">$serveurs</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>    <span class="nv">$disques</span> <span class="p">=</span> <span class="nb">Get-WmiObject</span> <span class="n">Win32_LogicalDisk</span> <span class="n">-ComputerName</span> <span class="nv">$srv</span> <span class="n">-Filter</span> <span class="s2">"DriveType=3"</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$disque</span> <span class="k">in</span> <span class="nv">$disques</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>        <span class="nv">$rapport</span> <span class="p">+=</span> <span class="no">[PSCustomObject]</span><span class="p">@{</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>            <span class="n">Serveur</span> <span class="p">=</span> <span class="nv">$srv</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>            <span class="n">Lecteur</span> <span class="p">=</span> <span class="nv">$disque</span><span class="p">.</span><span class="n">DeviceID</span>
+<a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>            <span class="n">TailleGo</span> <span class="p">=</span> <span class="no">[math]</span><span class="p">::</span><span class="n">Round</span><span class="p">(</span><span class="nv">$disque</span><span class="p">.</span><span class="n">Size</span><span class="p">/</span><span class="n">1GB</span><span class="p">,</span> <span class="n">2</span><span class="p">)</span>
+<a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>            <span class="n">LibreGo</span> <span class="p">=</span> <span class="no">[math]</span><span class="p">::</span><span class="n">Round</span><span class="p">(</span><span class="nv">$disque</span><span class="p">.</span><span class="n">FreeSpace</span><span class="p">/</span><span class="n">1GB</span><span class="p">,</span> <span class="n">2</span><span class="p">)</span>
+<a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a>            <span class="n">PourcentLibre</span> <span class="p">=</span> <span class="no">[math]</span><span class="p">::</span><span class="n">Round</span><span class="p">((</span><span class="nv">$disque</span><span class="p">.</span><span class="n">FreeSpace</span><span class="p">/</span><span class="nv">$disque</span><span class="p">.</span><span class="n">Size</span><span class="p">)*</span><span class="n">100</span><span class="p">,</span> <span class="n">2</span><span class="p">)</span>
+<a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a>        <span class="p">}</span>
+<a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a>    <span class="p">}</span>
+<a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a><span class="p">}</span>
+<a id="__codelineno-25-17" name="__codelineno-25-17" href="#__codelineno-25-17"></a>
+<a id="__codelineno-25-18" name="__codelineno-25-18" href="#__codelineno-25-18"></a><span class="nv">$rapport</span> <span class="p">|</span> <span class="nb">Export-Csv</span> <span class="s2">"rapport_disques.csv"</span> <span class="n">-NoTypeInformation</span>
+<a id="__codelineno-25-19" name="__codelineno-25-19" href="#__codelineno-25-19"></a><span class="nv">$rapport</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="p">{</span><span class="nv">$_</span><span class="p">.</span><span class="n">PourcentLibre</span> <span class="o">-lt</span> <span class="n">20</span><span class="p">}</span> <span class="p">|</span> <span class="nb">Format-Table</span> <span class="n">-AutoSize</span>
+</code></pre></div>
+<h3 id="script-3-desactiver-comptes-inactifs-90-jours">Script 3 : Désactiver comptes inactifs &gt;90 jours<a class="headerlink" href="#script-3-desactiver-comptes-inactifs-90-jours" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nv">$date</span> <span class="p">=</span> <span class="p">(</span><span class="nb">Get-Date</span><span class="p">).</span><span class="n">AddDays</span><span class="p">(-</span><span class="n">90</span><span class="p">)</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="nb">Get-ADUser</span> <span class="n">-Filter</span> <span class="p">{</span><span class="n">Enabled</span> <span class="o">-eq</span> <span class="nv">$true</span><span class="p">}</span> <span class="n">-Properties</span> <span class="n">LastLogonDate</span> <span class="p">|</span> 
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>    <span class="nb">Where-Object</span> <span class="p">{</span><span class="nv">$_</span><span class="p">.</span><span class="n">LastLogonDate</span> <span class="o">-lt</span> <span class="nv">$date</span><span class="p">}</span> <span class="p">|</span> 
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>    <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span>
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>        <span class="nb">Disable-ADAccount</span> <span class="n">-Identity</span> <span class="nv">$_</span><span class="p">.</span><span class="n">SamAccountName</span>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>        <span class="nb">Write-Host</span> <span class="s2">"Compte </span><span class="p">$(</span><span class="nv">$_</span><span class="p">.</span><span class="n">SamAccountName</span><span class="p">)</span><span class="s2"> desactive (inactif depuis </span><span class="p">$(</span><span class="nv">$_</span><span class="p">.</span><span class="n">LastLogonDate</span><span class="p">)</span><span class="s2">)"</span> <span class="n">-ForegroundColor</span> <span class="n">Yellow</span>
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>    <span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="commandes-essentielles-a-retenir">COMMANDES ESSENTIELLES À RETENIR<a class="headerlink" href="#commandes-essentielles-a-retenir" title="Permanent link">&para;</a></h2>
+<h3 id="active-directory">Active Directory<a class="headerlink" href="#active-directory" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nb">Get-ADUser</span><span class="p">,</span> <span class="nb">New-ADUser</span><span class="p">,</span> <span class="nb">Set-ADUser</span><span class="p">,</span> <span class="nb">Remove-ADUser</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="nb">Get-ADGroup</span><span class="p">,</span> <span class="nb">New-ADGroup</span><span class="p">,</span> <span class="nb">Add-ADGroupMember</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="nb">Get-ADComputer</span>
+</code></pre></div>
+<h3 id="gpo">GPO<a class="headerlink" href="#gpo" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nb">New-GPO</span><span class="p">,</span> <span class="nb">New-GPLink</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="n">gpupdate</span> <span class="p">/</span><span class="n">force</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="n">gpresult</span> <span class="p">/</span><span class="nb">r</span>
+</code></pre></div>
+<h3 id="dns">DNS<a class="headerlink" href="#dns" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nb">Add-DnsServerResourceRecordA</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="nb">Add-DnsServerResourceRecordCName</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="n">nslookup</span><span class="p">,</span> <span class="nb">Resolve-DnsName</span>
+</code></pre></div>
+<h3 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nb">Get-Acl</span><span class="p">,</span> <span class="nb">Set-Acl</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="nb">New-SmbShare</span><span class="p">,</span> <span class="nb">Grant-SmbShareAccess</span>
+</code></pre></div>
+<h3 id="services">Services<a class="headerlink" href="#services" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nb">Get-Service</span><span class="p">,</span> <span class="nb">Start-Service</span><span class="p">,</span> <span class="nb">Stop-Service</span><span class="p">,</span> <span class="nb">Restart-Service</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../../INDEX-CCP2/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Vue d&#39;ensemble">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Vue d'ensemble
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../QCM/Evaluation/QCM-Windows-ActiveDirectory-30Q/" class="md-footer__link md-footer__link--next" aria-label="Suivant: QCM — énoncé">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                QCM — énoncé
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Contenu sous licence GPL-3.0 — bon courage pour l'examen !
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../assets/quiz.js"></script>
+      
+    
+  </body>
+</html>

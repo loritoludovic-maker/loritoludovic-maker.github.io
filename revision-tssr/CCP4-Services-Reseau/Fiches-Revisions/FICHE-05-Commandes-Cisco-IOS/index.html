@@ -1,0 +1,6033 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Fiches, QCM interactifs, examens blancs et simulation orale pour préparer le titre TSSR.">
+      
+      
+      
+        <link rel="canonical" href="https://loritoludovic-maker.github.io/revision-tssr/CCP4-Services-Reseau/Fiches-Revisions/FICHE-05-Commandes-Cisco-IOS/">
+      
+      
+        <link rel="prev" href="../FICHE-04-Reseau-Subnetting-CIDR/">
+      
+      
+        <link rel="next" href="../../QCM/Evaluation/QCM-Reseau/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Fiche — Commandes Cisco IOS - Révisions TSSR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#commandes-cisco-ios-fiche-essentielle" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../.." title="Révisions TSSR" class="md-header__button md-logo" aria-label="Révisions TSSR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Révisions TSSR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fiche — Commandes Cisco IOS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal"  aria-label="Passer en mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer en mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="teal"  aria-label="Passer en mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer en mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../START-HERE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Démarrer
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../CCP/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Les 9 CCP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../quiz/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  QCM interactifs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Examens-Blancs/Examen-1/EXAMEN-BLANC-1-EVALUATION/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Examens blancs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Simulation-Orale-Complete/INDEX-SIMULATION-ORALE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Simulation orale
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../quiz/scores/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Mes scores
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Révisions TSSR" class="md-nav__button md-logo" aria-label="Révisions TSSR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    Révisions TSSR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Démarrer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Démarrer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../START-HERE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commencer ici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PRESENTATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Présentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../README-GUIDE-REVISION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide de révision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PLANNING-REVISION-5-JOURS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planning 5 jours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX-GENERAL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index général
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SUIVI-SCORES-PROGRESSION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche de suivi (papier)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../CCP/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Les 9 CCP
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Les 9 CCP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP1 · Support utilisateur
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP1 · Support utilisateur
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/INDEX-CCP1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/Fiche-Revision/FICHE-CCP1-Support-Utilisateur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Support Utilisateur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/QCM/Evaluation/QCM-Support-ITIL-40Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/QCM/Correction/QCM-Support-ITIL-40Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP1-Support-10Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP1-Support-10Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP2 · Windows & Active Directory
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP2 · Windows & Active Directory
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/INDEX-CCP2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/Fiche-Revision/FICHE-CCP2-Windows-AD-PowerShell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Windows AD PowerShell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/QCM/Evaluation/QCM-Windows-ActiveDirectory-30Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/QCM/Correction/QCM-Windows-ActiveDirectory-30Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP2-Windows-AD-15Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP2-Windows-AD-15Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP3 · Maintenance Linux
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP3 · Maintenance Linux
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/INDEX-CCP3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/Fiche-Revision/FICHE-01-Linux-Commandes-Essentielles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Linux Commandes Essentielles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/QCM/Evaluation/QCM-Linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/QCM/Correction/QCM-Linux-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/Questions-Ouvertes/Evaluation/Questions-Ouvertes-Linux-20Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/Questions-Ouvertes/Correction/Questions-Ouvertes-Linux-20Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/MSP/MSP-Pratique-Services-Linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MSP pratique — services Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP4 · Services réseau
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP4 · Services réseau
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../INDEX-CCP4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FICHE-02-Ports-Protocoles-Acronymes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Ports Protocoles Acronymes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FICHE-04-Reseau-Subnetting-CIDR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Reseau Subnetting CIDR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Commandes Cisco IOS
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Commandes Cisco IOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#routeurs-et-switchs-commandes-de-base-pour-lexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Routeurs et Switchs - Commandes de base pour l'examen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-des-matieres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 TABLE DES MATIÈRES
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modes-dutilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 MODES D'UTILISATION
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 MODES D&#39;UTILISATION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-mode-utilisateur-user-exec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Mode Utilisateur (User EXEC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-mode-privilegie-privileged-exec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Mode Privilégié (Privileged EXEC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-mode-configuration-globale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Mode Configuration Globale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-mode-configuration-dinterface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Mode Configuration d'Interface
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-mode-configuration-de-ligne" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Mode Configuration de Ligne
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commandes-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔹 COMMANDES DE BASE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 COMMANDES DE BASE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navigation-entre-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation entre modes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aide-et-completion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aide et complétion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-initiale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚙️ CONFIGURATION INITIALE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ CONFIGURATION INITIALE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nom-du-routeurswitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nom du routeur/switch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mot-de-passe-enable-mode-privilegie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mot de passe ENABLE (mode privilégié)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mot-de-passe-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mot de passe Console
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mot-de-passe-vty-telnetssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mot de passe VTY (Telnet/SSH)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#banniere-de-connexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bannière de connexion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chiffrement-des-mots-de-passe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chiffrement des mots de passe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-interface-et-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 CONFIGURATION INTERFACE ET IP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 CONFIGURATION INTERFACE ET IP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurer-une-ip-sur-une-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurer une IP sur une interface
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passerelle-par-defaut-switch-uniquement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passerelle par défaut (Switch uniquement)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifier-la-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vérifier la configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlan-switch-uniquement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔀 VLAN (SWITCH UNIQUEMENT)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔀 VLAN (SWITCH UNIQUEMENT)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creer-un-vlan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Créer un VLAN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assigner-un-port-a-un-vlan-mode-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assigner un port à un VLAN (mode Access)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurer-un-port-trunk-inter-switch-ou-switch-routeur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurer un port Trunk (inter-switch ou switch-routeur)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifier-les-vlan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vérifier les VLAN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supprimer-un-vlan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supprimer un VLAN
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routage-statique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛤️ ROUTAGE STATIQUE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛤️ ROUTAGE STATIQUE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#route-statique-classique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Route statique classique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#route-par-defaut-default-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Route par défaut (default route)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifier-les-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vérifier les routes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supprimer-une-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supprimer une route
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-et-telnet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔐 SSH ET TELNET
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔐 SSH ET TELNET">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-ssh-version-2-recommandee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration SSH (VERSION 2 RECOMMANDÉE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifier-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vérifier SSH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#se-connecter-en-ssh-depuis-un-autre-equipement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Se connecter en SSH (depuis un autre équipement)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sauvegarde-et-restauration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💾 SAUVEGARDE ET RESTAURATION
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💾 SAUVEGARDE ET RESTAURATION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voir-les-configurations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voir les configurations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sauvegarder-la-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sauvegarder la configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restaurer-la-configuration-de-demarrage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restaurer la configuration de démarrage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effacer-la-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effacer la configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sauvegarder-vers-un-serveur-tftp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sauvegarder vers un serveur TFTP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restaurer-depuis-un-serveur-tftp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restaurer depuis un serveur TFTP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagnostic-reseau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🩺 DIAGNOSTIC RÉSEAU
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🩺 DIAGNOSTIC RÉSEAU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commandes-de-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commandes de vérification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests-de-connectivite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tests de connectivité
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-avec-precaution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debug (avec précaution !)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#top-20-commandes-pour-lexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⭐ TOP 20 COMMANDES POUR L'EXAMEN
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scenarios-dexamen-frequents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 SCÉNARIOS D'EXAMEN FRÉQUENTS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 SCÉNARIOS D&#39;EXAMEN FRÉQUENTS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-configuration-initiale-routeur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 1 : Configuration initiale routeur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-configuration-vlan-sur-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 2 : Configuration VLAN sur switch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-configuration-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 3 : Configuration SSH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-4-routage-statique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 4 : Routage statique
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#astuces-pour-lexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 ASTUCES POUR L'EXAMEN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💡 ASTUCES POUR L&#39;EXAMEN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-retenir-absolument" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ À RETENIR ABSOLUMENT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erreurs-frequentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔥 ERREURS FRÉQUENTES
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-avant-lexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 CHECKLIST AVANT L'EXAMEN
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../QCM/Evaluation/QCM-Reseau/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../QCM/Correction/QCM-Reseau-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Questions-Ouvertes/Evaluation/Questions-Ouvertes-Reseau/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Questions-Ouvertes/Correction/Questions-Ouvertes-Reseau-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Exercices-Subnetting/Evaluation/Exercices-Subnetting-20-Exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices subnetting — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Exercices-Subnetting/Correction/Exercices-Subnetting-20-Exercices-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices subnetting — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP5 · Virtualisation VMware
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP5 · Virtualisation VMware
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/INDEX-CCP5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/Fiche-Revisions/FICHE-CCP5-VMware-vSphere/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — VMware vSphere
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/QCM/Evaluation/QCM-Virtualisation-40Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/QCM/Correction/QCM-Virtualisation-40Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP5-VMware-10Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP5-VMware-10Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP6 · Scripts & automatisation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP6 · Scripts & automatisation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/INDEX-CCP6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/Fiche-Revisions/FICHE-06-Scripting-Bash-PowerShell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Scripting Bash PowerShell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/QCM/Evaluation/QCM-CCP6-Scripting-30Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/QCM/Correction/QCM-CCP6-Scripting-30Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP6-Scripting-10Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP6-Scripting-10Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP7 · Sécurisation accès Internet
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP7 · Sécurisation accès Internet
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/INDEX-CCP7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/Fiche-Revisions/FICHE-CCP7-Securite-Reseau-pfSense/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Securite Reseau pfSense
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/QCM/Evaluation/QCM-CCP7-Securite-Reseau-25Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/QCM/Correction/QCM-CCP7-Securite-Reseau-25Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP7-Securite-8Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP7-Securite-8Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP8 · Sauvegardes & restaurations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP8 · Sauvegardes & restaurations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/INDEX-CCP8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/Fiche-Revisions/FICHE-03-Sauvegardes-PRA-PCA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Sauvegardes PRA PCA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/QCM/Evaluation/QCM-CCP8-Sauvegardes-20Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/QCM/Correction/QCM-CCP8-Sauvegardes-20Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/Questions-Ouvertes/Evaluation/Questions-Ouvertes-Sauvegardes-15Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/Questions-Ouvertes/Correction/Questions-Ouvertes-Sauvegardes-15Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP9 · Déploiement de postes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP9 · Déploiement de postes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/INDEX-CCP9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/Fiche-Revisions/FICHE-CCP9-Deploiement-Postes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Deploiement Postes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/QCM/Evaluation/QCM-CCP9-Deploiement-20Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/QCM/Correction/QCM-CCP9-Deploiement-20Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP9-Deploiement-6Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP9-Deploiement-6Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactifs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examens blancs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examens blancs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Examens-Blancs/Examen-1/EXAMEN-BLANC-1-EVALUATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen blanc 1 — sujet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Examens-Blancs/Examen-1/EXAMEN-BLANC-1-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen blanc 1 — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Examens-Blancs/Examen-2/EXAMEN-BLANC-2-EVALUATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen blanc 2 — sujet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Examens-Blancs/Examen-2/EXAMEN-BLANC-2-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen blanc 2 — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation orale
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Simulation orale
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simulation-Orale-Complete/INDEX-SIMULATION-ORALE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sommaire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simulation-Orale-Complete/SIMULATION-ORALE-PARTIE1-MSP-PRATIQUE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partie 1 — MSP pratique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simulation-Orale-Complete/SIMULATION-ORALE-PARTIE2-ENTRETIEN-TECHNIQUE-COMPLET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partie 2 — Entretien technique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simulation-Orale-Complete/SIMULATION-ORALE-PARTIE3-ENTRETIEN-FINAL-COMPLET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partie 3 — Entretien final
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/scores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mes scores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#routeurs-et-switchs-commandes-de-base-pour-lexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Routeurs et Switchs - Commandes de base pour l'examen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-des-matieres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 TABLE DES MATIÈRES
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modes-dutilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 MODES D'UTILISATION
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 MODES D&#39;UTILISATION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-mode-utilisateur-user-exec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Mode Utilisateur (User EXEC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-mode-privilegie-privileged-exec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Mode Privilégié (Privileged EXEC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-mode-configuration-globale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Mode Configuration Globale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-mode-configuration-dinterface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Mode Configuration d'Interface
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-mode-configuration-de-ligne" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Mode Configuration de Ligne
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commandes-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔹 COMMANDES DE BASE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 COMMANDES DE BASE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navigation-entre-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation entre modes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aide-et-completion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aide et complétion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-initiale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚙️ CONFIGURATION INITIALE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ CONFIGURATION INITIALE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nom-du-routeurswitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nom du routeur/switch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mot-de-passe-enable-mode-privilegie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mot de passe ENABLE (mode privilégié)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mot-de-passe-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mot de passe Console
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mot-de-passe-vty-telnetssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mot de passe VTY (Telnet/SSH)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#banniere-de-connexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bannière de connexion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chiffrement-des-mots-de-passe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chiffrement des mots de passe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-interface-et-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 CONFIGURATION INTERFACE ET IP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 CONFIGURATION INTERFACE ET IP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurer-une-ip-sur-une-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurer une IP sur une interface
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passerelle-par-defaut-switch-uniquement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passerelle par défaut (Switch uniquement)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifier-la-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vérifier la configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlan-switch-uniquement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔀 VLAN (SWITCH UNIQUEMENT)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔀 VLAN (SWITCH UNIQUEMENT)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creer-un-vlan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Créer un VLAN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assigner-un-port-a-un-vlan-mode-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assigner un port à un VLAN (mode Access)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurer-un-port-trunk-inter-switch-ou-switch-routeur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurer un port Trunk (inter-switch ou switch-routeur)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifier-les-vlan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vérifier les VLAN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supprimer-un-vlan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supprimer un VLAN
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routage-statique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛤️ ROUTAGE STATIQUE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛤️ ROUTAGE STATIQUE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#route-statique-classique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Route statique classique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#route-par-defaut-default-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Route par défaut (default route)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifier-les-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vérifier les routes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supprimer-une-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supprimer une route
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-et-telnet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔐 SSH ET TELNET
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔐 SSH ET TELNET">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-ssh-version-2-recommandee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration SSH (VERSION 2 RECOMMANDÉE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifier-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vérifier SSH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#se-connecter-en-ssh-depuis-un-autre-equipement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Se connecter en SSH (depuis un autre équipement)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sauvegarde-et-restauration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💾 SAUVEGARDE ET RESTAURATION
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💾 SAUVEGARDE ET RESTAURATION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voir-les-configurations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voir les configurations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sauvegarder-la-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sauvegarder la configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restaurer-la-configuration-de-demarrage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restaurer la configuration de démarrage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effacer-la-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effacer la configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sauvegarder-vers-un-serveur-tftp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sauvegarder vers un serveur TFTP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restaurer-depuis-un-serveur-tftp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restaurer depuis un serveur TFTP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagnostic-reseau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🩺 DIAGNOSTIC RÉSEAU
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🩺 DIAGNOSTIC RÉSEAU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commandes-de-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commandes de vérification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests-de-connectivite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tests de connectivité
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-avec-precaution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debug (avec précaution !)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#top-20-commandes-pour-lexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⭐ TOP 20 COMMANDES POUR L'EXAMEN
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scenarios-dexamen-frequents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 SCÉNARIOS D'EXAMEN FRÉQUENTS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 SCÉNARIOS D&#39;EXAMEN FRÉQUENTS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-configuration-initiale-routeur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 1 : Configuration initiale routeur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-configuration-vlan-sur-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 2 : Configuration VLAN sur switch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-configuration-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 3 : Configuration SSH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-4-routage-statique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 4 : Routage statique
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#astuces-pour-lexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 ASTUCES POUR L'EXAMEN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💡 ASTUCES POUR L&#39;EXAMEN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-retenir-absolument" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ À RETENIR ABSOLUMENT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erreurs-frequentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔥 ERREURS FRÉQUENTES
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-avant-lexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 CHECKLIST AVANT L'EXAMEN
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../../CCP/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Les 9 CCP
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../../quiz/ccp4/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    CCP4 · Services réseau
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="commandes-cisco-ios-fiche-essentielle">🔧 COMMANDES CISCO IOS - FICHE ESSENTIELLE<a class="headerlink" href="#commandes-cisco-ios-fiche-essentielle" title="Permanent link">&para;</a></h1>
+<h2 id="routeurs-et-switchs-commandes-de-base-pour-lexamen">Routeurs et Switchs - Commandes de base pour l'examen<a class="headerlink" href="#routeurs-et-switchs-commandes-de-base-pour-lexamen" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Pour l'examen</strong> : Connais les commandes de configuration de base, VLAN, routage statique, SSH, et sauvegarde !</p>
+</blockquote>
+<hr />
+<h2 id="table-des-matieres">📋 TABLE DES MATIÈRES<a class="headerlink" href="#table-des-matieres" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="#modes">Modes d'utilisation</a></li>
+<li><a href="#base">Commandes de base</a></li>
+<li><a href="#config">Configuration initiale</a></li>
+<li><a href="#interface">Interface et IP</a></li>
+<li><a href="#vlan">VLAN (Switch)</a></li>
+<li><a href="#routage">Routage statique</a></li>
+<li><a href="#ssh">SSH et Telnet</a></li>
+<li><a href="#sauvegarde">Sauvegarde et restauration</a></li>
+<li><a href="#diagnostic">Diagnostic réseau</a></li>
+<li><a href="#top20">Commandes TOP 20 pour l'examen</a></li>
+</ol>
+<hr />
+<h2 id="modes-dutilisation">🎯 MODES D'UTILISATION <a id="modes"></a><a class="headerlink" href="#modes-dutilisation" title="Permanent link">&para;</a></h2>
+<h3 id="1-mode-utilisateur-user-exec">1. Mode Utilisateur (User EXEC)<a class="headerlink" href="#1-mode-utilisateur-user-exec" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Router&gt;
+</code></pre></div>
+- <strong>Accès</strong> : Par défaut à la connexion
+- <strong>Droits</strong> : Consultation uniquement
+- <strong>Commandes</strong> : <code>show</code>, <code>ping</code>, <code>traceroute</code></p>
+<h3 id="2-mode-privilegie-privileged-exec">2. Mode Privilégié (Privileged EXEC)<a class="headerlink" href="#2-mode-privilegie-privileged-exec" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Router#
+</code></pre></div>
+- <strong>Accès</strong> : <code>Router&gt; enable</code>
+- <strong>Droits</strong> : Toutes les commandes show + commandes de debug
+- <strong>Commandes</strong> : Tous les <code>show</code>, <code>debug</code>, <code>copy</code>, <code>reload</code></p>
+<h3 id="3-mode-configuration-globale">3. Mode Configuration Globale<a class="headerlink" href="#3-mode-configuration-globale" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Router(config)#
+</code></pre></div>
+- <strong>Accès</strong> : <code>Router# configure terminal</code> (ou <code>conf t</code>)
+- <strong>Droits</strong> : Configuration du routeur/switch
+- <strong>Commandes</strong> : Hostname, mots de passe, interfaces, routage</p>
+<h3 id="4-mode-configuration-dinterface">4. Mode Configuration d'Interface<a class="headerlink" href="#4-mode-configuration-dinterface" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Router(config-if)#
+</code></pre></div>
+- <strong>Accès</strong> : <code>Router(config)# interface FastEthernet0/0</code>
+- <strong>Droits</strong> : Configuration d'une interface spécifique</p>
+<h3 id="5-mode-configuration-de-ligne">5. Mode Configuration de Ligne<a class="headerlink" href="#5-mode-configuration-de-ligne" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Router(config-line)#
+</code></pre></div>
+- <strong>Accès</strong> : <code>Router(config)# line vty 0 4</code>
+- <strong>Droits</strong> : Configuration des lignes de connexion (console, VTY)</p>
+<hr />
+<h2 id="commandes-de-base">🔹 COMMANDES DE BASE <a id="base"></a><a class="headerlink" href="#commandes-de-base" title="Permanent link">&para;</a></h2>
+<h3 id="navigation-entre-modes">Navigation entre modes<a class="headerlink" href="#navigation-entre-modes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Commande</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enable</code></td>
+<td>User → Privileged</td>
+</tr>
+<tr>
+<td><code>configure terminal</code> (ou <code>conf t</code>)</td>
+<td>Privileged → Config globale</td>
+</tr>
+<tr>
+<td><code>interface &lt;nom&gt;</code></td>
+<td>Config globale → Config interface</td>
+</tr>
+<tr>
+<td><code>line console 0</code> / <code>line vty 0 4</code></td>
+<td>Config globale → Config ligne</td>
+</tr>
+<tr>
+<td><code>exit</code></td>
+<td>Retour au mode précédent</td>
+</tr>
+<tr>
+<td><code>end</code></td>
+<td>Retour direct au mode Privileged</td>
+</tr>
+<tr>
+<td><code>disable</code></td>
+<td>Privileged → User</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aide-et-completion">Aide et complétion<a class="headerlink" href="#aide-et-completion" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Commande</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>?</code></td>
+<td>Liste des commandes disponibles</td>
+</tr>
+<tr>
+<td><code>sh?</code></td>
+<td>Commandes commençant par "sh"</td>
+</tr>
+<tr>
+<td><code>show ?</code></td>
+<td>Options de la commande show</td>
+</tr>
+<tr>
+<td><code>Tab</code></td>
+<td>Auto-complétion</td>
+</tr>
+<tr>
+<td><code>Ctrl+C</code></td>
+<td>Interruption de commande</td>
+</tr>
+<tr>
+<td><code>Ctrl+Z</code></td>
+<td>Retour au mode Privileged</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="configuration-initiale">⚙️ CONFIGURATION INITIALE <a id="config"></a><a class="headerlink" href="#configuration-initiale" title="Permanent link">&para;</a></h2>
+<h3 id="nom-du-routeurswitch">Nom du routeur/switch<a class="headerlink" href="#nom-du-routeurswitch" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Router&gt; enable
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Router# configure terminal
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Router(config)# hostname R1
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>R1(config)#
+</code></pre></div>
+<h3 id="mot-de-passe-enable-mode-privilegie">Mot de passe ENABLE (mode privilégié)<a class="headerlink" href="#mot-de-passe-enable-mode-privilegie" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>R1(config)# enable secret Cisco123!
+</code></pre></div>
+<blockquote>
+<p>⚠️ <code>enable secret</code> est <strong>chiffré</strong> (MD5), préférable à <code>enable password</code></p>
+</blockquote>
+<h3 id="mot-de-passe-console">Mot de passe Console<a class="headerlink" href="#mot-de-passe-console" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>R1(config)# line console 0
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>R1(config-line)# password Console123
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>R1(config-line)# login
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>R1(config-line)# exit
+</code></pre></div>
+<h3 id="mot-de-passe-vty-telnetssh">Mot de passe VTY (Telnet/SSH)<a class="headerlink" href="#mot-de-passe-vty-telnetssh" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>R1(config)# line vty 0 4
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>R1(config-line)# password VTY123
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>R1(config-line)# login
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>R1(config-line)# transport input ssh telnet
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>R1(config-line)# exit
+</code></pre></div>
+<h3 id="banniere-de-connexion">Bannière de connexion<a class="headerlink" href="#banniere-de-connexion" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>R1(config)# banner motd #
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>Accès réservé au personnel autorisé !
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>#
+</code></pre></div>
+<h3 id="chiffrement-des-mots-de-passe">Chiffrement des mots de passe<a class="headerlink" href="#chiffrement-des-mots-de-passe" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>R1(config)# service password-encryption
+</code></pre></div>
+<blockquote>
+<p>Chiffre tous les mots de passe en clair (type 7 - faible)</p>
+</blockquote>
+<hr />
+<h2 id="configuration-interface-et-ip">🌐 CONFIGURATION INTERFACE ET IP <a id="interface"></a><a class="headerlink" href="#configuration-interface-et-ip" title="Permanent link">&para;</a></h2>
+<h3 id="configurer-une-ip-sur-une-interface">Configurer une IP sur une interface<a class="headerlink" href="#configurer-une-ip-sur-une-interface" title="Permanent link">&para;</a></h3>
+<p><strong>Routeur</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>R1(config)# interface GigabitEthernet0/0
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>R1(config-if)# ip address 192.168.1.1 255.255.255.0
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>R1(config-if)# description LAN-ADMIN
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>R1(config-if)# no shutdown
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>R1(config-if)# exit
+</code></pre></div></p>
+<p><strong>Switch (VLAN 1 par défaut)</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>SW1(config)# interface vlan 1
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>SW1(config-if)# ip address 192.168.1.10 255.255.255.0
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>SW1(config-if)# no shutdown
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>SW1(config-if)# exit
+</code></pre></div></p>
+<h3 id="passerelle-par-defaut-switch-uniquement">Passerelle par défaut (Switch uniquement)<a class="headerlink" href="#passerelle-par-defaut-switch-uniquement" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>SW1(config)# ip default-gateway 192.168.1.1
+</code></pre></div>
+<h3 id="verifier-la-configuration">Vérifier la configuration<a class="headerlink" href="#verifier-la-configuration" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>R1# show ip interface brief
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>R1# show interfaces GigabitEthernet0/0
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>R1# show ip route
+</code></pre></div>
+<hr />
+<h2 id="vlan-switch-uniquement">🔀 VLAN (SWITCH UNIQUEMENT) <a id="vlan"></a><a class="headerlink" href="#vlan-switch-uniquement" title="Permanent link">&para;</a></h2>
+<h3 id="creer-un-vlan">Créer un VLAN<a class="headerlink" href="#creer-un-vlan" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>SW1(config)# vlan 10
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>SW1(config-vlan)# name ADMIN
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>SW1(config-vlan)# exit
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>SW1(config)# vlan 20
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>SW1(config-vlan)# name USERS
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>SW1(config-vlan)# exit
+</code></pre></div>
+<h3 id="assigner-un-port-a-un-vlan-mode-access">Assigner un port à un VLAN (mode Access)<a class="headerlink" href="#assigner-un-port-a-un-vlan-mode-access" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>SW1(config)# interface FastEthernet0/5
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>SW1(config-if)# switchport mode access
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>SW1(config-if)# switchport access vlan 10
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>SW1(config-if)# exit
+</code></pre></div>
+<h3 id="configurer-un-port-trunk-inter-switch-ou-switch-routeur">Configurer un port Trunk (inter-switch ou switch-routeur)<a class="headerlink" href="#configurer-un-port-trunk-inter-switch-ou-switch-routeur" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>SW1(config)# interface GigabitEthernet0/1
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>SW1(config-if)# switchport mode trunk
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>SW1(config-if)# switchport trunk allowed vlan 10,20,30
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>SW1(config-if)# exit
+</code></pre></div>
+<h3 id="verifier-les-vlan">Vérifier les VLAN<a class="headerlink" href="#verifier-les-vlan" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>SW1# show vlan brief
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>SW1# show interfaces trunk
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>SW1# show interfaces FastEthernet0/5 switchport
+</code></pre></div>
+<h3 id="supprimer-un-vlan">Supprimer un VLAN<a class="headerlink" href="#supprimer-un-vlan" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>SW1(config)# no vlan 10
+</code></pre></div>
+<hr />
+<h2 id="routage-statique">🛤️ ROUTAGE STATIQUE <a id="routage"></a><a class="headerlink" href="#routage-statique" title="Permanent link">&para;</a></h2>
+<h3 id="route-statique-classique">Route statique classique<a class="headerlink" href="#route-statique-classique" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>R1(config)# ip route &lt;réseau_destination&gt; &lt;masque&gt; &lt;next_hop_ou_interface&gt;
+</code></pre></div>
+<p><strong>Exemple 1</strong> : Via next-hop
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>R1(config)# ip route 192.168.2.0 255.255.255.0 10.0.0.2
+</code></pre></div></p>
+<blockquote>
+<p>Route vers 192.168.2.0/24 via le routeur 10.0.0.2</p>
+</blockquote>
+<p><strong>Exemple 2</strong> : Via interface de sortie
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>R1(config)# ip route 192.168.3.0 255.255.255.0 GigabitEthernet0/1
+</code></pre></div></p>
+<h3 id="route-par-defaut-default-route">Route par défaut (default route)<a class="headerlink" href="#route-par-defaut-default-route" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>R1(config)# ip route 0.0.0.0 0.0.0.0 &lt;next_hop&gt;
+</code></pre></div>
+<p><strong>Exemple</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>R1(config)# ip route 0.0.0.0 0.0.0.0 200.100.50.1
+</code></pre></div></p>
+<blockquote>
+<p>Toutes les destinations inconnues → 200.100.50.1</p>
+</blockquote>
+<h3 id="verifier-les-routes">Vérifier les routes<a class="headerlink" href="#verifier-les-routes" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>R1# show ip route
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>R1# show ip route static
+</code></pre></div>
+<h3 id="supprimer-une-route">Supprimer une route<a class="headerlink" href="#supprimer-une-route" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>R1(config)# no ip route 192.168.2.0 255.255.255.0 10.0.0.2
+</code></pre></div>
+<hr />
+<h2 id="ssh-et-telnet">🔐 SSH ET TELNET <a id="ssh"></a><a class="headerlink" href="#ssh-et-telnet" title="Permanent link">&para;</a></h2>
+<h3 id="configuration-ssh-version-2-recommandee">Configuration SSH (VERSION 2 RECOMMANDÉE)<a class="headerlink" href="#configuration-ssh-version-2-recommandee" title="Permanent link">&para;</a></h3>
+<p><strong>Étape 1</strong> : Nom d'hôte et domaine
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>R1(config)# hostname R1
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>R1(config)# ip domain-name entreprise.local
+</code></pre></div></p>
+<p><strong>Étape 2</strong> : Générer les clés RSA
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>R1(config)# crypto key generate rsa
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>How many bits in the modulus [512]: 1024
+</code></pre></div></p>
+<blockquote>
+<p>⚠️ Minimum 768 bits pour SSHv2, <strong>1024 bits recommandé</strong></p>
+</blockquote>
+<p><strong>Étape 3</strong> : Créer un utilisateur local
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>R1(config)# username admin privilege 15 secret AdminPass123!
+</code></pre></div></p>
+<p><strong>Étape 4</strong> : Configurer les lignes VTY
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>R1(config)# line vty 0 4
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>R1(config-line)# transport input ssh
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>R1(config-line)# login local
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>R1(config-line)# exit
+</code></pre></div></p>
+<p><strong>Étape 5</strong> : Forcer SSH version 2
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>R1(config)# ip ssh version 2
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>R1(config)# ip ssh time-out 60
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>R1(config)# ip ssh authentication-retries 3
+</code></pre></div></p>
+<h3 id="verifier-ssh">Vérifier SSH<a class="headerlink" href="#verifier-ssh" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>R1# show ip ssh
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>R1# show ssh
+</code></pre></div>
+<h3 id="se-connecter-en-ssh-depuis-un-autre-equipement">Se connecter en SSH (depuis un autre équipement)<a class="headerlink" href="#se-connecter-en-ssh-depuis-un-autre-equipement" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>R1# ssh -l admin 192.168.1.1
+</code></pre></div>
+<hr />
+<h2 id="sauvegarde-et-restauration">💾 SAUVEGARDE ET RESTAURATION <a id="sauvegarde"></a><a class="headerlink" href="#sauvegarde-et-restauration" title="Permanent link">&para;</a></h2>
+<h3 id="voir-les-configurations">Voir les configurations<a class="headerlink" href="#voir-les-configurations" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Commande</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>show running-config</code></td>
+<td>Config active (RAM)</td>
+</tr>
+<tr>
+<td><code>show startup-config</code></td>
+<td>Config de démarrage (NVRAM)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sauvegarder-la-configuration">Sauvegarder la configuration<a class="headerlink" href="#sauvegarder-la-configuration" title="Permanent link">&para;</a></h3>
+<p><strong>Méthode 1</strong> : Commande classique
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>R1# copy running-config startup-config
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>Destination filename [startup-config]? [Entrée]
+</code></pre></div></p>
+<p><strong>Méthode 2</strong> : Commande courte
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>R1# write memory
+</code></pre></div>
+ou
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>R1# wr
+</code></pre></div></p>
+<h3 id="restaurer-la-configuration-de-demarrage">Restaurer la configuration de démarrage<a class="headerlink" href="#restaurer-la-configuration-de-demarrage" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>R1# copy startup-config running-config
+</code></pre></div>
+<h3 id="effacer-la-configuration">Effacer la configuration<a class="headerlink" href="#effacer-la-configuration" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>R1# erase startup-config
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>R1# reload
+</code></pre></div>
+<blockquote>
+<p>⚠️ <strong>reload</strong> redémarre l'équipement</p>
+</blockquote>
+<h3 id="sauvegarder-vers-un-serveur-tftp">Sauvegarder vers un serveur TFTP<a class="headerlink" href="#sauvegarder-vers-un-serveur-tftp" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>R1# copy running-config tftp:
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>Address or name of remote host []? 192.168.1.100
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>Destination filename [r1-confg]? backup-r1.cfg
+</code></pre></div>
+<h3 id="restaurer-depuis-un-serveur-tftp">Restaurer depuis un serveur TFTP<a class="headerlink" href="#restaurer-depuis-un-serveur-tftp" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>R1# copy tftp: running-config
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>Address or name of remote host []? 192.168.1.100
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>Source filename []? backup-r1.cfg
+</code></pre></div>
+<hr />
+<h2 id="diagnostic-reseau">🩺 DIAGNOSTIC RÉSEAU <a id="diagnostic"></a><a class="headerlink" href="#diagnostic-reseau" title="Permanent link">&para;</a></h2>
+<h3 id="commandes-de-verification">Commandes de vérification<a class="headerlink" href="#commandes-de-verification" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Commande</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>show version</code></td>
+<td>Version IOS, uptime, mémoire</td>
+</tr>
+<tr>
+<td><code>show running-config</code></td>
+<td>Configuration active</td>
+</tr>
+<tr>
+<td><code>show startup-config</code></td>
+<td>Configuration sauvegardée</td>
+</tr>
+<tr>
+<td><code>show ip interface brief</code></td>
+<td><strong>ESSENTIEL</strong> - État des interfaces</td>
+</tr>
+<tr>
+<td><code>show interfaces</code></td>
+<td>Détails de toutes les interfaces</td>
+</tr>
+<tr>
+<td><code>show ip route</code></td>
+<td><strong>ESSENTIEL</strong> - Table de routage</td>
+</tr>
+<tr>
+<td><code>show vlan brief</code></td>
+<td>Liste des VLAN (switch)</td>
+</tr>
+<tr>
+<td><code>show mac address-table</code></td>
+<td>Table MAC (switch)</td>
+</tr>
+<tr>
+<td><code>show arp</code></td>
+<td>Table ARP</td>
+</tr>
+<tr>
+<td><code>show ip protocols</code></td>
+<td>Protocoles de routage actifs</td>
+</tr>
+<tr>
+<td><code>show clock</code></td>
+<td>Date et heure</td>
+</tr>
+<tr>
+<td><code>show flash</code></td>
+<td>Contenu de la mémoire Flash</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tests-de-connectivite">Tests de connectivité<a class="headerlink" href="#tests-de-connectivite" title="Permanent link">&para;</a></h3>
+<p><strong>Ping</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>R1# ping 192.168.1.10
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>R1# ping 192.168.1.10 repeat 100
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>R1# ping 192.168.1.10 size 1500
+</code></pre></div></p>
+<p><strong>Traceroute</strong> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>R1# traceroute 8.8.8.8
+</code></pre></div></p>
+<p><strong>Telnet</strong> (test de port) :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>R1# telnet 192.168.1.10 80
+</code></pre></div></p>
+<h3 id="debug-avec-precaution">Debug (avec précaution !)<a class="headerlink" href="#debug-avec-precaution" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>R1# debug ip icmp
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>R1# debug ip routing
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>R1# no debug all  ← TOUJOURS arrêter le debug !
+</code></pre></div>
+<blockquote>
+<p>⚠️ Le debug peut saturer le CPU en production</p>
+</blockquote>
+<hr />
+<h2 id="top-20-commandes-pour-lexamen">⭐ TOP 20 COMMANDES POUR L'EXAMEN <a id="top20"></a><a class="headerlink" href="#top-20-commandes-pour-lexamen" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Commande</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>enable</code></td>
+<td>Passer en mode privilégié</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>configure terminal</code></td>
+<td>Entrer en mode config</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>hostname &lt;nom&gt;</code></td>
+<td>Changer le nom</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>enable secret &lt;mdp&gt;</code></td>
+<td>Mot de passe enable chiffré</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>interface &lt;nom&gt;</code></td>
+<td>Configurer une interface</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>ip address &lt;IP&gt; &lt;masque&gt;</code></td>
+<td>Assigner une IP</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>no shutdown</code></td>
+<td>Activer une interface</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>ip route &lt;réseau&gt; &lt;masque&gt; &lt;next_hop&gt;</code></td>
+<td>Route statique</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>show ip interface brief</code></td>
+<td><strong>État des interfaces</strong></td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>show ip route</code></td>
+<td><strong>Table de routage</strong></td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>show running-config</code></td>
+<td>Config active</td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>copy running-config startup-config</code></td>
+<td><strong>Sauvegarder</strong></td>
+</tr>
+<tr>
+<td>13</td>
+<td><code>vlan &lt;numéro&gt;</code></td>
+<td>Créer un VLAN</td>
+</tr>
+<tr>
+<td>14</td>
+<td><code>switchport mode access</code></td>
+<td>Port en mode access</td>
+</tr>
+<tr>
+<td>15</td>
+<td><code>switchport access vlan &lt;n&gt;</code></td>
+<td>Assigner VLAN</td>
+</tr>
+<tr>
+<td>16</td>
+<td><code>switchport mode trunk</code></td>
+<td>Port en mode trunk</td>
+</tr>
+<tr>
+<td>17</td>
+<td><code>line vty 0 4</code></td>
+<td>Config lignes SSH/Telnet</td>
+</tr>
+<tr>
+<td>18</td>
+<td><code>transport input ssh</code></td>
+<td>Autoriser SSH</td>
+</tr>
+<tr>
+<td>19</td>
+<td><code>ping &lt;IP&gt;</code></td>
+<td>Test connectivité</td>
+</tr>
+<tr>
+<td>20</td>
+<td><code>reload</code></td>
+<td>Redémarrer</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="scenarios-dexamen-frequents">📌 SCÉNARIOS D'EXAMEN FRÉQUENTS<a class="headerlink" href="#scenarios-dexamen-frequents" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-1-configuration-initiale-routeur">Scénario 1 : Configuration initiale routeur<a class="headerlink" href="#scenario-1-configuration-initiale-routeur" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>Router&gt; enable
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>Router# configure terminal
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>Router(config)# hostname R1
+<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>R1(config)# enable secret Cisco123!
+<a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a>R1(config)# line console 0
+<a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a>R1(config-line)# password Console123
+<a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a>R1(config-line)# login
+<a id="__codelineno-45-8" name="__codelineno-45-8" href="#__codelineno-45-8"></a>R1(config-line)# exit
+<a id="__codelineno-45-9" name="__codelineno-45-9" href="#__codelineno-45-9"></a>R1(config)# interface GigabitEthernet0/0
+<a id="__codelineno-45-10" name="__codelineno-45-10" href="#__codelineno-45-10"></a>R1(config-if)# ip address 192.168.1.1 255.255.255.0
+<a id="__codelineno-45-11" name="__codelineno-45-11" href="#__codelineno-45-11"></a>R1(config-if)# no shutdown
+<a id="__codelineno-45-12" name="__codelineno-45-12" href="#__codelineno-45-12"></a>R1(config-if)# exit
+<a id="__codelineno-45-13" name="__codelineno-45-13" href="#__codelineno-45-13"></a>R1(config)# exit
+<a id="__codelineno-45-14" name="__codelineno-45-14" href="#__codelineno-45-14"></a>R1# copy running-config startup-config
+</code></pre></div>
+<h3 id="scenario-2-configuration-vlan-sur-switch">Scénario 2 : Configuration VLAN sur switch<a class="headerlink" href="#scenario-2-configuration-vlan-sur-switch" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>SW1# configure terminal
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>SW1(config)# vlan 10
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>SW1(config-vlan)# name ADMIN
+<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a>SW1(config-vlan)# exit
+<a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a>SW1(config)# vlan 20
+<a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a>SW1(config-vlan)# name USERS
+<a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a>SW1(config-vlan)# exit
+<a id="__codelineno-46-8" name="__codelineno-46-8" href="#__codelineno-46-8"></a>SW1(config)# interface FastEthernet0/5
+<a id="__codelineno-46-9" name="__codelineno-46-9" href="#__codelineno-46-9"></a>SW1(config-if)# switchport mode access
+<a id="__codelineno-46-10" name="__codelineno-46-10" href="#__codelineno-46-10"></a>SW1(config-if)# switchport access vlan 10
+<a id="__codelineno-46-11" name="__codelineno-46-11" href="#__codelineno-46-11"></a>SW1(config-if)# exit
+<a id="__codelineno-46-12" name="__codelineno-46-12" href="#__codelineno-46-12"></a>SW1(config)# interface GigabitEthernet0/1
+<a id="__codelineno-46-13" name="__codelineno-46-13" href="#__codelineno-46-13"></a>SW1(config-if)# switchport mode trunk
+<a id="__codelineno-46-14" name="__codelineno-46-14" href="#__codelineno-46-14"></a>SW1(config-if)# exit
+<a id="__codelineno-46-15" name="__codelineno-46-15" href="#__codelineno-46-15"></a>SW1# write memory
+</code></pre></div>
+<h3 id="scenario-3-configuration-ssh">Scénario 3 : Configuration SSH<a class="headerlink" href="#scenario-3-configuration-ssh" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>R1(config)# hostname R1
+<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>R1(config)# ip domain-name lab.local
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>R1(config)# crypto key generate rsa
+<a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a>[1024]
+<a id="__codelineno-47-5" name="__codelineno-47-5" href="#__codelineno-47-5"></a>R1(config)# username admin privilege 15 secret Admin123!
+<a id="__codelineno-47-6" name="__codelineno-47-6" href="#__codelineno-47-6"></a>R1(config)# line vty 0 4
+<a id="__codelineno-47-7" name="__codelineno-47-7" href="#__codelineno-47-7"></a>R1(config-line)# transport input ssh
+<a id="__codelineno-47-8" name="__codelineno-47-8" href="#__codelineno-47-8"></a>R1(config-line)# login local
+<a id="__codelineno-47-9" name="__codelineno-47-9" href="#__codelineno-47-9"></a>R1(config-line)# exit
+<a id="__codelineno-47-10" name="__codelineno-47-10" href="#__codelineno-47-10"></a>R1(config)# ip ssh version 2
+</code></pre></div>
+<h3 id="scenario-4-routage-statique">Scénario 4 : Routage statique<a class="headerlink" href="#scenario-4-routage-statique" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>R1(config)# ip route 192.168.2.0 255.255.255.0 10.0.0.2
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>R1(config)# ip route 192.168.3.0 255.255.255.0 10.0.0.2
+<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a>R1(config)# ip route 0.0.0.0 0.0.0.0 200.50.100.1
+<a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a>R1(config)# exit
+<a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a>R1# show ip route
+</code></pre></div>
+<hr />
+<h2 id="astuces-pour-lexamen">💡 ASTUCES POUR L'EXAMEN<a class="headerlink" href="#astuces-pour-lexamen" title="Permanent link">&para;</a></h2>
+<h3 id="a-retenir-absolument">✅ À RETENIR ABSOLUMENT<a class="headerlink" href="#a-retenir-absolument" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>no shutdown</strong> après config d'interface (sinon reste down)</li>
+<li><strong>copy run start</strong> pour sauvegarder (sinon perdu au reboot)</li>
+<li><strong>enable secret</strong> est chiffré, <strong>enable password</strong> non</li>
+<li><strong>SSH nécessite</strong> : hostname + domain-name + crypto key + user local</li>
+<li><strong>Mode trunk</strong> = plusieurs VLANs, <strong>mode access</strong> = un seul VLAN</li>
+<li><strong>ip default-gateway</strong> sur switch, <strong>ip route 0.0.0.0 0.0.0.0</strong> sur routeur</li>
+</ol>
+<h3 id="erreurs-frequentes">🔥 ERREURS FRÉQUENTES<a class="headerlink" href="#erreurs-frequentes" title="Permanent link">&para;</a></h3>
+<p>❌ Oublier <code>no shutdown</code> → interface reste down<br />
+❌ Oublier <code>copy run start</code> → config perdue au reboot<br />
+❌ Confondre <code>transport input ssh</code> et <code>transport input telnet</code><br />
+❌ Oublier <code>login</code> ou <code>login local</code> sur line vty → connexion refusée<br />
+❌ Mauvais masque de sous-réseau<br />
+❌ Route statique sans next-hop  </p>
+<hr />
+<h2 id="checklist-avant-lexamen">🎯 CHECKLIST AVANT L'EXAMEN<a class="headerlink" href="#checklist-avant-lexamen" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Je connais les 5 modes (User, Privileged, Config, Interface, Line)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Je sais configurer une IP sur une interface</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Je sais créer des VLAN et les assigner aux ports</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Je sais configurer un port trunk</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Je sais configurer une route statique</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Je sais configurer SSH (hostname, domain, crypto, user, vty)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Je sais sauvegarder la config (<code>copy run start</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Je connais les commandes <code>show ip interface brief</code> et <code>show ip route</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Je sais faire un ping et un traceroute</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Je sais distinguer mode access et mode trunk</li>
+</ul>
+<hr />
+<p><strong>🚀 Tu es prêt pour les commandes Cisco IOS ! Passe au QCM Réseau maintenant !</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../FICHE-04-Reseau-Subnetting-CIDR/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Fiche — Reseau Subnetting CIDR">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Fiche — Reseau Subnetting CIDR
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../QCM/Evaluation/QCM-Reseau/" class="md-footer__link md-footer__link--next" aria-label="Suivant: QCM — énoncé">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                QCM — énoncé
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Contenu sous licence GPL-3.0 — bon courage pour l'examen !
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../assets/quiz.js"></script>
+      
+    
+  </body>
+</html>

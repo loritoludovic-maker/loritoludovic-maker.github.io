@@ -1,0 +1,5719 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Fiches, QCM interactifs, examens blancs et simulation orale pour préparer le titre TSSR.">
+      
+      
+      
+        <link rel="canonical" href="https://loritoludovic-maker.github.io/revision-tssr/CCP4-Services-Reseau/Fiches-Revisions/FICHE-02-Ports-Protocoles-Acronymes/">
+      
+      
+        <link rel="prev" href="../../INDEX-CCP4/">
+      
+      
+        <link rel="next" href="../FICHE-04-Reseau-Subnetting-CIDR/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Fiche — Ports Protocoles Acronymes - Révisions TSSR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fiche-de-revision-express-portsprotocolesacronymes" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../.." title="Révisions TSSR" class="md-header__button md-logo" aria-label="Révisions TSSR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Révisions TSSR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fiche — Ports Protocoles Acronymes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="teal"  aria-label="Passer en mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer en mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="teal"  aria-label="Passer en mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer en mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../START-HERE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Démarrer
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../CCP/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Les 9 CCP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../quiz/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  QCM interactifs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Examens-Blancs/Examen-1/EXAMEN-BLANC-1-EVALUATION/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Examens blancs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Simulation-Orale-Complete/INDEX-SIMULATION-ORALE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Simulation orale
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../quiz/scores/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Mes scores
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Révisions TSSR" class="md-nav__button md-logo" aria-label="Révisions TSSR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    Révisions TSSR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Démarrer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Démarrer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../START-HERE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commencer ici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PRESENTATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Présentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../README-GUIDE-REVISION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide de révision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PLANNING-REVISION-5-JOURS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planning 5 jours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX-GENERAL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index général
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SUIVI-SCORES-PROGRESSION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche de suivi (papier)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../CCP/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Les 9 CCP
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Les 9 CCP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP1 · Support utilisateur
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP1 · Support utilisateur
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/INDEX-CCP1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/Fiche-Revision/FICHE-CCP1-Support-Utilisateur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Support Utilisateur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/QCM/Evaluation/QCM-Support-ITIL-40Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/QCM/Correction/QCM-Support-ITIL-40Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP1-Support-10Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP1-Support-Utilisateur/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP1-Support-10Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP2 · Windows & Active Directory
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP2 · Windows & Active Directory
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/INDEX-CCP2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/Fiche-Revision/FICHE-CCP2-Windows-AD-PowerShell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Windows AD PowerShell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/QCM/Evaluation/QCM-Windows-ActiveDirectory-30Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/QCM/Correction/QCM-Windows-ActiveDirectory-30Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP2-Windows-AD-15Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP2-Windows-Active-Directory/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP2-Windows-AD-15Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP3 · Maintenance Linux
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP3 · Maintenance Linux
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/INDEX-CCP3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/Fiche-Revision/FICHE-01-Linux-Commandes-Essentielles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Linux Commandes Essentielles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/QCM/Evaluation/QCM-Linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/QCM/Correction/QCM-Linux-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/Questions-Ouvertes/Evaluation/Questions-Ouvertes-Linux-20Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/Questions-Ouvertes/Correction/Questions-Ouvertes-Linux-20Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP3-Maintenance-Linux/MSP/MSP-Pratique-Services-Linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MSP pratique — services Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP4 · Services réseau
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP4 · Services réseau
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../INDEX-CCP4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Ports Protocoles Acronymes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Ports Protocoles Acronymes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#essentiels-pour-lexamen-tssr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Essentiels pour l'examen TSSR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ports-et-protocoles-a-connaitre-par-cur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 PORTS ET PROTOCOLES - À CONNAÎTRE PAR CŒUR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 PORTS ET PROTOCOLES - À CONNAÎTRE PAR CŒUR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ports-les-plus-importants-pour-lexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ports les plus importants pour l'examen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mnemotechnique-pour-les-ports-essentiels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Mnémotechnique pour les ports ESSENTIELS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocoles-de-messagerie-differences-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📧 PROTOCOLES DE MESSAGERIE - DIFFÉRENCES IMPORTANTES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📧 PROTOCOLES DE MESSAGERIE - DIFFÉRENCES IMPORTANTES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pop3-vs-imap-question-frequente-a-lexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POP3 vs IMAP (question FRÉQUENTE à l'examen)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smtp-envoi-vs-pop3imap-reception" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SMTP (envoi) vs POP3/IMAP (réception)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-client-de-messagerie-question-dexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration client de messagerie (question d'examen)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocoles-de-securite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔐 PROTOCOLES DE SÉCURITÉ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔐 PROTOCOLES DE SÉCURITÉ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cryptage-et-authentification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cryptage et Authentification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssltls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSL/TLS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vpn-protocoles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VPN - Protocoles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocoles-reseau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 PROTOCOLES RÉSEAU
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 PROTOCOLES RÉSEAU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suite-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suite TCP/IP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-vs-udp-tres-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP vs UDP (TRÈS IMPORTANT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protocoles-importants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protocoles importants
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Protocoles importants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns-domain-name-system-port-53-udptcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS (Domain Name System) - Port 53 UDP/TCP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dhcp-dynamic-host-configuration-protocol-port-6768-udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DHCP (Dynamic Host Configuration Protocol) - Port 67/68 UDP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#icmp-internet-control-message-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ICMP (Internet Control Message Protocol)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arp-address-resolution-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ARP (Address Resolution Protocol)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ports-speciaux-et-plages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔌 PORTS SPÉCIAUX ET PLAGES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔌 PORTS SPÉCIAUX ET PLAGES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plages-de-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plages de ports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ports-a-eviter-en-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ports à éviter en production
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acronymes-essentiels-a-connaitre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏷️ ACRONYMES ESSENTIELS - À CONNAÎTRE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏷️ ACRONYMES ESSENTIELS - À CONNAÎTRE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#securite-et-reglementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sécurité et Réglementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reseau-et-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Réseau et Infrastructure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemes-et-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Systèmes et Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtualisation-et-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Virtualisation et Cloud
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#itil-et-gestion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ITIL et Gestion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sauvegarde-et-continuite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sauvegarde et Continuité
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#developpement-et-bdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Développement et BDD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#divers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Divers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions-types-dexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 QUESTIONS TYPES D'EXAMEN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 QUESTIONS TYPES D&#39;EXAMEN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#format-habituel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format habituel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions-frequentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questions fréquentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-dauto-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 EXERCICE D'AUTO-ÉVALUATION
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 EXERCICE D&#39;AUTO-ÉVALUATION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-rapide-a-faire-sans-regarder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test rapide (à faire sans regarder)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#astuce-revision-rapide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 ASTUCE RÉVISION RAPIDE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💡 ASTUCE RÉVISION RAPIDE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technique-de-memorisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technique de mémorisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#juste-avant-lexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Juste avant l'examen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FICHE-04-Reseau-Subnetting-CIDR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Reseau Subnetting CIDR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FICHE-05-Commandes-Cisco-IOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Commandes Cisco IOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../QCM/Evaluation/QCM-Reseau/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../QCM/Correction/QCM-Reseau-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Questions-Ouvertes/Evaluation/Questions-Ouvertes-Reseau/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Questions-Ouvertes/Correction/Questions-Ouvertes-Reseau-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Exercices-Subnetting/Evaluation/Exercices-Subnetting-20-Exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices subnetting — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Exercices-Subnetting/Correction/Exercices-Subnetting-20-Exercices-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices subnetting — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP5 · Virtualisation VMware
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP5 · Virtualisation VMware
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/INDEX-CCP5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/Fiche-Revisions/FICHE-CCP5-VMware-vSphere/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — VMware vSphere
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/QCM/Evaluation/QCM-Virtualisation-40Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/QCM/Correction/QCM-Virtualisation-40Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP5-VMware-10Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP5-Virtualisation/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP5-VMware-10Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP6 · Scripts & automatisation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP6 · Scripts & automatisation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/INDEX-CCP6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/Fiche-Revisions/FICHE-06-Scripting-Bash-PowerShell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Scripting Bash PowerShell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/QCM/Evaluation/QCM-CCP6-Scripting-30Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/QCM/Correction/QCM-CCP6-Scripting-30Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP6-Scripting-10Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP6-Scripts-Automatisation/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP6-Scripting-10Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP7 · Sécurisation accès Internet
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP7 · Sécurisation accès Internet
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/INDEX-CCP7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/Fiche-Revisions/FICHE-CCP7-Securite-Reseau-pfSense/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Securite Reseau pfSense
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/QCM/Evaluation/QCM-CCP7-Securite-Reseau-25Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/QCM/Correction/QCM-CCP7-Securite-Reseau-25Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP7-Securite-8Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP7-Securisation-Acces-Internet/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP7-Securite-8Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP8 · Sauvegardes & restaurations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP8 · Sauvegardes & restaurations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/INDEX-CCP8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/Fiche-Revisions/FICHE-03-Sauvegardes-PRA-PCA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Sauvegardes PRA PCA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/QCM/Evaluation/QCM-CCP8-Sauvegardes-20Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/QCM/Correction/QCM-CCP8-Sauvegardes-20Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/Questions-Ouvertes/Evaluation/Questions-Ouvertes-Sauvegardes-15Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP8-Sauvegardes-Restaurations/Questions-Ouvertes/Correction/Questions-Ouvertes-Sauvegardes-15Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CCP9 · Déploiement de postes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CCP9 · Déploiement de postes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/ccp9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/INDEX-CCP9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/Fiche-Revisions/FICHE-CCP9-Deploiement-Postes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche — Deploiement Postes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/QCM/Evaluation/QCM-CCP9-Deploiement-20Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/QCM/Correction/QCM-CCP9-Deploiement-20Q-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/Questions-Ouvertes/Evaluation/QUESTIONS-OUVERTES-CCP9-Deploiement-6Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — énoncé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CCP9-Deploiement-Postes/Questions-Ouvertes/Correction/QUESTIONS-OUVERTES-CCP9-Deploiement-6Q-CORRECTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Questions ouvertes — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QCM interactifs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examens blancs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examens blancs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Examens-Blancs/Examen-1/EXAMEN-BLANC-1-EVALUATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen blanc 1 — sujet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Examens-Blancs/Examen-1/EXAMEN-BLANC-1-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen blanc 1 — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Examens-Blancs/Examen-2/EXAMEN-BLANC-2-EVALUATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen blanc 2 — sujet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Examens-Blancs/Examen-2/EXAMEN-BLANC-2-CORRECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen blanc 2 — correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation orale
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Simulation orale
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simulation-Orale-Complete/INDEX-SIMULATION-ORALE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sommaire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simulation-Orale-Complete/SIMULATION-ORALE-PARTIE1-MSP-PRATIQUE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partie 1 — MSP pratique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simulation-Orale-Complete/SIMULATION-ORALE-PARTIE2-ENTRETIEN-TECHNIQUE-COMPLET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partie 2 — Entretien technique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simulation-Orale-Complete/SIMULATION-ORALE-PARTIE3-ENTRETIEN-FINAL-COMPLET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partie 3 — Entretien final
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quiz/scores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mes scores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#essentiels-pour-lexamen-tssr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Essentiels pour l'examen TSSR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ports-et-protocoles-a-connaitre-par-cur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 PORTS ET PROTOCOLES - À CONNAÎTRE PAR CŒUR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 PORTS ET PROTOCOLES - À CONNAÎTRE PAR CŒUR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ports-les-plus-importants-pour-lexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ports les plus importants pour l'examen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mnemotechnique-pour-les-ports-essentiels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Mnémotechnique pour les ports ESSENTIELS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocoles-de-messagerie-differences-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📧 PROTOCOLES DE MESSAGERIE - DIFFÉRENCES IMPORTANTES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📧 PROTOCOLES DE MESSAGERIE - DIFFÉRENCES IMPORTANTES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pop3-vs-imap-question-frequente-a-lexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POP3 vs IMAP (question FRÉQUENTE à l'examen)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smtp-envoi-vs-pop3imap-reception" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SMTP (envoi) vs POP3/IMAP (réception)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-client-de-messagerie-question-dexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration client de messagerie (question d'examen)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocoles-de-securite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔐 PROTOCOLES DE SÉCURITÉ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔐 PROTOCOLES DE SÉCURITÉ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cryptage-et-authentification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cryptage et Authentification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssltls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSL/TLS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vpn-protocoles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VPN - Protocoles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocoles-reseau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 PROTOCOLES RÉSEAU
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 PROTOCOLES RÉSEAU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suite-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suite TCP/IP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-vs-udp-tres-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP vs UDP (TRÈS IMPORTANT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protocoles-importants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protocoles importants
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Protocoles importants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns-domain-name-system-port-53-udptcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS (Domain Name System) - Port 53 UDP/TCP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dhcp-dynamic-host-configuration-protocol-port-6768-udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DHCP (Dynamic Host Configuration Protocol) - Port 67/68 UDP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#icmp-internet-control-message-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ICMP (Internet Control Message Protocol)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arp-address-resolution-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ARP (Address Resolution Protocol)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ports-speciaux-et-plages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔌 PORTS SPÉCIAUX ET PLAGES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔌 PORTS SPÉCIAUX ET PLAGES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plages-de-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plages de ports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ports-a-eviter-en-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ports à éviter en production
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acronymes-essentiels-a-connaitre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏷️ ACRONYMES ESSENTIELS - À CONNAÎTRE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏷️ ACRONYMES ESSENTIELS - À CONNAÎTRE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#securite-et-reglementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sécurité et Réglementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reseau-et-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Réseau et Infrastructure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemes-et-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Systèmes et Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtualisation-et-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Virtualisation et Cloud
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#itil-et-gestion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ITIL et Gestion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sauvegarde-et-continuite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sauvegarde et Continuité
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#developpement-et-bdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Développement et BDD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#divers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Divers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions-types-dexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 QUESTIONS TYPES D'EXAMEN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 QUESTIONS TYPES D&#39;EXAMEN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#format-habituel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format habituel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions-frequentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questions fréquentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-dauto-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 EXERCICE D'AUTO-ÉVALUATION
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 EXERCICE D&#39;AUTO-ÉVALUATION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-rapide-a-faire-sans-regarder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test rapide (à faire sans regarder)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#astuce-revision-rapide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 ASTUCE RÉVISION RAPIDE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💡 ASTUCE RÉVISION RAPIDE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technique-de-memorisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technique de mémorisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#juste-avant-lexamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Juste avant l'examen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../../CCP/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Les 9 CCP
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../../quiz/ccp4/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    CCP4 · Services réseau
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="fiche-de-revision-express-portsprotocolesacronymes">🔢 FICHE DE RÉVISION EXPRESS - PORTS/PROTOCOLES/ACRONYMES<a class="headerlink" href="#fiche-de-revision-express-portsprotocolesacronymes" title="Permanent link">&para;</a></h1>
+<h2 id="essentiels-pour-lexamen-tssr">Essentiels pour l'examen TSSR<a class="headerlink" href="#essentiels-pour-lexamen-tssr" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⚠️ CRITIQUE</strong> : Ces informations sont demandées à CHAQUE examen TSSR !</p>
+</blockquote>
+<hr />
+<h2 id="ports-et-protocoles-a-connaitre-par-cur">🌐 PORTS ET PROTOCOLES - À CONNAÎTRE PAR CŒUR<a class="headerlink" href="#ports-et-protocoles-a-connaitre-par-cur" title="Permanent link">&para;</a></h2>
+<h3 id="ports-les-plus-importants-pour-lexamen">Ports les plus importants pour l'examen<a class="headerlink" href="#ports-les-plus-importants-pour-lexamen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Protocole</th>
+<th>Type</th>
+<th>Service/Utilisation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>20</strong></td>
+<td>FTP-DATA</td>
+<td>TCP</td>
+<td>Transfert de données FTP</td>
+</tr>
+<tr>
+<td><strong>21</strong></td>
+<td>FTP</td>
+<td>TCP</td>
+<td>Contrôle FTP (File Transfer Protocol)</td>
+</tr>
+<tr>
+<td><strong>22</strong></td>
+<td>SSH</td>
+<td>TCP</td>
+<td>Secure Shell (connexion sécurisée)</td>
+</tr>
+<tr>
+<td><strong>23</strong></td>
+<td>Telnet</td>
+<td>TCP</td>
+<td>Connexion non sécurisée (obsolète)</td>
+</tr>
+<tr>
+<td><strong>25</strong></td>
+<td>SMTP</td>
+<td>TCP</td>
+<td>Envoi d'emails (Simple Mail Transfer Protocol)</td>
+</tr>
+<tr>
+<td><strong>53</strong></td>
+<td>DNS</td>
+<td>TCP/UDP</td>
+<td>Domain Name System (résolution noms)</td>
+</tr>
+<tr>
+<td><strong>67</strong></td>
+<td>DHCP Server</td>
+<td>UDP</td>
+<td>Serveur DHCP</td>
+</tr>
+<tr>
+<td><strong>68</strong></td>
+<td>DHCP Client</td>
+<td>UDP</td>
+<td>Client DHCP</td>
+</tr>
+<tr>
+<td><strong>69</strong></td>
+<td>TFTP</td>
+<td>UDP</td>
+<td>Trivial FTP (transfert fichiers simple)</td>
+</tr>
+<tr>
+<td><strong>80</strong></td>
+<td>HTTP</td>
+<td>TCP</td>
+<td>Web non sécurisé</td>
+</tr>
+<tr>
+<td><strong>110</strong></td>
+<td>POP3</td>
+<td>TCP</td>
+<td>Réception emails (Post Office Protocol)</td>
+</tr>
+<tr>
+<td><strong>123</strong></td>
+<td>NTP</td>
+<td>UDP</td>
+<td>Network Time Protocol (synchronisation temps)</td>
+</tr>
+<tr>
+<td><strong>143</strong></td>
+<td>IMAP</td>
+<td>TCP</td>
+<td>Réception emails (Internet Message Access Protocol)</td>
+</tr>
+<tr>
+<td><strong>161</strong></td>
+<td>SNMP</td>
+<td>UDP</td>
+<td>Supervision réseau (Simple Network Management Protocol)</td>
+</tr>
+<tr>
+<td><strong>162</strong></td>
+<td>SNMP Trap</td>
+<td>UDP</td>
+<td>Alertes SNMP</td>
+</tr>
+<tr>
+<td><strong>389</strong></td>
+<td>LDAP</td>
+<td>TCP</td>
+<td>Annuaire (Lightweight Directory Access Protocol)</td>
+</tr>
+<tr>
+<td><strong>443</strong></td>
+<td>HTTPS</td>
+<td>TCP</td>
+<td>Web sécurisé (HTTP + SSL/TLS)</td>
+</tr>
+<tr>
+<td><strong>445</strong></td>
+<td>SMB</td>
+<td>TCP</td>
+<td>Partage de fichiers Windows (Server Message Block)</td>
+</tr>
+<tr>
+<td><strong>465</strong></td>
+<td>SMTPS</td>
+<td>TCP</td>
+<td>SMTP sécurisé (obsolète, utiliser 587)</td>
+</tr>
+<tr>
+<td><strong>514</strong></td>
+<td>Syslog</td>
+<td>UDP</td>
+<td>Logs système</td>
+</tr>
+<tr>
+<td><strong>587</strong></td>
+<td>SMTP</td>
+<td>TCP</td>
+<td>SMTP moderne pour envoi emails (STARTTLS)</td>
+</tr>
+<tr>
+<td><strong>636</strong></td>
+<td>LDAPS</td>
+<td>TCP</td>
+<td>LDAP sécurisé (LDAP + SSL)</td>
+</tr>
+<tr>
+<td><strong>993</strong></td>
+<td>IMAPS</td>
+<td>TCP</td>
+<td>IMAP sécurisé (IMAP + SSL/TLS)</td>
+</tr>
+<tr>
+<td><strong>995</strong></td>
+<td>POP3S</td>
+<td>TCP</td>
+<td>POP3 sécurisé (POP3 + SSL/TLS)</td>
+</tr>
+<tr>
+<td><strong>1433</strong></td>
+<td>MS SQL</td>
+<td>TCP</td>
+<td>Microsoft SQL Server</td>
+</tr>
+<tr>
+<td><strong>1521</strong></td>
+<td>Oracle</td>
+<td>TCP</td>
+<td>Oracle Database</td>
+</tr>
+<tr>
+<td><strong>2049</strong></td>
+<td>NFS</td>
+<td>TCP/UDP</td>
+<td>Network File System (partage Linux)</td>
+</tr>
+<tr>
+<td><strong>3306</strong></td>
+<td>MySQL</td>
+<td>TCP</td>
+<td>Base de données MySQL/MariaDB</td>
+</tr>
+<tr>
+<td><strong>3389</strong></td>
+<td>RDP</td>
+<td>TCP</td>
+<td>Remote Desktop Protocol (Bureau à distance Windows)</td>
+</tr>
+<tr>
+<td><strong>3724</strong></td>
+<td>WoW</td>
+<td>TCP</td>
+<td>World of Warcraft (exemple jeu)</td>
+</tr>
+<tr>
+<td><strong>5432</strong></td>
+<td>PostgreSQL</td>
+<td>TCP</td>
+<td>Base de données PostgreSQL</td>
+</tr>
+<tr>
+<td><strong>8080</strong></td>
+<td>HTTP-Alt</td>
+<td>TCP</td>
+<td>HTTP alternatif (souvent proxy/web)</td>
+</tr>
+<tr>
+<td><strong>8443</strong></td>
+<td>HTTPS-Alt</td>
+<td>TCP</td>
+<td>HTTPS alternatif</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mnemotechnique-pour-les-ports-essentiels">🎯 Mnémotechnique pour les ports ESSENTIELS<a class="headerlink" href="#mnemotechnique-pour-les-ports-essentiels" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>22 = SSH → "22 c'est l'âge pour conduire secure"
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>25 = SMTP → "25 décembre = on envoie des cartes (mails)"
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>53 = DNS → "53 régions, chacune a son nom"
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>80 = HTTP → "8-0 = H-ttp (ressemble au H)"
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>110 = POP3 → "110 = police, on récupère (mails)"
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>143 = IMAP → "1-4-3 = I LOVE YOU = j'aime avoir mes mails partout"
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>443 = HTTPS → "443 + 80 = HTTPS + HTTP"
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>3389 = RDP → "3389 = Windows à distance"
+</code></pre></div>
+<hr />
+<h2 id="protocoles-de-messagerie-differences-importantes">📧 PROTOCOLES DE MESSAGERIE - DIFFÉRENCES IMPORTANTES<a class="headerlink" href="#protocoles-de-messagerie-differences-importantes" title="Permanent link">&para;</a></h2>
+<h3 id="pop3-vs-imap-question-frequente-a-lexamen">POP3 vs IMAP (question FRÉQUENTE à l'examen)<a class="headerlink" href="#pop3-vs-imap-question-frequente-a-lexamen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Caractéristique</th>
+<th>POP3 (Port 110/995)</th>
+<th>IMAP (Port 143/993)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Téléchargement</strong></td>
+<td>Télécharge ET supprime du serveur</td>
+<td>Garde sur le serveur</td>
+</tr>
+<tr>
+<td><strong>Synchronisation</strong></td>
+<td>❌ Pas de synchro</td>
+<td>✅ Synchro multi-appareils</td>
+</tr>
+<tr>
+<td><strong>Accès hors ligne</strong></td>
+<td>✅ Oui (emails locaux)</td>
+<td>⚠️ Limité</td>
+</tr>
+<tr>
+<td><strong>Gestion serveur</strong></td>
+<td>❌ Faible</td>
+<td>✅ Forte (dossiers, flags)</td>
+</tr>
+<tr>
+<td><strong>Usage disque local</strong></td>
+<td>📈 Beaucoup</td>
+<td>📉 Peu</td>
+</tr>
+<tr>
+<td><strong>Usage disque serveur</strong></td>
+<td>📉 Peu</td>
+<td>📈 Beaucoup</td>
+</tr>
+<tr>
+<td><strong>Meilleur pour</strong></td>
+<td>1 seul appareil, espace serveur limité</td>
+<td>Multi-appareils, accès web</td>
+</tr>
+</tbody>
+</table>
+<h3 id="smtp-envoi-vs-pop3imap-reception">SMTP (envoi) vs POP3/IMAP (réception)<a class="headerlink" href="#smtp-envoi-vs-pop3imap-reception" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>SMTP (25/587/465)</strong> : Protocole d'ENVOI d'emails</li>
+<li>Port 25 : Serveur à serveur</li>
+<li>Port 587 : Client à serveur (moderne, recommandé)</li>
+<li>
+<p>Port 465 : SMTPS (obsolète)</p>
+</li>
+<li>
+<p><strong>POP3/IMAP</strong> : Protocoles de RÉCEPTION d'emails</p>
+</li>
+<li>Utilisés par le client pour récupérer les emails depuis le serveur</li>
+</ul>
+<h3 id="configuration-client-de-messagerie-question-dexamen">Configuration client de messagerie (question d'examen)<a class="headerlink" href="#configuration-client-de-messagerie-question-dexamen" title="Permanent link">&para;</a></h3>
+<p><strong>Paramètres à configurer</strong> :
+1. <strong>Serveur SMTP</strong> (envoi) : smtp.example.com, port 587, STARTTLS
+2. <strong>Serveur POP3 ou IMAP</strong> (réception) : imap.example.com, port 993, SSL
+3. <strong>Identifiants</strong> : adresse email + mot de passe
+4. <strong>Type de sécurité</strong> : SSL/TLS ou STARTTLS</p>
+<hr />
+<h2 id="protocoles-de-securite">🔐 PROTOCOLES DE SÉCURITÉ<a class="headerlink" href="#protocoles-de-securite" title="Permanent link">&para;</a></h2>
+<h3 id="cryptage-et-authentification">Cryptage et Authentification<a class="headerlink" href="#cryptage-et-authentification" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Protocole</th>
+<th>Port</th>
+<th>Utilisation</th>
+<th>Sécurité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SSH</strong></td>
+<td>22</td>
+<td>Connexion sécurisée, SFTP</td>
+<td>✅ Chiffré</td>
+</tr>
+<tr>
+<td><strong>Telnet</strong></td>
+<td>23</td>
+<td>Connexion non sécurisée</td>
+<td>❌ En clair (DANGER)</td>
+</tr>
+<tr>
+<td><strong>SFTP</strong></td>
+<td>22</td>
+<td>Transfert fichiers sécurisé (via SSH)</td>
+<td>✅ Chiffré</td>
+</tr>
+<tr>
+<td><strong>FTPS</strong></td>
+<td>990</td>
+<td>FTP sécurisé (FTP + SSL/TLS)</td>
+<td>✅ Chiffré</td>
+</tr>
+<tr>
+<td><strong>HTTPS</strong></td>
+<td>443</td>
+<td>HTTP sécurisé (HTTP + SSL/TLS)</td>
+<td>✅ Chiffré</td>
+</tr>
+<tr>
+<td><strong>LDAPS</strong></td>
+<td>636</td>
+<td>LDAP sécurisé (LDAP + SSL)</td>
+<td>✅ Chiffré</td>
+</tr>
+<tr>
+<td><strong>RDP</strong></td>
+<td>3389</td>
+<td>Bureau à distance (peut être chiffré)</td>
+<td>⚠️ Configurable</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ssltls">SSL/TLS<a class="headerlink" href="#ssltls" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>SSL</strong> (Secure Sockets Layer) : Ancien protocole (obsolète)</li>
+<li><strong>TLS</strong> (Transport Layer Security) : Remplaçant moderne de SSL</li>
+<li><strong>Versions actuelles</strong> : TLS 1.2 et TLS 1.3 (à connaître pour l'exam)</li>
+<li><strong>Utilisation</strong> : HTTPS, SMTPS, IMAPS, POP3S, FTPS, LDAPS</li>
+</ul>
+<h3 id="vpn-protocoles">VPN - Protocoles<a class="headerlink" href="#vpn-protocoles" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PPTP</strong> : Point-to-Point Tunneling Protocol (obsolète, faible sécurité)</li>
+<li><strong>L2TP</strong> : Layer 2 Tunneling Protocol (souvent avec IPsec)</li>
+<li><strong>IPsec</strong> : Internet Protocol Security (VPN site-à-site)</li>
+<li><strong>OpenVPN</strong> : Open source, très utilisé</li>
+<li><strong>WireGuard</strong> : Moderne, performant</li>
+<li><strong>SSL VPN</strong> : VPN via SSL/TLS (accès via navigateur)</li>
+</ul>
+<hr />
+<h2 id="protocoles-reseau">🌐 PROTOCOLES RÉSEAU<a class="headerlink" href="#protocoles-reseau" title="Permanent link">&para;</a></h2>
+<h3 id="suite-tcpip">Suite TCP/IP<a class="headerlink" href="#suite-tcpip" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Couche OSI</th>
+<th>Couche TCP/IP</th>
+<th>Protocoles</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7-6-5 (Application, Présentation, Session)</td>
+<td><strong>Application</strong></td>
+<td>HTTP, FTP, SMTP, DNS, DHCP</td>
+<td>Services utilisateur</td>
+</tr>
+<tr>
+<td>4 (Transport)</td>
+<td><strong>Transport</strong></td>
+<td>TCP, UDP</td>
+<td>Fiabilité, ports</td>
+</tr>
+<tr>
+<td>3 (Réseau)</td>
+<td><strong>Internet</strong></td>
+<td>IP, ICMP, ARP</td>
+<td>Adressage, routage</td>
+</tr>
+<tr>
+<td>2-1 (Liaison, Physique)</td>
+<td><strong>Accès réseau</strong></td>
+<td>Ethernet, Wi-Fi</td>
+<td>Transmission physique</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tcp-vs-udp-tres-important">TCP vs UDP (TRÈS IMPORTANT)<a class="headerlink" href="#tcp-vs-udp-tres-important" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Caractéristique</th>
+<th>TCP (Transmission Control Protocol)</th>
+<th>UDP (User Datagram Protocol)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Connexion</strong></td>
+<td>✅ Orienté connexion (handshake)</td>
+<td>❌ Sans connexion</td>
+</tr>
+<tr>
+<td><strong>Fiabilité</strong></td>
+<td>✅ Garantit la livraison</td>
+<td>❌ Pas de garantie</td>
+</tr>
+<tr>
+<td><strong>Ordre</strong></td>
+<td>✅ Ordre préservé</td>
+<td>❌ Pas d'ordre garanti</td>
+</tr>
+<tr>
+<td><strong>Vitesse</strong></td>
+<td>🐢 Plus lent</td>
+<td>🐇 Plus rapide</td>
+</tr>
+<tr>
+<td><strong>Overhead</strong></td>
+<td>📈 Plus lourd</td>
+<td>📉 Léger</td>
+</tr>
+<tr>
+<td><strong>Cas d'usage</strong></td>
+<td>Web, Email, FTP, SSH</td>
+<td>DNS, Streaming, VoIP, Jeux</td>
+</tr>
+<tr>
+<td><strong>Exemple</strong></td>
+<td>Téléchargement fichier</td>
+<td>Streaming vidéo</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mnémotechnique</strong> :
+- <strong>TCP</strong> = "<strong>T</strong>rès <strong>C</strong>omplètement <strong>P</strong>récis" → pour ce qui doit arriver intact
+- <strong>UDP</strong> = "<strong>U</strong>ltra <strong>D</strong>irect <strong>P</strong>ide" → pour ce qui doit être rapide</p>
+<h3 id="protocoles-importants">Protocoles importants<a class="headerlink" href="#protocoles-importants" title="Permanent link">&para;</a></h3>
+<h4 id="dns-domain-name-system-port-53-udptcp">DNS (Domain Name System) - Port 53 UDP/TCP<a class="headerlink" href="#dns-domain-name-system-port-53-udptcp" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Rôle</strong> : Résoudre noms de domaine → adresses IP</li>
+<li><strong>Exemple</strong> : google.com → 142.250.185.46</li>
+<li><strong>Types d'enregistrements</strong> :</li>
+<li><strong>A</strong> : IPv4</li>
+<li><strong>AAAA</strong> : IPv6</li>
+<li><strong>MX</strong> : Serveur mail</li>
+<li><strong>CNAME</strong> : Alias</li>
+<li><strong>PTR</strong> : Résolution inverse (IP → nom)</li>
+<li><strong>NS</strong> : Serveur de noms</li>
+<li><strong>TXT</strong> : Texte (SPF, DKIM, etc.)</li>
+</ul>
+<h4 id="dhcp-dynamic-host-configuration-protocol-port-6768-udp">DHCP (Dynamic Host Configuration Protocol) - Port 67/68 UDP<a class="headerlink" href="#dhcp-dynamic-host-configuration-protocol-port-6768-udp" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Rôle</strong> : Attribution automatique d'IP aux clients</li>
+<li><strong>Processus DORA</strong> :</li>
+<li><strong>D</strong>iscover : Client cherche serveur DHCP</li>
+<li><strong>O</strong>ffer : Serveur propose une IP</li>
+<li><strong>R</strong>equest : Client demande l'IP proposée</li>
+<li><strong>A</strong>cknowledge : Serveur confirme</li>
+<li><strong>Informations fournies</strong> :</li>
+<li>Adresse IP</li>
+<li>Masque de sous-réseau</li>
+<li>Passerelle par défaut</li>
+<li>Serveurs DNS</li>
+<li>Durée de bail (lease time)</li>
+</ul>
+<h4 id="icmp-internet-control-message-protocol">ICMP (Internet Control Message Protocol)<a class="headerlink" href="#icmp-internet-control-message-protocol" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Rôle</strong> : Messages de contrôle et d'erreur</li>
+<li><strong>Commandes</strong> :</li>
+<li><code>ping</code> : Test de connectivité (echo request/reply)</li>
+<li><code>traceroute</code> : Tracer le chemin des paquets</li>
+</ul>
+<h4 id="arp-address-resolution-protocol">ARP (Address Resolution Protocol)<a class="headerlink" href="#arp-address-resolution-protocol" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Rôle</strong> : Résoudre adresse IP → adresse MAC</li>
+<li><strong>Commande</strong> : <code>arp -a</code> (afficher table ARP)</li>
+</ul>
+<hr />
+<h2 id="ports-speciaux-et-plages">🔌 PORTS SPÉCIAUX ET PLAGES<a class="headerlink" href="#ports-speciaux-et-plages" title="Permanent link">&para;</a></h2>
+<h3 id="plages-de-ports">Plages de ports<a class="headerlink" href="#plages-de-ports" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>0-1023</strong> : Ports <strong>bien connus</strong> (well-known) - Services système</li>
+<li><strong>1024-49151</strong> : Ports <strong>enregistrés</strong> (registered) - Applications</li>
+<li><strong>49152-65535</strong> : Ports <strong>dynamiques/privés</strong> (ephemeral) - Connexions temporaires</li>
+</ul>
+<h3 id="ports-a-eviter-en-production">Ports à éviter en production<a class="headerlink" href="#ports-a-eviter-en-production" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Telnet (23)</strong> : Non sécurisé, utiliser SSH</li>
+<li><strong>HTTP (80)</strong> : Non chiffré, utiliser HTTPS</li>
+<li><strong>FTP (21)</strong> : Identifiants en clair, utiliser SFTP/FTPS</li>
+<li><strong>SNMP v1/v2 (161)</strong> : Faible sécurité, utiliser SNMPv3</li>
+</ul>
+<hr />
+<h2 id="acronymes-essentiels-a-connaitre">🏷️ ACRONYMES ESSENTIELS - À CONNAÎTRE<a class="headerlink" href="#acronymes-essentiels-a-connaitre" title="Permanent link">&para;</a></h2>
+<h3 id="securite-et-reglementation">Sécurité et Réglementation<a class="headerlink" href="#securite-et-reglementation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ANSSI</strong> : Agence Nationale de la Sécurité des Systèmes d'Information</li>
+<li><strong>CNIL</strong> : Commission Nationale de l'Informatique et des Libertés</li>
+<li><strong>RGPD</strong> : Règlement Général sur la Protection des Données</li>
+<li><strong>PSSI</strong> : Politique de Sécurité des Systèmes d'Information</li>
+<li><strong>RSSI</strong> : Responsable de la Sécurité des Systèmes d'Information</li>
+<li><strong>DPO</strong> : Data Protection Officer (Délégué à la Protection des Données)</li>
+<li><strong>2FA</strong> : Two-Factor Authentication (Authentification à deux facteurs)</li>
+<li><strong>MFA</strong> : Multi-Factor Authentication</li>
+<li><strong>PKI/IGC</strong> : Public Key Infrastructure / Infrastructure de Gestion de Clés</li>
+<li><strong>DEEE</strong> : Déchets d'Équipements Électriques et Électroniques</li>
+</ul>
+<h3 id="reseau-et-infrastructure">Réseau et Infrastructure<a class="headerlink" href="#reseau-et-infrastructure" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>LAN</strong> : Local Area Network</li>
+<li><strong>WAN</strong> : Wide Area Network</li>
+<li><strong>MAN</strong> : Metropolitan Area Network</li>
+<li><strong>PAN</strong> : Personal Area Network</li>
+<li><strong>VLAN</strong> : Virtual Local Area Network</li>
+<li><strong>VPN</strong> : Virtual Private Network</li>
+<li><strong>DMZ</strong> : Demilitarized Zone (Zone démilitarisée)</li>
+<li><strong>NAT</strong> : Network Address Translation</li>
+<li><strong>PAT</strong> : Port Address Translation</li>
+<li><strong>DHCP</strong> : Dynamic Host Configuration Protocol</li>
+<li><strong>DNS</strong> : Domain Name System</li>
+<li><strong>DDNS</strong> : Dynamic DNS</li>
+<li><strong>QoS</strong> : Quality of Service</li>
+<li><strong>ACL</strong> : Access Control List</li>
+<li><strong>SNMP</strong> : Simple Network Management Protocol</li>
+<li><strong>NTP</strong> : Network Time Protocol</li>
+<li><strong>RADIUS</strong> : Remote Authentication Dial-In User Service</li>
+<li><strong>802.1X</strong> : Norme d'authentification réseau</li>
+</ul>
+<h3 id="systemes-et-services">Systèmes et Services<a class="headerlink" href="#systemes-et-services" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>OS</strong> : Operating System</li>
+<li><strong>AD</strong> : Active Directory</li>
+<li><strong>DC</strong> : Domain Controller (Contrôleur de domaine)</li>
+<li><strong>OU</strong> : Organizational Unit</li>
+<li><strong>GPO</strong> : Group Policy Object (Stratégie de groupe)</li>
+<li><strong>LDAP</strong> : Lightweight Directory Access Protocol</li>
+<li><strong>NTFS</strong> : New Technology File System</li>
+<li><strong>FAT32</strong> : File Allocation Table 32</li>
+<li><strong>EXT4</strong> : Fourth Extended File System</li>
+<li><strong>XFS</strong> : X File System</li>
+<li><strong>LVM</strong> : Logical Volume Manager</li>
+<li><strong>RAID</strong> : Redundant Array of Independent Disks</li>
+<li><strong>NAS</strong> : Network Attached Storage</li>
+<li><strong>SAN</strong> : Storage Area Network</li>
+<li><strong>NFS</strong> : Network File System</li>
+<li><strong>SMB/CIFS</strong> : Server Message Block / Common Internet File System</li>
+<li><strong>iSCSI</strong> : Internet Small Computer Systems Interface</li>
+<li><strong>UEFI</strong> : Unified Extensible Firmware Interface</li>
+<li><strong>BIOS</strong> : Basic Input/Output System</li>
+<li><strong>GRUB</strong> : Grand Unified Bootloader</li>
+</ul>
+<h3 id="virtualisation-et-cloud">Virtualisation et Cloud<a class="headerlink" href="#virtualisation-et-cloud" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>VM</strong> : Virtual Machine</li>
+<li><strong>VDI</strong> : Virtual Desktop Infrastructure</li>
+<li><strong>HA</strong> : High Availability (Haute disponibilité)</li>
+<li><strong>DRS</strong> : Distributed Resource Scheduler</li>
+<li><strong>HCI</strong> : Hyper-Converged Infrastructure</li>
+<li><strong>IaaS</strong> : Infrastructure as a Service</li>
+<li><strong>PaaS</strong> : Platform as a Service</li>
+<li><strong>SaaS</strong> : Software as a Service</li>
+<li><strong>IaC</strong> : Infrastructure as Code</li>
+</ul>
+<h3 id="itil-et-gestion">ITIL et Gestion<a class="headerlink" href="#itil-et-gestion" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ITIL</strong> : Information Technology Infrastructure Library</li>
+<li><strong>ITSM</strong> : IT Service Management</li>
+<li><strong>SLA</strong> : Service Level Agreement</li>
+<li><strong>KPI</strong> : Key Performance Indicator</li>
+<li><strong>CMDB</strong> : Configuration Management Database</li>
+<li><strong>MCO</strong> : Maintien en Condition Opérationnelle</li>
+<li><strong>DSI</strong> : Direction des Systèmes d'Information</li>
+<li><strong>MSP</strong> : Managed Service Provider</li>
+<li><strong>GLPI</strong> : Gestionnaire Libre de Parc Informatique</li>
+</ul>
+<h3 id="sauvegarde-et-continuite">Sauvegarde et Continuité<a class="headerlink" href="#sauvegarde-et-continuite" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PRA</strong> : Plan de Reprise d'Activité</li>
+<li><strong>PCA</strong> : Plan de Continuité d'Activité</li>
+<li><strong>RTO</strong> : Recovery Time Objective (Temps de reprise)</li>
+<li><strong>RPO</strong> : Recovery Point Objective (Perte de données acceptable)</li>
+<li><strong>PRI</strong> : Plan de Reprise Informatique</li>
+</ul>
+<h3 id="developpement-et-bdd">Développement et BDD<a class="headerlink" href="#developpement-et-bdd" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>SQL</strong> : Structured Query Language</li>
+<li><strong>NoSQL</strong> : Not Only SQL</li>
+<li><strong>SGBD</strong> : Système de Gestion de Base de Données</li>
+<li><strong>CRUD</strong> : Create, Read, Update, Delete</li>
+<li><strong>API</strong> : Application Programming Interface</li>
+<li><strong>REST</strong> : Representational State Transfer</li>
+<li><strong>JSON</strong> : JavaScript Object Notation</li>
+<li><strong>XML</strong> : eXtensible Markup Language</li>
+<li><strong>HTTP</strong> : HyperText Transfer Protocol</li>
+<li><strong>HTML</strong> : HyperText Markup Language</li>
+<li><strong>CSS</strong> : Cascading Style Sheets</li>
+<li><strong>DevOps</strong> : Development + Operations</li>
+<li><strong>CI/CD</strong> : Continuous Integration / Continuous Deployment</li>
+</ul>
+<h3 id="divers">Divers<a class="headerlink" href="#divers" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>BYOD</strong> : Bring Your Own Device</li>
+<li><strong>MDM</strong> : Mobile Device Management</li>
+<li><strong>IoT</strong> : Internet of Things</li>
+<li><strong>USB</strong> : Universal Serial Bus</li>
+<li><strong>CPU</strong> : Central Processing Unit</li>
+<li><strong>GPU</strong> : Graphics Processing Unit</li>
+<li><strong>RAM</strong> : Random Access Memory</li>
+<li><strong>ROM</strong> : Read-Only Memory</li>
+<li><strong>SSD</strong> : Solid State Drive</li>
+<li><strong>HDD</strong> : Hard Disk Drive</li>
+<li><strong>MAC</strong> : Media Access Control (adresse physique)</li>
+<li><strong>IP</strong> : Internet Protocol</li>
+<li><strong>URL</strong> : Uniform Resource Locator</li>
+<li><strong>URI</strong> : Uniform Resource Identifier</li>
+<li><strong>UID</strong> : User IDentifier</li>
+<li><strong>GID</strong> : Group IDentifier</li>
+<li><strong>PID</strong> : Process IDentifier</li>
+</ul>
+<hr />
+<h2 id="questions-types-dexamen">🎯 QUESTIONS TYPES D'EXAMEN<a class="headerlink" href="#questions-types-dexamen" title="Permanent link">&para;</a></h2>
+<h3 id="format-habituel">Format habituel<a class="headerlink" href="#format-habituel" title="Permanent link">&para;</a></h3>
+<p><strong>"Citez les ports (numéro) et types (TCP/UDP) des protocoles suivants :"</strong>
+- FTP : 21 (TCP) + 20 (TCP data)
+- SSH : 22 (TCP)
+- SMTP : 25 (TCP) / 587 (TCP moderne)
+- DNS : 53 (UDP/TCP)
+- DHCP : 67-68 (UDP)
+- HTTP : 80 (TCP)
+- HTTPS : 443 (TCP)
+- POP3 : 110 (TCP)
+- IMAP : 143 (TCP)
+- SNMP : 161-162 (UDP)
+- LDAP : 389 (TCP)
+- SMB : 445 (TCP)
+- RDP : 3389 (TCP)</p>
+<h3 id="questions-frequentes">Questions fréquentes<a class="headerlink" href="#questions-frequentes" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>"Quelle est la différence entre POP3 et IMAP ?"</strong>
+   → POP3 télécharge et supprime, IMAP synchronise</p>
+</li>
+<li>
+<p><strong>"Quels sont les protocoles utilisés dans un VPN ?"</strong>
+   → IPsec, L2TP, OpenVPN, PPTP, SSL VPN</p>
+</li>
+<li>
+<p><strong>"Quelle est la différence entre TCP et UDP ?"</strong>
+   → TCP est fiable mais lent, UDP est rapide mais sans garantie</p>
+</li>
+<li>
+<p><strong>"Que signifie RGPD et CNIL ?"</strong>
+   → RGPD = protection données EU, CNIL = autorité française</p>
+</li>
+<li>
+<p><strong>"Citez 3 types de Cloud ?"</strong>
+   → IaaS, PaaS, SaaS</p>
+</li>
+</ol>
+<hr />
+<h2 id="exercice-dauto-evaluation">📝 EXERCICE D'AUTO-ÉVALUATION<a class="headerlink" href="#exercice-dauto-evaluation" title="Permanent link">&para;</a></h2>
+<h3 id="test-rapide-a-faire-sans-regarder">Test rapide (à faire sans regarder)<a class="headerlink" href="#test-rapide-a-faire-sans-regarder" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Port HTTPS : 443_____</li>
+<li>Port SSH : 22_____</li>
+<li>Port DNS : 53_____</li>
+<li>Port SMTP : 25, 587, 465, 2525_____</li>
+<li>Port RDP : 3389_____</li>
+<li>Port MySQL : 3306_____</li>
+<li>Port LDAP : 389_____</li>
+<li>Port SNMP : 161/162_____</li>
+<li>Différence POP3/IMAP : _____</li>
+<li>Différence TCP/UDP : _____</li>
+</ol>
+<p><strong>Réponses</strong> : 1) 443, 2) 22, 3) 53, 4) 25/587, 5) 3389, 6) 3306, 7) 389, 8) 161, 9) POP3 télécharge, IMAP synchronise, 10) TCP fiable/lent, UDP rapide/non fiable</p>
+<hr />
+<h2 id="astuce-revision-rapide">💡 ASTUCE RÉVISION RAPIDE<a class="headerlink" href="#astuce-revision-rapide" title="Permanent link">&para;</a></h2>
+<h3 id="technique-de-memorisation">Technique de mémorisation<a class="headerlink" href="#technique-de-memorisation" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Écris 10 fois</strong> la liste des 20 ports principaux</li>
+<li><strong>Récite à voix haute</strong> ports + protocoles + utilisation</li>
+<li><strong>Crée des flash cards</strong> : port d'un côté, protocole de l'autre</li>
+<li><strong>Teste-toi</strong> tous les jours pendant 5 minutes</li>
+<li><strong>Associe à des images mentales</strong> (ex: 22 = paire de chaussettes SSH)</li>
+</ol>
+<h3 id="juste-avant-lexamen">Juste avant l'examen<a class="headerlink" href="#juste-avant-lexamen" title="Permanent link">&para;</a></h3>
+<p>📌 Relis cette page en 10 minutes chrono !</p>
+<hr />
+<p><strong>🎓 Maîtriser cette fiche = Gagner facilement 10-15 points à l'examen ! 💪</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../../INDEX-CCP4/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Vue d&#39;ensemble">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Vue d'ensemble
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../FICHE-04-Reseau-Subnetting-CIDR/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Fiche — Reseau Subnetting CIDR">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                Fiche — Reseau Subnetting CIDR
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Contenu sous licence GPL-3.0 — bon courage pour l'examen !
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../assets/quiz.js"></script>
+      
+    
+  </body>
+</html>
